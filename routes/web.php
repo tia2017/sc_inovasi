@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/inovasi', function() {
+	return view('inovasi.index');
+});
+Route::get('/tambah-inovasi', function() {
+	return view('tambahInovasi.index');
+});
 Route::get('/login','loginController@index');
 Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');

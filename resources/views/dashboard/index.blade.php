@@ -123,8 +123,8 @@
                                 <div class="nav-item has-sub">
                                     <a href="javascript:void(0)"><i class="ik ik-aperture"></i><span>Inovasi</span> <span class="badge badge-danger">150+</span></a>
                                     <div class="submenu-content">
-                                        <a href="pages/innovation.html" class="menu-item">Data Inovasi</a>
-                                        <a href="pages/add-innovation.html" class="menu-item">Tambah Inovasi</a>
+                                        <a href="inovasi" class="menu-item">Data Inovasi</a>
+                                        <a href="tambah-inovasi" class="menu-item">Tambah Inovasi</a>
                                     </div>
                                 </div>
                                 <div class="nav-lavel">Bantuan</div>
