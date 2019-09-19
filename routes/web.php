@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard', function() {
+	return view('dashboard.index');
+});
 Route::get('/inovasi', function() {
 	return view('inovasi.index');
 });
