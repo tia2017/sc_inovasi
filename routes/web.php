@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/login','loginController@index');
 Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');
+Route::get('/tambah-inovasi','tambahInovasiController@index');
