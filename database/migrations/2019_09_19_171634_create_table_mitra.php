@@ -17,9 +17,13 @@ class CreateTableMitra extends Migration
             $table->bigIncrements('id');
             $table->string('bentuk_mitra',255);
             $table->string('nama_mitra',255);
-            $table->string('id_inovasi',255);
+            $table->bigInteger('id_inovasi')->unsigned();
             $table->timestamps();
+
+            $table->foreign('id_inovasi')->references('id')->on('inovasi');
+
         });
+
     }
 
     /**

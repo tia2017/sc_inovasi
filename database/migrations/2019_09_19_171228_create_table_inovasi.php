@@ -26,7 +26,6 @@ class CreateTableInovasi extends Migration
             $table->text('keunikan');
             $table->text('potensi');
             $table->text('strategi');
-            $table->text('penjelasan');
             $table->text('analisis');
             $table->string('sumber_daya',255);
             $table->timestamps();

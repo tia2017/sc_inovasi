@@ -15,12 +15,16 @@ class CreateTableProgresInovasi extends Migration
     {
         Schema::create('progres_inovasi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_inovasi',255);
-            $table->string('id_status',255);
+            $table->bigInteger('id_inovasi')->unsigned();
+            $table->bigInteger('id_status')->unsigned();
             $table->integer('progres');
             $table->text('foto');
             $table->text('keterangan');
             $table->timestamps();
+
+            $table->foreign('id_inovasi')->references('id')->on('inovasi');
+            $table->foreign('id_status')->references('id')->on('status_inovasi');
+
         });
     }
 
