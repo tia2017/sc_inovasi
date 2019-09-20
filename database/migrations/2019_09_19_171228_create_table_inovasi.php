@@ -29,6 +29,8 @@ class CreateTableInovasi extends Migration
             $table->text('analisis');
             $table->string('sumber_daya',255);
             $table->timestamps();
+            $table->bigInteger('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('user_akun');
         });
     }
 
