@@ -19,7 +19,10 @@ class CreateTableUser extends Migration
             $table->string('username',100);
             $table->string('password',100);
             $table->string('role',25);
-            $table->timestamps();
+            $table->string('remember_token',25);
+            $table->timestamps('created_at');
+            $table->timestamps('updated_at');
+            //$table->timestamps();
         });
     }
 
