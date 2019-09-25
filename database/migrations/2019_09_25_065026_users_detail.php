@@ -14,6 +14,9 @@ class UsersDetail extends Migration
     public function up()
     {
         //
+        Schema::create('users_detail', function (Blueprint $table) {
+
+        });
     }
 
     /**
