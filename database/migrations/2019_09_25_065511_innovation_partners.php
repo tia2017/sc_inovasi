@@ -14,6 +14,12 @@ class InnovationPartners extends Migration
     public function up()
     {
         //
+         Schema::create('innovation_partners', function (Blueprint $table) {
+            $table->bigIncrements('id');
+        //    $table->string('innovaion_id',255);
+         //   $table->string('partner_id',100);
+          
+            $table->timestamps();
     }
 
     /**

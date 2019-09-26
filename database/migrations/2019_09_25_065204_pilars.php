@@ -14,6 +14,11 @@ class Pilars extends Migration
     public function up()
     {
         //
+         Schema::create('pilars', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',255);
+            
+            $table->timestamps();
     }
 
     /**

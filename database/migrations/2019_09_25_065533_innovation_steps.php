@@ -14,7 +14,15 @@ class InnovationSteps extends Migration
     public function up()
     {
         //
-    }
+         Schema::create('innovation_steps', function (Blueprint $table) {
+            $table->bigIncrements('id');
+         //   $table->string('innovation_id',255);
+          //  $table->string('steps_id',100);
+            $table->string('explanation',255);
+            $table->string('file',191);
+       
+            $table->timestamps();
+         
 
     /**
      * Reverse the migrations.

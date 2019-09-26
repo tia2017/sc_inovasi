@@ -14,6 +14,10 @@ class Steps extends Migration
     public function up()
     {
         //
+         Schema::create('steps', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',200);
+            $table->timestamps();
     }
 
     /**

@@ -14,6 +14,16 @@ class Partners extends Migration
     public function up()
     {
         //
+         Schema::create('partners', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',255);
+            $table->string('form',191);
+            $table->string('specializations',191);
+            $table->string('address',255);
+            $table->string('phone',191);
+            $table->string('email',191);
+            $table->string('remember_token',25);
+            $table->timestamps();
     }
 
     /**
