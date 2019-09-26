@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Partners extends Migration
+class Types extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class Partners extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('types', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',255);
+            $table->string('description',500);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Partners extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('types');
     }
 }

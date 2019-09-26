@@ -13,7 +13,12 @@ class Pilars extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('pilars', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',191);
+            $table->string('desciption',500);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Pilars extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('pilars');
     }
 }

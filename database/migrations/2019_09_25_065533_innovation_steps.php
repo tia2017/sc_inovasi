@@ -13,7 +13,16 @@ class InnovationSteps extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('innovation_steps', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('innovation_id')->unsigned();
+            $table->foreign('innovation_id')->references('id')->on('innovations');
+            $table->bigInteger('step_id')->unsigned();
+            $table->foreign('step_id')->references('id')->on('steps');
+            $table->string('explaination',255);
+            $table->string('file',191);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ class InnovationSteps extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('innovation_steps');
     }
 }

@@ -18,6 +18,7 @@ class Roles extends Migration
             $table->bigIncrements('id');
             $table->string('name',255);
             $table->timestamps();
+         });
     }
 
     /**
@@ -27,6 +28,7 @@ class Roles extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('roles');
+
     }
 }

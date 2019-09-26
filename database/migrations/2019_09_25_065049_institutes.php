@@ -21,6 +21,7 @@ class Institutes extends Migration
             $table->string('address',100);
             $table->string('phone',25);
             $table->timestamps();
+         });
           
     }
 
@@ -31,6 +32,6 @@ class Institutes extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('institutes');
     }
 }

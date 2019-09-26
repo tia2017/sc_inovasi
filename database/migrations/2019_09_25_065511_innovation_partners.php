@@ -13,7 +13,14 @@ class InnovationPartners extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('innovation_partners', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('innovation_id')->unsigned();
+            $table->bigInteger('partner_id')->unsigned();
+            $table->foreign('innovation_id')->references('id')->on('innovations');
+            $table->foreign('partner_id')->references('id')->on('partners');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class InnovationPartners extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('innovation_partners');
     }
 }

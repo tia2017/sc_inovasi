@@ -17,10 +17,16 @@ class Innovations extends Migration
         Schema::create('innovations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name',255);
-            //$table->string('institue_id',100);
-            //$table->string('innovation_type_id',100);
-            //$table->string('pilar_id',100);
-            //$table->string('created_by_id',100);
+
+            $table->bigInteger('institute_id')->unsigned();
+            $table->foreign('institute_id')->references('id')->on('institutes');
+            $table->bigInteger('innovation_type_id')->unsigned();
+            $table->foreign('innovation_type_id')->references('id')->on('types');
+            $table->bigInteger('pilar_id')->unsigned();
+            $table->foreign('pilar_id')->references('id')->on('pilars');
+            $table->bigInteger('created_by')->unsigned();
+            $table->foreign('created_by')->references('id')->on('users');
+
             $table->string('description',255);
             $table->string('benefit',255);
             $table->string('unique_creativity',255);
@@ -30,8 +36,8 @@ class Innovations extends Migration
             $table->string('resource',255);
             $table->date('date');
             $table->string('verification_status',191);
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -41,6 +47,7 @@ class Innovations extends Migration
      */
     public function down()
     {
-        //
+        Schema:dropIfExists('innovations');
+
     }
 }
