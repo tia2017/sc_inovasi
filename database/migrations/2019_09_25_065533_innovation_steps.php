@@ -13,6 +13,7 @@ class InnovationSteps extends Migration
      */
     public function up()
     {
+
         Schema::create('innovation_steps', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('innovation_id')->unsigned();
@@ -24,6 +25,7 @@ class InnovationSteps extends Migration
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

@@ -13,6 +13,7 @@ class InnovationPartners extends Migration
      */
     public function up()
     {
+
         Schema::create('innovation_partners', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('innovation_id')->unsigned();
@@ -21,6 +22,7 @@ class InnovationPartners extends Migration
             $table->foreign('partner_id')->references('id')->on('partners');
             $table->timestamps();
         });
+
     }
 
     /**

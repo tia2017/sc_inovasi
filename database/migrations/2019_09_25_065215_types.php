@@ -19,6 +19,7 @@ class Types extends Migration
             $table->string('description',500);
             $table->timestamps();
         });
+       
     }
 
     /**
