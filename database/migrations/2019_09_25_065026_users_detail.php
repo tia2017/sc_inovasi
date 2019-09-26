@@ -15,8 +15,16 @@ class UsersDetail extends Migration
     {
         //
         Schema::create('users_detail', function (Blueprint $table) {
-
-        });
+            $table->bigIncrements('id');
+            $table->int('nik');
+            $table->int('nip');
+            $table->string('name',200);
+            $table->string('address',255);
+            $table->string('gender',191);
+            $table->string('phone',191);
+          //relasi  $table->string('institute_id',191);
+        
+            $table->timestamps();
     }
 
     /**
