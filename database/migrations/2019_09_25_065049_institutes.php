@@ -14,6 +14,14 @@ class Institutes extends Migration
     public function up()
     {
         //
+         Schema::create('institutes', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('short_name',255);
+            $table->string('name',100);
+            $table->string('address',100);
+            $table->string('phone',25);
+            $table->timestamps();
+          
     }
 
     /**
