@@ -15,6 +15,7 @@ class inovasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         // $inovasi = m_inovasi::all();
@@ -25,4 +26,6 @@ class inovasiController extends Controller
         // return ($progres);
 
         return view('inovasi.index', compact('inovasi'));
-    }
+}
+
+}
