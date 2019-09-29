@@ -25,3 +25,5 @@ class inovasiController extends Controller
         // return ($progres);
         return view('inovasi.index', compact('inovasi'));
     }
+
+}
