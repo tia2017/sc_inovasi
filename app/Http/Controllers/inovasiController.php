@@ -23,6 +23,5 @@ class inovasiController extends Controller
                 ->get();
         // return ($inovasi);
         // return ($progres);
-
         return view('inovasi.index', compact('inovasi'));
     }
