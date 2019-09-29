@@ -187,8 +187,8 @@
                                     <div class="tab-content" id="myTabContent2">
                                         
                                             <div class="col-md-12">
-                                                <form class="forms-sample">
-
+                                                <form class="forms-sample" actiion="/tambah-inovasi" method="post"> 
+                                                @csrf
                                                     <!-- BEGIN::Nama Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">

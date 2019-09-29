@@ -253,37 +253,24 @@
                                             <th>Tanggal Ubah</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td><a href="detail-innovation.html">Pembangunan Sistem Manajemen Inovasi Smart City</a></td>
-                                            <td>DISKOMINFO</td>
-                                            <td>Implementasi</td>
-                                            <td>50%</td>
-                                            <td>70%</td>
-                                            <td>22/07/2019</td>
-                                            <td>22/07/2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td><a href="detail-innovation.html">Pembangunan Pemesanan Online Space Room</a></td>
-                                            <td>DISKOMINFO</td>
-                                            <td>Perencanaan Pembangunan</td>
-                                            <td>50%</td>
-                                            <td>40%</td>
-                                            <td>22/07/2019</td>
-                                            <td>22/07/2019</td>
-                                        </tr>
+                                    <tbody>                            
+                                        @foreach($inovasi as $data)                                        
+                                            <tr>
+                                                <td>
+                                                    <label class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                        <span class="custom-control-label">&nbsp;</span>
+                                                    </label>
+                                                </td>
+                                                <td><a href="detail-innovation.html">{{$data->nama_inovasi}}</a></td>
+                                                <td>{{$data->perangkat_daerah}}</td>
+                                                <td>Implementasi</td>
+                                                <td>{{$data->progres}}%</td>
+                                                <td>70%</td>
+                                                <td>{{$data->created_at}}</td>
+                                                <td>{{$data->updated_at}}</td>
+                                            </tr>
+                                        @endforeach            
                                     </tbody>
                                 </table>
                             </div>
