@@ -11,9 +11,9 @@ class tambahInovasiController extends Controller
 {
     public function create()
     {
-        $ins = Institute::all();
-        dd($ins);
-    	// return view('tambahInovasi.index');
+        // $ins = Institute::all();
+        // dd($ins);
+    	return view('tambahInovasi.index');
     }
 
     public function store(Request $request)
