@@ -188,7 +188,9 @@
                                         
                                             <div class="col-md-12">
                                                 <form class="forms-sample" actiion="/tambah-inovasi" method="post"> 
+                                                <input type="hidden" name="user_id">
                                                 @csrf
+                                                <!-- $user_id; -->
                                                     <!-- BEGIN::Nama Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -198,13 +200,11 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>
-                                                                <select class="form-control" id="perangkatDaerah">
-                                                                    <option value="1">DISKOMINFO</option>
-                                                                    <option value="2">DINKES</option>
-                                                                    <option value="3">DISDIK</option>
-                                                                    <option value="4">DISKARPUS</option>
-                                                                    <option value="5">DISPORYATA</option>
-                                                                    <option value="6">DPMPTSP</option>
+                                                                <select class="form-control" id="perangkatDaerah" name="institute_id">
+                                                                @foreach($institute as $ins_data)
+                                                                    <option value="{{$loop->iteration}}">{{$ins_data->short_name}}</option>
+                                                                @endforeach
+                                                                    
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -216,7 +216,10 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <label for="jenisInovasi">Jenis Inovasi</label>
-                                                                <select class="form-control" id="jenisInovasi">
+                                                                <select class="form-control" id="jenisInovasi" name="type_id">
+                                                                @foreach($institute as $ins_data)
+                                                                    <option value="{{$loop->iteration}}">{{$ins_data->short_name}}</option>
+                                                                @endforeach
                                                                     <option value="1">Program</option>
                                                                     <option value="2">Produk</option>
                                                                     <option value="3">Metode</option>
@@ -226,7 +229,7 @@
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label for="pilarInovasi">Pilar Smart City</label>
-                                                                <select class="form-control" id="pilarInovasi">
+                                                                <select class="form-control" id="pilarInovasi" name="pilar_id">
                                                                     <option value="1">Smart Governance</option>
                                                                     <option value="2">Smart Branding</option>
                                                                     <option value="3">Smart Economy</option>
@@ -244,7 +247,7 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="statusInovasi">Status Inovasi</label>
-                                                                <select class="form-control" id="statusInovasi">
+                                                                <select class="form-control" id="statusInovasi" name="status_name"> 
                                                                     <option value="1">Perumusan Masalah atau Kebutuhan</option>
                                                                     <option value="2">Perumusan Ide</option>
                                                                     <option value="3">Perencanaan Pembangunan</option>
@@ -255,7 +258,7 @@
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <label>Unggah File</label>
-                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <input type="file" name="img[]" class="file-upload-default" name="file">
                                                                 <div class="input-group col-xs-12">
                                                                     <input type="text" class="form-control file-upload-info" disabled placeholder="File">
                                                                     <span class="input-group-append">
@@ -264,7 +267,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-2">
-                                                                <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                <label for="progresInovasi">Progres Inovasi (%)</label> <!-- bingung -->
                                                                 <input required="" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi">
                                                             </div>
                                                             <div class="col-md-4">
@@ -279,16 +282,16 @@
                                                     <div class="form-group">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label>
-                                                                <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="Penjelasan mengenai inovasi yang dapat dipahami dengan baik"></textarea>
+                                                                <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label> 
+                                                                <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="Penjelasan mengenai inovasi yang dapat dipahami dengan baik" name="description"></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="manfaatInovasi">Manfaat Inovasi</label>
-                                                                <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="Manfaat Inovasi ini bagi Penyelenggara, Pemerintah dan Masyarakat"></textarea>
+                                                                <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="Manfaat Inovasi ini bagi Penyelenggara, Pemerintah dan Masyarakat" name="benefit"></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keunikanInovasi">Keunikan/Kreativitas Inovasi</label>
-                                                                <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="Keunggulan dan keunikan Inovasi"></textarea>
+                                                                <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="Keunggulan dan keunikan Inovasi" name="unique_creativity"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -315,13 +318,13 @@
                                                                             <div class="form-group">
                                                                                 <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                                 <div class="col-lg-10 col-md-10">
-                                                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk">
+                                                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form">
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="namaMitra" class="col-lg-2 control-label">Nama Mitra</label>
                                                                                 <div class="col-lg-10">
-                                                                                    <input type="text" class="form-control" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="nama">
+                                                                                    <input type="text" class="form-control" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="nama" name="partner_name">
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -345,15 +348,15 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="potensiPengembangan">Potensi Pengembangan Inovasi</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="Kemungkinan perluasan, peningkatan, replikasi"></textarea>
+                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="Kemungkinan perluasan, peningkatan, replikasi" name="potency"></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="Upaya memastikan keberlangsungan (regulasi, kelembagaan, penyediaan sumber daya, dan model bisnis)"></textarea>
+                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="Upaya memastikan keberlangsungan (regulasi, kelembagaan, penyediaan sumber daya, dan model bisnis)" name="strategy"></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="analisisRisiko">Analisis Risiko</label>
-                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="Dampak yang perlu diantisipasi, hambatan, dan potensi kegagalan"></textarea>
+                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="Dampak yang perlu diantisipasi, hambatan, dan potensi kegagalan" name="risk_analysis"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -364,7 +367,7 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <label for="potensiPengembangan">Sumber Daya yang Digunakan</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="Anggaran, tenaga kerja, fasilitas dan sumber daya yang diperlukan (berapa dan berasal dari mana)"></textarea>
+                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="Anggaran, tenaga kerja, fasilitas dan sumber daya yang diperlukan (berapa dan berasal dari mana)" name="resource"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>

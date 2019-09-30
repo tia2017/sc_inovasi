@@ -9,7 +9,7 @@ class Innovation extends Model
 {
     
     protected $fillable = [
-        'name', 'institute_id', 'innovation_type_id', 'pilar_id', 'created_by',
+        'name', 'institute_id', 'innovation_type_id', 'pilar_id', 'created_by' => '1',
         'description', 'benefit', 'unique_creativity', 'potency', 'strategy', 'risk_analysis',
         'resource', 'date', 'verification_status'];
 
@@ -31,7 +31,7 @@ class Innovation extends Model
     }
     public function institute()
     {
-        return $this->hasMany(Institute::class);
+        return $this->belongsTo(Institute::class);
     }
 }
 

@@ -268,7 +268,7 @@
                                                     </label>
                                                 </td>
                                                 <td><a href="detail-innovation.html">{{$ino_data->name}}</a></td>
-                                                <td>{{$ino_data->Pilar->name}}</td>  
+                                                <td>{{$ino_data->Institute->short_name}}</td>  
                                                 <td> 
                                                 @foreach($ino_data->innovation_step as $ino_step)                                
                                                     {{$ino_step->step->name}}
