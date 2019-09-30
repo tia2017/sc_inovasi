@@ -8,6 +8,6 @@ class Step extends Model
 {
     public function innovation_step()
     {
-        return $this->hasMany(innovation_step::class);
+        return $this->hasMany(Innovation_step::class);
     }
 }

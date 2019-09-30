@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function innovation()
+    {
+        return $this->hasMany(Innovation::class);
+    }
 }

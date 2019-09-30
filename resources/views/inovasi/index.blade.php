@@ -271,7 +271,7 @@
                                                 <td>{{$ino_data->Pilar->name}}</td>  
                                                 <td> 
                                                 @foreach($ino_data->innovation_step as $ino_step)                                
-                                                    {{$ino_step->step_id}}
+                                                    {{$ino_step->step->name}}
                                                 @endforeach
                                                 </td>
                                                 <td>50%</td>

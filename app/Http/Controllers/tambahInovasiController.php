@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Innovation;
+use App\Institute;
 
 class tambahInovasiController extends Controller
 {
     public function create()
     {
-    	return view('tambahInovasi.index');
+        $ins = Institute::all();
+        dd($ins);
+    	// return view('tambahInovasi.index');
     }
 
     public function store(Request $request)
