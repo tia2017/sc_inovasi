@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Type;
 use App\Institute;
+use App\Pilar;
+use App\Step;
 
 class tambahInovasiController extends Controller
 {
@@ -14,7 +16,10 @@ class tambahInovasiController extends Controller
         // $ins = Institute::all();
         // dd($ins);
         $institute = Institute::all();
-    	return view('tambahInovasi.index', compact('institute'));
+        $type = Type::all();
+        $pilar = Pilar::all();
+        $step = Step::all();
+    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step'));
     }
 
     public function store(Request $request)

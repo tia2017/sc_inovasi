@@ -217,25 +217,17 @@
                                                             <div class="col-md-6">
                                                                 <label for="jenisInovasi">Jenis Inovasi</label>
                                                                 <select class="form-control" id="jenisInovasi" name="type_id">
-                                                                @foreach($institute as $ins_data)
-                                                                    <option value="{{$loop->iteration}}">{{$ins_data->short_name}}</option>
-                                                                @endforeach
-                                                                    <option value="1">Program</option>
-                                                                    <option value="2">Produk</option>
-                                                                    <option value="3">Metode</option>
-                                                                    <option value="4">Konseptual</option>
-                                                                    <option value="5">Teknologi</option>
+                                                                @foreach($type as $type_data)
+                                                                    <option value="{{$loop->iteration}}">{{$type_data->name}}</option>
+                                                                @endforeach                                                                 
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label for="pilarInovasi">Pilar Smart City</label>
                                                                 <select class="form-control" id="pilarInovasi" name="pilar_id">
-                                                                    <option value="1">Smart Governance</option>
-                                                                    <option value="2">Smart Branding</option>
-                                                                    <option value="3">Smart Economy</option>
-                                                                    <option value="4">Smart Living</option>
-                                                                    <option value="5">Smart Society</option>
-                                                                    <option value="6">Smart Environment</option>
+                                                                @foreach($pilar as $pilar_data)
+                                                                    <option value="{{$loop->iteration}}">{{ $pilar_data->name }}</option>
+                                                                @endforeach
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -248,12 +240,9 @@
                                                             <div class="col-md-4">
                                                                 <label for="statusInovasi">Status Inovasi</label>
                                                                 <select class="form-control" id="statusInovasi" name="status_name"> 
-                                                                    <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                                    <option value="2">Perumusan Ide</option>
-                                                                    <option value="3">Perencanaan Pembangunan</option>
-                                                                    <option value="4">Pembangunan</option>
-                                                                    <option value="5">Implementasi</option>
-                                                                    <option value="6">Evaluasi</option>
+                                                                    @foreach($step as $step_data)
+                                                                    <option value="{{$loop->iteration}}">{{ $step_data->name}}</option>
+                                                                    @endforeach
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-2">
