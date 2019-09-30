@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\m_inovasi;
+use App\Innovation;
 
 class tambahInovasiController extends Controller
 {
@@ -15,8 +15,8 @@ class tambahInovasiController extends Controller
 
     public function store(Request $request)
     {
-        m_inovasi::create([
-            'nama' => $request->nama
-        ]);
+
+        Innovation::create($request->all());
+        return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
     }
 }

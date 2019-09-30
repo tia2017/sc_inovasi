@@ -194,7 +194,7 @@
                                                         <div class="row">
                                                             <div class="col-md-8">
                                                                 <label for="namaInovasi">Nama Singkat Inovasi</label>
-                                                                <input type="text" class="form-control" id="namaInovasi" placeholder="Nama Singkat Inovasi yang Diajukan">
+                                                                <input type="text" class="form-control" id="namaInovasi" placeholder="Nama Singkat Inovasi yang Diajukan" name="name">
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>

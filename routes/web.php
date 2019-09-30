@@ -27,6 +27,6 @@ Route::get('/login','loginController@index');
 Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
-// Route::get('/tambah-inovasi','tambahInovasiController@create');
+Route::post('/tambah-inovasi','tambahInovasiController@store');
 
 // Route::resource('inovasi', 'inovasiController');

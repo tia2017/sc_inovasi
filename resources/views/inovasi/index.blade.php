@@ -235,6 +235,11 @@
                                 </div>
                             </div>
                             <div class="card-body">
+                                @if (session('status'))
+                                    <div class="alert alert-success">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif    
                                 <table id="advanced_table" class="table">
                                     <thead>
                                         <tr>
@@ -254,7 +259,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>                            
-                                        @foreach($inovasi as $data)                                        
+                                        @foreach($inovasi as $ino_data)                                        
                                             <tr>
                                                 <td>
                                                     <label class="custom-control custom-checkbox">
@@ -262,15 +267,19 @@
                                                         <span class="custom-control-label">&nbsp;</span>
                                                     </label>
                                                 </td>
-                                                <td><a href="detail-innovation.html">{{$data->nama_inovasi}}</a></td>
-                                                <td>{{$data->perangkat_daerah}}</td>
-                                                <td>Implementasi</td>
-                                                <td>{{$data->progres}}%</td>
+                                                <td><a href="detail-innovation.html">{{$ino_data->name}}</a></td>
+                                                <td>{{$ino_data->Pilar->name}}</td>  
+                                                <td> 
+                                                @foreach($ino_data->innovation_step as $ino_step)                                
+                                                    {{$ino_step->step_id}}
+                                                @endforeach
+                                                </td>
+                                                <td>50%</td>
                                                 <td>70%</td>
-                                                <td>{{$data->created_at}}</td>
-                                                <td>{{$data->updated_at}}</td>
+                                                <td>{{$ino_data->created_at}}</td>
+                                                <td>{{$ino_data->updated_at}}</td>
                                             </tr>
-                                        @endforeach            
+                                        @endforeach         
                                     </tbody>
                                 </table>
                             </div>
