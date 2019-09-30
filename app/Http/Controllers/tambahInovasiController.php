@@ -8,6 +8,8 @@ use App\Type;
 use App\Institute;
 use App\Pilar;
 use App\Step;
+use App\Innovation;
+use App\Innovation_step;
 
 class tambahInovasiController extends Controller
 {
@@ -25,6 +27,8 @@ class tambahInovasiController extends Controller
     public function store(Request $request)
     {
         Innovation::create($request->all());
+        // Innovation::create($request->all());
+        // dd($request->all());
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
     }
 }

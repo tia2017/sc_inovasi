@@ -188,9 +188,11 @@
                                         
                                             <div class="col-md-12">
                                                 <form class="forms-sample" actiion="/tambah-inovasi" method="post"> 
-                                                <input type="hidden" name="user_id">
+                                                <input type="hidden" name="created_by" value="1">
+                                                <input type="hidden" name="date" value="2019-09-30">
+                                                <input type="hidden" name="verification_status" value="True">
                                                 @csrf
-                                                <!-- $user_id; -->
+                                              
                                                     <!-- BEGIN::Nama Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -216,7 +218,7 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <label for="jenisInovasi">Jenis Inovasi</label>
-                                                                <select class="form-control" id="jenisInovasi" name="type_id">
+                                                                <select class="form-control" id="jenisInovasi" name="innovation_type_id">
                                                                 @foreach($type as $type_data)
                                                                     <option value="{{$loop->iteration}}">{{$type_data->name}}</option>
                                                                 @endforeach                                                                 
@@ -239,7 +241,7 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="statusInovasi">Status Inovasi</label>
-                                                                <select class="form-control" id="statusInovasi" name="status_name"> 
+                                                                <select class="form-control" id="statusInovasi" name="step_id"> 
                                                                     @foreach($step as $step_data)
                                                                     <option value="{{$loop->iteration}}">{{ $step_data->name}}</option>
                                                                     @endforeach
