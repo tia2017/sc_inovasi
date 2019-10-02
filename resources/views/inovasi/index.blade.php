@@ -258,7 +258,7 @@
                                             <th>Tanggal Ubah</th>
                                         </tr>
                                     </thead>
-                                    <tbody>                            
+                                    <tbody>                        
                                         @foreach($inovasi as $ino_data)                                        
                                             <tr>
                                                 <td>
@@ -267,7 +267,7 @@
                                                         <span class="custom-control-label">&nbsp;</span>
                                                     </label>
                                                 </td>
-                                                <td><a href="detail-innovation.html">{{$ino_data->name}}</a></td>
+                                                <td><a href="/inovasi/detail/{{$ino_data->id}}" >{{$ino_data->name}}</a></td>
                                                 <td>{{$ino_data->Institute->short_name}}</td>  
                                                 <td> 
                                                 @foreach($ino_data->innovation_step as $ino_step)                                

@@ -192,12 +192,12 @@
                                                         <div class="row">
                                                             <div class="col-md-8">
                                                                 <label for="namaInovasi">Nama Singkat Inovasi</label>
-                                                                <input type="text" class="form-control" id="namaInovasi" placeholder="{{ $detail->name }}" disabled>
+                                                                <input type="text" class="form-control" id="namaInovasi" placeholder="{{ $detail_info->name }}" disabled>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>
                                                                 <select class="form-control" id="perangkatDaerah" disabled>
-                                                                    <option value="{{$loop->$iteration}}">{{ $detail->Institute->short_name }}</option>
+                                                                    <option value="{{$detail_info->institute->short_name}}">{{$detail_info->institute->short_name}}</option>
                                                                     <!-- <option value="2">DINKES</option>
                                                                     <option value="3">DISDIK</option>
                                                                     <option value="4">DISKARPUS</option>
@@ -216,7 +216,8 @@
                                                                 <label for="jenisInovasi">Jenis Inovasi</label>
                                                                 <select class="form-control" id="jenisInovasi" disabled>
                                                                     <!-- <option value="1">Program</option> -->
-                                                                    <option value="{{$loop->$iteration}}">{{ $detail->Type->name }}</option>
+
+                                                                    <option value="">$detail_info->Type->name</option>
                                                                     <!-- <option value="3">Metode</option>
                                                                     <option value="4">Konseptual</option>
                                                                     <option value="5">Teknologi</option> -->
@@ -225,12 +226,7 @@
                                                             <div class="col-md-6">
                                                                 <label for="pilarInovasi">Pilar Smart City</label>
                                                                 <select class="form-control" id="pilarInovasi" disabled>
-                                                                    <option value="{{$loop->$iteration}}">{{ $detail->Pilar->name }}</option>
-                                                                    <!-- <option value="2">Smart Branding</option>
-                                                                    <option value="3">Smart Economy</option>
-                                                                    <option value="4">Smart Living</option>
-                                                                    <option value="5">Smart Society</option>
-                                                                    <option value="6">Smart Environment</option> -->
+                                                                    <option value="">{{$detail_info->Pilar->name}}</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -247,7 +243,7 @@
                                                                     <option value="2">Perumusan Ide</option>
                                                                     <option value="3">Perencanaan Pembangunan</option>
                                                                     <option value="4">Pembangunan</option> -->
-                                                                    <option value="{{$loop->$iteration}}">{{ $detail->Step->name }}</option>
+                                                                    <option value="">$detail_info->innovation_step->step->name</option>
                                                                     <!-- <option value="6">Evaluasi</option> -->
                                                                 </select>
                                                             </div>
@@ -278,15 +274,15 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label>
-                                                                <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="{{ $detail->description }}" disabled></textarea>
+                                                                <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="{{$detail_info->description}}" disabled></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="manfaatInovasi">Manfaat Inovasi</label>
-                                                                <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="{{ $detail->benefit }}" disabled></textarea>
+                                                                <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="{{$detail_info->benefit}}" disabled></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keunikanInovasi">Keunikan/Kreativitas Inovasi</label>
-                                                                <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="{{ $detail->unique_creativity }}" disabled></textarea>
+                                                                <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="{{$detail_info->unique_creativity}}" disabled></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -312,15 +308,15 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="potensiPengembangan">Potensi Pengembangan Inovasi</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{ $detail->potency }}" disabled></textarea>
+                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->potency}}" disabled></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="{{ $detail->strategy }}" disabled></textarea>
+                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="{{$detail_info->strategy}}" disabled></textarea>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="analisisRisiko">Analisis Risiko</label>
-                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="{{ $detail->risk_analysis }}" disabled></textarea>
+                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="{{$detail_info->risk_analysis}}" disabled></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -331,7 +327,7 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <label for="potensiPengembangan">Sumber Daya yang Digunakan</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{ $detail->resource }}" disabled></textarea>
+                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->resource}}" disabled></textarea>
                                                             </div>
                                                             <!-- <div class="col-md-4">
                                                                 <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
