@@ -14,7 +14,6 @@ class detailInovasiController extends Controller
     	dd($Innovation);
     	// $detail = Innovation::find('$Innovation');
     	$detail = Innovation::find($Innovation);
-    	dd($detail);
     	return view::make('detailInovasi.index')->with('detail', $detail);
     	// return view('detailInovasi.index', ['detail' => $detail]);
     	// Innovation::all();
