@@ -43,7 +43,7 @@ class inovasiController extends Controller
     public function detail($ino_data){
         // $innovation = Innovation::all();
         $detail_info = Innovation::find($ino_data);
-        // dd($detail_info);
+        dd($detail_info);
 
         return view('inovasi.detail', compact('detail_info'));
         // return view('detailInovasi.index', ['detail' => $detail]);
