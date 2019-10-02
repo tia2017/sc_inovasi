@@ -28,7 +28,7 @@ Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
-Route::get('/inovasi/detail/{ino_data}', 'inovasiController@detail');
+Route::get('/inovasi/detail/{detail_info}', 'inovasiController@detail');
 route::get('/profile', 'profileController@index');
 
 // Route::resource('inovasi', 'inovasiController');

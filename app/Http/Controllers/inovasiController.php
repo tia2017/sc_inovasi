@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 // use App\Http\Controllers\View;
 use Illuminate\Support\Facades\DB;
 use App\Innovation;
-// use App\Innovation_step;
+use App\Innovation_step;
 
 class inovasiController extends Controller
 {
@@ -40,12 +40,14 @@ class inovasiController extends Controller
         return view('inovasi.index', compact('inovasi'));
     }
 
-    public function detail($ino_data){
+    public function detail(Innovation $detail_info){
         // $innovation = Innovation::all();
-        $detail_info = Innovation::find($ino_data);
+        // $detail_info = Innovation::find($ino_data);
+        // $detail_info_step = Innovation_step::find($detail_info);
+        // dd($detail_info_step);
+        // dd($info_step);
         return view('inovasi.detail', compact('detail_info'));
         // return view('detailInovasi.index', ['detail' => $detail]);
-        // Innovation::all();
     }
 
 }

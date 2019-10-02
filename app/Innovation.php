@@ -27,7 +27,7 @@ class Innovation extends Model
     }
     public function type()
     {
-        return $this->belongsTo(Type::class);
+        return $this->belongsTo(Type::class, 'innovation_type_id');
     }
     public function institute()
     {
