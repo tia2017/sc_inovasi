@@ -106,7 +106,7 @@
                     <div class="sidebar-header">
                         <a class="header-brand" href="index.html">
                             <div class="logo-img">
-                               <img src="{{ asset('assets/img/brand-white.svg.jpg') }}" class="header-brand-img" alt="ipi"> 
+                               <img src="{{asset('assets/src/img/brand-white.svg')}}" class="header-brand-img" alt="ipi"> 
                             </div>
                             <span class="text">Inovasi SC</span>
                         </a>
