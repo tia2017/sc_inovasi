@@ -187,7 +187,7 @@
                                     <div class="tab-content" id="myTabContent2">
                                         
                                             <div class="col-md-12">
-                                                <form class="forms-sample" actiion="/tambah-inovasi" method="post"> 
+                                                <form class="forms-sample" action="/tambah-inovasi" method="post"> 
                                                 <input type="hidden" name="created_by" value="1">
                                                 <input type="hidden" name="date" value="{{date('Y-m-d h:i:s')}}">
                                                 <input type="hidden" name="verification_status" value="True">
@@ -198,7 +198,7 @@
                                                         <div class="row">
                                                             <div class="col-md-8">
                                                                 <label for="namaInovasi" >Nama Singkat Inovasi</label>
-                                                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="namaInovasi" placeholder="Nama Singkat Inovasi yang Diajukan" name="name">
+                                                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="namaInovasi" placeholder="Nama Singkat Inovasi yang Diajukan" name="name" value="{{old('name')}}">
                                                                 @error('name')
                                                                     <div class="invalid-feedback">{{$message}}</div>  
                                                                 @enderror
@@ -261,22 +261,23 @@
                                                                 <label>Unggah File</label>
                                                                 <input type="file" name="img[]" class="file-upload-default" name="file">
                                                                 <div class="input-group col-xs-12">
-                                                                    <input type="text" class="form-control file-upload-info" disabled placeholder="File">
+                                                                    <input type="text" class="form-control file-upload-info" disabled placeholder="File" value="{{old('file')}}">
                                                                     <span class="input-group-append">
                                                                     <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
                                                                     </span>
                                                                 </div>
                                                             </div>
+                                                            <!-- (bingung) progress masuk ke tabel mana -->
                                                             <div class="col-md-2">
                                                                 <label for="progresInovasi">Progres Inovasi (%)</label> <!-- bingung -->
-                                                                <input required="" class="@error('progress') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi">
+                                                                <input required="" class="@error('progress') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi" name="progress" value="{{old('progress')}}">
                                                                 @error('progress')
                                                                     <div class="invalid-feedback">{{$message}}</div>  
                                                                 @enderror
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keteranganStatus">Keterangan</label>
-                                                                <textarea class="form-control @error('explaination') is-invalid @enderror" id="keteranganStatus" rows="3" name="explaination" placeholder="Keterangan mengenai status tahapan Inovasi"></textarea>
+                                                                <textarea class="form-control @error('explaination') is-invalid @enderror" id="keteranganStatus" rows="3" placeholder="Keterangan mengenai status tahapan Inovasi"  name="explaination" value="{{old('explaination')}}"></textarea>
                                                                 @error('explaination')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
@@ -291,21 +292,21 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label> 
-                                                                <textarea class="form-control @error('description') is-invalid @enderror" id="penjelasanInovasi" rows="3" placeholder="Penjelasan mengenai inovasi yang dapat dipahami dengan baik" name="description"></textarea>
+                                                                <textarea class="form-control @error('description') is-invalid @enderror" id="penjelasanInovasi" rows="3" placeholder="Penjelasan mengenai inovasi yang dapat dipahami dengan baik" name="description" value="{{old('description')}}"></textarea>
                                                                 @error('description')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="manfaatInovasi">Manfaat Inovasi</label>
-                                                                <textarea class="form-control @error('benefit') is-invalid @enderror" id="manfaatInovasi" rows="3" placeholder="Manfaat Inovasi ini bagi Penyelenggara, Pemerintah dan Masyarakat" name="benefit"></textarea>
+                                                                <textarea class="form-control @error('benefit') is-invalid @enderror" id="manfaatInovasi" rows="3" placeholder="Manfaat Inovasi ini bagi Penyelenggara, Pemerintah dan Masyarakat" name="benefit" value="{{old('benefit')}}"></textarea>
                                                                 @error('benefit')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keunikanInovasi">Keunikan/Kreativitas Inovasi</label>
-                                                                <textarea class="form-control @error('unique_creativity') is-invalid @enderror" id="keunikanInovasi" rows="3" placeholder="Keunggulan dan keunikan Inovasi" name="unique_creativity"></textarea>
+                                                                <textarea class="form-control @error('unique_creativity') is-invalid @enderror" id="keunikanInovasi" rows="3" placeholder="Keunggulan dan keunikan Inovasi" name="unique_creativity" value="{{old('unique_creativity')}}"></textarea>
                                                                 @error('unique_creativity')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
@@ -329,13 +330,14 @@
                                                                     </div>
                                                                     <div class="clearfix"></div>
                                                                     <!-- Repeater Items -->
+                                                                    <!--(bingung) mitra masih null -->
                                                                     <div class="items" data-group="test">
                                                                         <!-- Repeater Content -->
                                                                         <div class="item-content">
                                                                             <div class="form-group">
                                                                                 <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                                 <div class="col-lg-10 col-md-10">
-                                                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form[]">
+                                                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form[]"> 
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -365,21 +367,21 @@
                                                         <div class="row">
                                                             <div class="col-md-4">
                                                                 <label for="potensiPengembangan">Potensi Pengembangan Inovasi</label>
-                                                                <textarea class="form-control @error('potency') is-invalid @enderror" id="potensiPengembangan" rows="3" placeholder="Kemungkinan perluasan, peningkatan, replikasi" name="potency"></textarea>
+                                                                <textarea class="form-control @error('potency') is-invalid @enderror" id="potensiPengembangan" rows="3" placeholder="Kemungkinan perluasan, peningkatan, replikasi" name="potency" value="{{old('potency')}}"></textarea>
                                                                 @error('potency')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                                <textarea class="form-control @error('strategy') is-invalid @enderror" id="strategiKeberlangsungan" rows="3" placeholder="Upaya memastikan keberlangsungan (regulasi, kelembagaan, penyediaan sumber daya, dan model bisnis)" name="strategy"></textarea>
+                                                                <textarea class="form-control @error('strategy') is-invalid @enderror" id="strategiKeberlangsungan" rows="3" placeholder="Upaya memastikan keberlangsungan (regulasi, kelembagaan, penyediaan sumber daya, dan model bisnis)" name="strategy" value="{{old('strategy')}}"></textarea>
                                                                 @error('strategy')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="analisisRisiko">Analisis Risiko</label>
-                                                                <textarea class="form-control @error('risk_analysis') is-invalid @enderror" id="analisisRisiko" rows="3" placeholder="Dampak yang perlu diantisipasi, hambatan, dan potensi kegagalan" name="risk_analysis"></textarea>
+                                                                <textarea class="form-control @error('risk_analysis') is-invalid @enderror" id="analisisRisiko" rows="3" placeholder="Dampak yang perlu diantisipasi, hambatan, dan potensi kegagalan" name="risk_analysis" value="{{old('risk_analysis')}}"></textarea>
                                                                 @error('risk_analysis')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror
@@ -393,7 +395,7 @@
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <label for="potensiPengembangan">Sumber Daya yang Digunakan</label>
-                                                                <textarea class="form-control @error('resource') is-invalid @enderror" id="potensiPengembangan" rows="3" placeholder="Anggaran, tenaga kerja, fasilitas dan sumber daya yang diperlukan (berapa dan berasal dari mana)" name="resource"></textarea>
+                                                                <textarea class="form-control @error('resource') is-invalid @enderror" id="potensiPengembangan" rows="3" placeholder="Anggaran, tenaga kerja, fasilitas dan sumber daya yang diperlukan (berapa dan berasal dari mana)" name="resource" value="{{old('resource')}}"></textarea>
                                                                 @error('resource')
                                                                     <div class="invalid-feedback">{{$message}}</div>
                                                                 @enderror

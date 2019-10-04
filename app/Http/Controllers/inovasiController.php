@@ -23,7 +23,7 @@ class inovasiController extends Controller
      */
     public function index()
     {
-        $inovasi = Innovation::all();
+        // dibawah ini adalah cara lain pemanggilan
         // $inovasi_step = Innovation_step::get();
         // $inovasi_step = Innovation::find(2)->innovation_step()->get();
         // $ino_step = Innovation_step::all();
@@ -36,17 +36,16 @@ class inovasiController extends Controller
         //         ->select('innovations.name as name_ino', 'innovations.description as decs_ino', 'innovations.*', 'pilars.*')
         //         ->get();
                 // select * from x where (select * from x where ())
+        
+        $inovasi = Innovation::all();
         // dd($inovasi);
         return view('inovasi.index', compact('inovasi'));
     }
 
     public function detail(Innovation $detail_info){
-        // $innovation = Innovation::all();
-        // $detail_info = Innovation::find($ino_data);
-        // $detail_info_step = Innovation_step::find($detail_info);
-        // dd($detail_info_step);
-        // dd($info_step);
         return view('inovasi.detail', compact('detail_info'));
+
+        // dibawah ini cara lain return
         // return view('detailInovasi.index', ['detail' => $detail]);
     }
 
