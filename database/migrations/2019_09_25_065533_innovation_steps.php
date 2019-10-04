@@ -22,6 +22,7 @@ class InnovationSteps extends Migration
             $table->foreign('step_id')->references('id')->on('steps')->onDelete('cascade');
             $table->string('explaination',255);
             $table->string('file',191);
+            $table->integer('progress_persentage');
             $table->timestamps();
         });
     }
