@@ -122,14 +122,14 @@
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel">Navigasi</div>
-                                <div class="nav-item active">
+                                <div class="nav-item ">
                                     <a href="dashboard"><i class="ik ik-bar-chart-2"></i><span>Dasbor</span></a>
                                 </div>
                                 <div class="nav-item has-sub">
                                     <a href="javascript:void(0)"><i class="ik ik-aperture"></i><span>Inovasi</span> <span class="badge badge-danger">150+</span></a>
                                     <div class="submenu-content">
                                         <a href="inovasi" class="menu-item">Data Inovasi</a>
-                                        <a href="tambah-inovasi" class="menu-item">Tambah Inovasi</a>
+                                        <a href="tambah-inovasi" class="menu-item active">Tambah Inovasi</a>
                                     </div>
                                 </div>
                                 <div class="nav-lavel">Bantuan</div>
