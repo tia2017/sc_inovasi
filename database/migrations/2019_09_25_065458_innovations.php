@@ -13,19 +13,19 @@ class Innovations extends Migration
      */
     public function up()
     {
-        // 
+        //
         Schema::create('innovations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name',255);
 
             $table->bigInteger('institute_id')->unsigned();
-            $table->foreign('institute_id')->references('id')->on('institutes');
+            $table->foreign('institute_id')->references('id')->on('institutes')->onDelete('cascade');
             $table->bigInteger('innovation_type_id')->unsigned();
-            $table->foreign('innovation_type_id')->references('id')->on('types');
+            $table->foreign('innovation_type_id')->references('id')->on('types')->onDelete('cascade');
             $table->bigInteger('pilar_id')->unsigned();
-            $table->foreign('pilar_id')->references('id')->on('pilars');
+            $table->foreign('pilar_id')->references('id')->on('pilars')->onDelete('cascade');
             $table->bigInteger('created_by')->unsigned();
-            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
 
             $table->string('description',255);
             $table->string('benefit',255);

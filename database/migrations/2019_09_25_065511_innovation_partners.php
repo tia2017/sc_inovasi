@@ -18,8 +18,8 @@ class InnovationPartners extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('innovation_id')->unsigned();
             $table->bigInteger('partner_id')->unsigned();
-            $table->foreign('innovation_id')->references('id')->on('innovations');
-            $table->foreign('partner_id')->references('id')->on('partners');
+            $table->foreign('innovation_id')->references('id')->on('innovations')->onDelete('cascade');
+            $table->foreign('partner_id')->references('id')->on('partners')->onDelete('cascade');
             $table->timestamps();
         });
 

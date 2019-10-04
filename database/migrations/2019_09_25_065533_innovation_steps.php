@@ -17,9 +17,9 @@ class InnovationSteps extends Migration
         Schema::create('innovation_steps', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('innovation_id')->unsigned();
-            $table->foreign('innovation_id')->references('id')->on('innovations');
+            $table->foreign('innovation_id')->references('id')->on('innovations')->onDelete('cascade');
             $table->bigInteger('step_id')->unsigned();
-            $table->foreign('step_id')->references('id')->on('steps');
+            $table->foreign('step_id')->references('id')->on('steps')->onDelete('cascade');
             $table->string('explaination',255);
             $table->string('file',191);
             $table->timestamps();

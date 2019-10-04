@@ -50,4 +50,10 @@ class inovasiController extends Controller
         // return view('detailInovasi.index', ['detail' => $detail]);
     }
 
+    public function hapus($id){
+        $inovasi = Innovation::find($id);
+        $inovasi->delete();
+
+        return redirect('inovasi');
+    }
 }

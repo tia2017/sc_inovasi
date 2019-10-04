@@ -7,11 +7,11 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
-        
+
         <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/icon-kit/dist/css/iconkit.min.css') }}">
@@ -36,7 +36,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+
         <!-- BEGIN::Wrapper Utama -->
         <div class="wrapper">
 
@@ -92,7 +92,7 @@
                                     <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -108,14 +108,14 @@
                     <div class="sidebar-header">
                         <a class="header-brand" href="index.html">
                             <div class="logo-img">
-                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="ipi"> 
+                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="ipi">
                             </div>
                             <span class="text">Inovasi SC</span>
                         </a>
                         <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
                         <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
                     </div>
-                    
+
                     <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
@@ -162,12 +162,9 @@
                                     <nav class="breadcrumb-container" aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="../index.html"><i class="ik ik-home"></i></a>
+                                                <a href="/dashboard"><i class="ik ik-home"></i></a>
                                             </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#">Kelola</a>
-                                            </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Data Inovasi</li>
+                                            <li class="breadcrumb-item active"  aria-current="page">Kelola</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -181,15 +178,8 @@
                                 <div class="col col-sm-3">
                                     <div class="card-options d-inline-block">
                                         <!-- <a href="#" data-toggle="modal" data-target="#fullwindowModal"><i class="ik ik-plus"></i></a> -->
-                                        <a href="add-innovation.html"><i class="ik ik-plus"></i></a>
-                                        <a href="#"><i class="ik ik-rotate-cw"></i></a>
-                                        <div class="dropdown d-inline-block">
-                                            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="moreDropdown">
-                                                <a class="dropdown-item" href="#">Ubah</a>
-                                                <a class="dropdown-item" href="#">Hapus</a>
-                                            </div>
-                                        </div>
+                                        <a href="tambah-inovasi"><i class="ik ik-plus"></i></a>
+                                        <a href="inovasi"><i class="ik ik-rotate-cw"></i></a>
                                     </div>
                                 </div>
                                 <div class="col col-sm-6">
@@ -239,47 +229,34 @@
                                     <div class="alert alert-success">
                                         {{ session('status') }}
                                     </div>
-                                @endif    
+                                @endif
                                 <table id="advanced_table" class="table">
                                     <thead>
                                         <tr>
-                                            <th class="nosort" width="10">
-                                                <label class="custom-control custom-checkbox m-0">
-                                                    <input type="checkbox" class="custom-control-input" id="selectall" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </th>
                                             <th class="nosort">Inovasi</th>
                                             <th>Perangkat Daerah</th>
                                             <th>Tahapan</th>
                                             <th>Progres</th>
                                             <th>Total Progres</th>
-                                            <th>Tanggal Buat</th>
-                                            <th>Tanggal Ubah</th>
+                                            <th colspan="2" class="txt text-center">Opsi</th>
                                         </tr>
                                     </thead>
-                                    <tbody>                        
-                                        @foreach($inovasi as $ino_data)                                        
+                                    <tbody>
+                                        @foreach($inovasi as $ino_data)
                                             <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                        <span class="custom-control-label">&nbsp;</span>
-                                                    </label>
-                                                </td>
                                                 <td><a href="/inovasi/detail/{{$ino_data->id}}" >{{$ino_data->name}}</a></td>
-                                                <td>{{$ino_data->Institute->short_name}}</td>  
-                                                <td> 
-                                                @foreach($ino_data->innovation_step as $ino_step)                                
+                                                <td>{{$ino_data->Institute->short_name}}</td>
+                                                <td>
+                                                @foreach($ino_data->innovation_step as $ino_step)
                                                     {{$ino_step->step->name}}
                                                 @endforeach
                                                 </td>
                                                 <td>50%</td>
                                                 <td>70%</td>
-                                                <td>{{$ino_data->created_at}}</td>
-                                                <td>{{$ino_data->updated_at}}</td>
+                                                <td><a href="/inovasi/edit/{{$ino_data->id}}" class="btn btn-warning">Edit</a></td>
+                                                <td><a href="/inovasi/hapus/{{$ino_data->id}}" class="btn btn-danger">Hapus</a></td>
                                             </tr>
-                                        @endforeach         
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -298,7 +275,7 @@
                     </div>
                 </footer>
                 <!-- END::Footer -->
-                
+
             </div>
             <!-- END::Halaman -->
 
@@ -382,7 +359,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Jenis dan Pilar Inovasi -->
-    
+
                                                     <!-- BEGIN::Status, Progres, Keterangan -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -418,7 +395,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Status, Progres, Keterangan -->
-    
+
                                                     <!-- BEGIN::Penjelasan Manfaat Keunikan Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -437,7 +414,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Penjelasan Manfaat Keunikan Inovasi -->
-    
+
                                                     <!-- BEGIN::Mitra Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -483,7 +460,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Mitra Inovasi -->
-    
+
                                                     <!-- BEGIN::Potensi Strategi Analisis Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -502,7 +479,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Potensi Strategi Analisis Inovasi -->
-    
+
                                                     <!-- BEGIN::Sumber Tahun Pilar Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -521,7 +498,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Sumber Tahun Pilar Inovasi -->
-    
+
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
                                                     <button type="submit" class="btn btn-primary btn-lg btn-block mt-4 mb-4">SIMPAN DATA</button>
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
@@ -578,7 +555,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Jenis dan Pilar Inovasi -->
-    
+
                                                     <!-- BEGIN::Status, Progres, Keterangan -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -614,7 +591,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- BEGIN::Status, Progres, Keterangan -->
-    
+
                                                     <!-- BEGIN::Penjelasan Manfaat Keunikan Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -633,7 +610,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Penjelasan Manfaat Keunikan Inovasi -->
-    
+
                                                     <!-- BEGIN::Mitra Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -679,7 +656,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Mitra Inovasi -->
-    
+
                                                     <!-- BEGIN::Potensi Strategi Analisis Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -698,7 +675,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Potensi Strategi Analisis Inovasi -->
-    
+
                                                     <!-- BEGIN::Sumber Tahun Pilar Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -717,7 +694,7 @@
                                                         </div>
                                                     </div>
                                                     <!-- END::Sumber Tahun Pilar Inovasi -->
-    
+
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
                                                     <button type="submit" class="btn btn-primary btn-lg btn-block mt-4 mb-4">SIMPAN DATA</button>
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
@@ -738,7 +715,7 @@
             </div>
         </div>
         <!-- END::Modal Layar Penuh -->
-        
+
         <!-- BEGIN::Modal Fitur Kelola Sistem -->
         <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
@@ -825,7 +802,7 @@
             </div>
         </div>
         <!-- END::Modal Fitur Kelola Sistem -->
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ asset('assets/src/js/vendor/jquery-3.3.1.min.js') }}"><\/script>')</script>
         <script src="{{ asset('assets/plugins/popper.js/dist/umd/popper.min.js') }}"></script>

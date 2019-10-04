@@ -23,7 +23,7 @@ class UsersDetail extends Migration
             $table->string('gender',191);
             $table->string('phone',191);
             $table->bigInteger('institute_id')->unsigned();
-            $table->foreign('institute_id')->references('id')->on('institutes');
+            $table->foreign('institute_id')->references('id')->on('institutes')->onDelete('cascade');
             $table->timestamps();
         });
     }

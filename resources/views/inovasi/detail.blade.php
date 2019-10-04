@@ -7,11 +7,11 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
-        
+
         <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/dist/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/icon-kit/dist/css/iconkit.min.css') }}">
@@ -36,7 +36,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+
         <!-- BEGIN::Wrapper Utama -->
         <div class="wrapper">
 
@@ -92,7 +92,7 @@
                                     <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -108,14 +108,14 @@
                     <div class="sidebar-header">
                         <a class="header-brand" href="index.html">
                             <div class="logo-img">
-                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="ipi"> 
+                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="ipi">
                             </div>
                             <span class="text">Inovasi SC</span>
                         </a>
                         <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
                         <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
                     </div>
-                    
+
                     <div class="sidebar-content">
                         <div class="nav-container">
                             <nav id="main-menu-navigation" class="navigation-main">
@@ -162,10 +162,10 @@
                                     <nav class="breadcrumb-container" aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="../index.html"><i class="ik ik-home"></i></a>
+                                                <a href="/dashboard"><i class="ik ik-home"></i></a>
                                             </li>
                                             <li class="breadcrumb-item">
-                                                <a href="#">Kelola</a>
+                                                <a href="/inovasi">Kelola</a>
                                             </li>
                                             <li class="breadcrumb-item active" aria-current="page">Detail Inovasi</li>
                                         </ol>
@@ -183,10 +183,10 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="tab-content" id="myTabContent2">
-                                        
+
                                             <div class="col-md-12">
                                                 <form class="forms-sample" action="status-innovation.html">
-                                                    
+
                                                     <!-- BEGIN::Nama Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
@@ -246,7 +246,7 @@
                                                                     @foreach($detail_info->innovation_step as $ino_step)
                                                                         <option value="">{{$ino_step->step->name}}</option>
                                                                     @endforeach
-                                                                    
+
                                                                     <!-- <option value="6">Evaluasi</option> -->
                                                                 </select>
                                                             </div>
@@ -342,7 +342,7 @@
                                                             </div> -->
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <!-- END::Sumber Tahun Pilar Inovasi -->
 
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
@@ -350,8 +350,8 @@
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
                                                 </form>
                                             </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                             </div>
@@ -370,13 +370,13 @@
                     </div>
                 </footer>
                 <!-- END::Footer -->
-                
+
             </div>
             <!-- END::Halaman -->
 
         </div>
         <!-- END::Wrapper Utama -->
-        
+
         <!-- BEGIN::Modal Fitur Kelola Sistem -->
         <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
@@ -463,7 +463,7 @@
             </div>
         </div>
         <!-- END::Modal Fitur Kelola Sistem -->
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ asset('assets/src/js/vendor/jquery-3.3.1.min.js') }}"><\/script>')</script>
         <script src="{{ asset('assets/plugins/popper.js/dist/umd/popper.min.js') }}"></script>

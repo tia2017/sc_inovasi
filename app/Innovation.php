@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Innovation extends Model
 {
-    
+
     protected $fillable = [
         'name', 'institute_id', 'innovation_type_id', 'pilar_id', 'created_by' ,
         'description', 'benefit', 'unique_creativity', 'potency', 'strategy', 'risk_analysis',
