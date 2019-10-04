@@ -22,12 +22,12 @@ class Users extends Migration
                     $table->string('password',100);
                     $table->bigInteger('role_id')->unsigned();
                     $table->bigInteger('user_id')->unsigned();
-                    $table->foreign('role_id')->references('id')->on('roles');
-                    $table->foreign('user_id')->references('id')->on('users_detail');
+                    $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+                    $table->foreign('user_id')->references('id')->on('users_detail')->onDelete('cascade');
                     $table->string('remember_token',25);
                     $table->timestamps();
         });
-           
+
     }
 
     /**
