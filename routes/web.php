@@ -30,9 +30,6 @@ Route::get('/buatAkun', function() {
 	return view('buatAkun.index');
 });
 
-Route::get('/daftarRole', function() {
-	return view('daftarRole.index');
-});
 
 
 Route::get('/login','loginController@index');
@@ -43,7 +40,7 @@ Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
 Route::get('/profile', 'profileController@index');
 Route::get('/daftarRole', 'daftarRoleController@index');
-route::get('/buatAkun', 'buatAkunController@index');
+Route::get('/buatAkun', 'buatAkunController@index');
 
 
 
