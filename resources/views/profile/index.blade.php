@@ -332,11 +332,8 @@
                                     <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
 
                                         <li class="nav-item">
-<<<<<<< HEAD
                                             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-=======
                                             <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
->>>>>>> 82e854cc24b4ad9d7bf8dfdc7530e30e5b3c709b
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Setting</a>
@@ -392,7 +389,6 @@
                                                 <form class="form-horizontal">
                                                     <div class="form-group">
                                                         <label for="example-name">Full Name</label>
-<<<<<<< HEAD
                                                         <input type="text" placeholder="Enter your full name" class="form-control" name="example-name" id="example-name">
                                                     </div>
                                                     <div class="form-group">
@@ -406,7 +402,7 @@
                                                     <div class="form-group">
                                                         <label for="example-phone">Phone No</label>
                                                         <input type="text" placeholder=" ex: 081388446654" id="example-phone" name="example-phone" class="form-control">
-=======
+
                                                         <input type="text" placeholder="enter your name" class="form-control" name="example-name" id="example-name">
                                                     </div>
                                                     <div class="form-group">
@@ -420,7 +416,6 @@
                                                     <div class="form-group">
                                                         <label for="example-phone">Phone No</label>
                                                         <input type="text" placeholder="ex: 08234567890" id="example-phone" name="example-phone" class="form-control">
->>>>>>> 4ef41cfa42a1bb1cbc6790990db04a7576a02e6a
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-message">Message</label>
