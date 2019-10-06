@@ -24,6 +24,9 @@ Route::get('/tambah-inovasi', function() {
 	return view('tambahInovasi.index');
 });
 
+Route::get('/daftarRole', function() {
+	return view('daftarRole.index');
+});
 
 
 Route::get('/login','loginController@index');
@@ -33,7 +36,7 @@ Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
 route::get('/profile', 'profileController@index');
-
+route::get('/daftarRole', 'daftarRoleController@index');
 
 
 
