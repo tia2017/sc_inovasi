@@ -706,9 +706,7 @@
                                 <div class="app-item">
                                     <a href="#"><i class="ik ik-edit"></i><span>Blogs</span></a>
                                 </div>
-                                <div class="app-item">
-                                    <a href="#"><i class="ik ik-settings"></i><span>Settings</span></a>
-                                </div>
+                                
                                 <div class="app-item">
                                     <a href="#"><i class="ik ik-more-horizontal"></i><span>More</span></a>
                                 </div>
