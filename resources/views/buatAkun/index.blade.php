@@ -128,7 +128,7 @@
                     
                     <div class="sidebar-content">
                         <div class="nav-container">
-                            <nav id="main-menu-navigation" class="navigation-main">
+                            <nav id="main-menu-navigation" class="navigation-main"> 
                                 <div class="nav-lavel">Navigation</div>
                                 <div class="nav-item">
                                     <a href="../index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
@@ -161,7 +161,7 @@
                                         <a href="ui/modals.html" class="menu-item">Modals</a>
                                         <a href="ui/notifications.html" class="menu-item">Notifications</a>
                                         <a href="ui/carousel.html" class="menu-item">Slider</a>
-                                        <a href="ui/range-slider.html" class="menu-item">Range Slider</a>
+                                        <a href="ui/range-slider.html" class="menu-item">Range  Slider</a>
                                         <a href="ui/rating.html" class="menu-item">Rating</a>
                                     </div>
                                 </div>
