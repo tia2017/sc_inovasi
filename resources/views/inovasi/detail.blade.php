@@ -192,12 +192,12 @@
                                                         <div class="row">
                                                             <div class="col-md-8">
                                                                 <label for="namaInovasi">Nama Singkat Inovasi</label>
-                                                                <input type="text" class="form-control" id="namaInovasi" value="{{ $detail_info->name }}">
+                                                                <input type="text" class="form-control" id="namaInovasi" value="{{ $detail_info->name }}" disabled>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>
-                                                                <select class="form-control" id="perangkatDaerah" >
-                                                                    <option value="{{$detail_info->institute->short_name}}">{{$detail_info->institute->short_name}}</option>
+                                                                <select class="form-control" id="perangkatDaerah" disabled>
+                                                                    <option value="{{$detail_info->institute->short_name}}" >{{$detail_info->institute->short_name}}</option>
                                                                     <!-- <option value="2">DINKES</option>
                                                                     <option value="3">DISDIK</option>
                                                                     <option value="4">DISKARPUS</option>
@@ -214,7 +214,7 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <label for="jenisInovasi">Jenis Inovasi</label>
-                                                                <select class="form-control" id="jenisInovasi">
+                                                                <select class="form-control" id="jenisInovasi" disabled>
                                                                     <!-- <option value="1">Program</option> -->
 
                                                                     <option value="">{{$detail_info->Type->name}}</option>
@@ -225,7 +225,7 @@
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label for="pilarInovasi">Pilar Smart City</label>
-                                                                <select class="form-control" id="pilarInovasi">
+                                                                <select class="form-control" id="pilarInovasi" disabled>
                                                                     <option value="">{{$detail_info->Pilar->name}}</option>
                                                                 </select>
                                                             </div>
@@ -238,7 +238,7 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <label for="statusInovasi">Status Inovasi</label>
-                                                                <select class="form-control" id="statusInovasi">
+                                                                <select class="form-control" id="statusInovasi" disabled>
                                                                     <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
                                                                     <option value="2">Perumusan Ide</option>
                                                                     <option value="3">Perencanaan Pembangunan</option>

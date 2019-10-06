@@ -207,7 +207,7 @@
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>
                                                                 <select class="form-control @error('institute_id') is-invalid @enderror" placeholder="Perangkat Daerah" id="perangkatDaerah" name="institute_id">                                                                    
                                                                 @foreach($institute as $ins_data)                                                                        
-                                                                    <option value="">{{$ins_data->short_name}}</option>
+                                                                    <option value="{{$loop->iteration}}">{{$ins_data->short_name}}</option>
                                                                 @endforeach
                                                                 
                                                                 @error('institute_id')

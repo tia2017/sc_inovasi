@@ -248,10 +248,15 @@
                                                 <td>{{$ino_data->Institute->short_name}}</td>
                                                 <td>
                                                 @foreach($ino_data->innovation_step as $ino_step)
-                                                    {{$ino_step->step->name}}
-                                                @endforeach
+                                                    {{$ino_step->step->name}}     
+                                                @endforeach                                           
                                                 </td>
-                                                <td>50%</td>
+                                                
+                                                <td>
+                                                @foreach($ino_data->innovation_step as $ino_step)
+                                                    {{$ino_step->progress_persentage}}%
+                                                @endforeach 
+                                                </td>                                                
                                                 <td>70%</td>
                                                 <td><a href="/inovasi/edit/{{$ino_data->id}}" class="btn btn-warning">Edit</a></td>
                                                 <td><a href="/inovasi/hapus/{{$ino_data->id}}" class="btn btn-danger">Hapus</a></td>
