@@ -230,20 +230,20 @@
                                         {{ session('status') }}
                                     </div>
                                 @endif
-                                <table id="advanced_table" class="table">
+                                <table class="table">
                                     <thead>
-                                        <tr>
-                                            <th class="nosort">Inovasi</th>
+                                        <tr class="text text-center">
+                                            <th>Inovasi</th>
                                             <th>Perangkat Daerah</th>
                                             <th>Tahapan</th>
                                             <th>Progres</th>
                                             <th>Total Progres</th>
-                                            <th colspan="2" class="txt text-center">Opsi</th>
+                                            <th colspan="2">Opsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($inovasi as $ino_data)
-                                            <tr>
+                                            <tr class="text text-center">
                                                 <td><a href="/inovasi/detail/{{$ino_data->id}}" >{{$ino_data->name}}</a></td>
                                                 <td>{{$ino_data->Institute->short_name}}</td>
                                                 <td>
