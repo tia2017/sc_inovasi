@@ -34,6 +34,10 @@ Route::get('/daftarRole', function() {
 	return view('daftarRole.index');
 });
 
+Route::get('/profile', function() {
+	return view('profile.index');
+});
+
 
 Route::get('/login','loginController@index');
 Route::get('/dashboard','dashboardController@index');
