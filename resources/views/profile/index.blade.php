@@ -332,7 +332,11 @@
                                     <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
 
                                         <li class="nav-item">
+<<<<<<< HEAD
+                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+=======
                                             <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
+>>>>>>> 82e854cc24b4ad9d7bf8dfdc7530e30e5b3c709b
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Setting</a>
