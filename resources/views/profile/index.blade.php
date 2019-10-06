@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Profile | ThemeKit - Admin Template</title>
+        <title>Profile</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,7 +120,7 @@
                             <div class="logo-img">
                                <img src="../src/img/brand-white.svg" class="header-brand-img" alt="lavalite"> 
                             </div>
-                            <span class="text">ThemeKit</span>
+                            <span class="text">DEPOK</span>
                         </a>
                         <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
                         <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
@@ -274,7 +274,7 @@
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
                                             <h5>Profile</h5>
-                                            <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                            <span>Tentang akun anda</span>
                                         </div>
                                     </div>
                                 </div>
@@ -313,7 +313,7 @@
                                         <small class="text-muted d-block">Email address </small>
                                         <h6>johndoe@admin.com</h6> 
                                         <small class="text-muted d-block pt-10">Phone</small>
-                                        <h6>(123) 456 7890</h6> 
+                                        <h6>(021) 593 7890</h6> 
                                         <small class="text-muted d-block pt-10">Address</small>
                                         <h6>71 Pilgrim Avenue Chevy Chase, MD 20815</h6>
                                         <div class="map-box">
@@ -348,7 +348,7 @@
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Mobile</strong>
                                                         <br>
-                                                        <p class="text-muted">(123) 456 7890</p>
+                                                        <p class="text-muted">(021) 593 7890</p>
                                                     </div>
                                                     <div class="col-md-3 col-6"> <strong>Email</strong>
                                                         <br>
@@ -360,7 +360,7 @@
                                                     </div>
                                                 </div>
                                                 <hr>
-                                                <p class="mt-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                <p class="mt-30">Saya bisa dipanggil Jeo. Saya adalah seorang programming fornt end developer. Saya telah bekerja di banyak perusahaan</p>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
                                                 <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                                                 <h4 class="mt-30">Skill Set</h4>
