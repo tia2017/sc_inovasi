@@ -61,7 +61,10 @@
                                     </div>
                                 </div>
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-theme">Sign In</button>
+                                    <!-- <button class="btn btn-theme">Sign In</button> -->
+                                    <div class="nav-item active">
+                                    <a href="dashboard"><i class="ik ik-bar-chart-2"></i><span>Sign In</span></a>
+                                </div>
                                 </div>
                             </form>
                         </div>
