@@ -50,6 +50,7 @@ class tambahInovasiController extends Controller
             //validate innovations_step
             'step_id' => 'required',
             'explaination' => 'required',
+            'progress_persentage' => 'required'
             
         ]);
         
@@ -58,7 +59,8 @@ class tambahInovasiController extends Controller
             'innovation_id' => $data->id,
             'step_id' => $request['step_id'],
             'explaination' => $request['explaination'],
-            'file' => $request['file_name']   
+            'file' => $request['file'],   
+            'progress_persentage' => $request['progress_persentage']   
         ]);
         
         // dd($data_step);

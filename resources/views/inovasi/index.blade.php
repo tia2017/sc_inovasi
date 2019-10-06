@@ -386,7 +386,7 @@
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                                <input required="" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi">
+                                                                <input required="" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progress_presentage">
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keteranganStatus">Keterangan</label>
