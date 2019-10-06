@@ -38,14 +38,13 @@ Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
-<<<<<<< HEAD
+
 Route::get('/profile', 'profileController@index');
 Route::get('/daftarRole', 'daftarRoleController@index');
 
-=======
+
 route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarRoleController@index');
->>>>>>> c8f9980f054db1a016d56b7a014923b34236472f
 
 
 
