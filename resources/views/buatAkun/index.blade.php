@@ -294,7 +294,8 @@
                             </div>
                         </div>
 
-                        
+                    <div class="tab-content" id="pills-tabContent">
+                         <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
                                                 <form class="form-horizontal">
                                                     <div class="form-group">
@@ -338,5 +339,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                </div>
                 </div>
                 </body>
