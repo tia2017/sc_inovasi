@@ -388,19 +388,19 @@
                                                 <form class="form-horizontal">
                                                     <div class="form-group">
                                                         <label for="example-name">Full Name</label>
-                                                        <input type="text" placeholder="Johnathan Doe" class="form-control" name="example-name" id="example-name">
+                                                        <input type="text" placeholder="enter your name" class="form-control" name="example-name" id="example-name">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="johnathan@admin.com" class="form-control" name="example-email" id="example-email">
+                                                        <input type="email" placeholder="enter your email" class="form-control" name="example-email" id="example-email">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-password">Password</label>
-                                                        <input type="password" value="password" class="form-control" name="example-password" id="example-password">
+                                                        <input type="password" placeholder="password" class="form-control" name="example-password" id="example-password">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-phone">Phone No</label>
-                                                        <input type="text" placeholder="123 456 7890" id="example-phone" name="example-phone" class="form-control">
+                                                        <input type="text" placeholder="ex: 08234567890" id="example-phone" name="example-phone" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="example-message">Message</label>
