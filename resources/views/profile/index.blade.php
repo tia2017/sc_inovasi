@@ -339,7 +339,6 @@
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="pills-tabContent">
-                                       s
                                         <div class="tab-pane fade show active" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div class="card-body">
                                                 <div class="row">
