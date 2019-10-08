@@ -36,7 +36,7 @@ class inovasiController extends Controller
         //         ->select('innovations.name as name_ino', 'innovations.description as decs_ino', 'innovations.*', 'pilars.*')
         //         ->get();
                 // select * from x where (select * from x where ())
-        
+
         $inovasi = Innovation::all();
         // dd($inovasi);
         return view('inovasi.index', compact('inovasi'));
@@ -54,5 +54,14 @@ class inovasiController extends Controller
         $inovasi->delete();
 
         return redirect('inovasi');
+    }
+
+    public function edit($id){
+        $inovasi = Innovation::find($id);
+        return view('inovasi.edit', compact('inovasi'));
+    }
+    public function update($id, Request $request){
+        $inovasi = Innovation::find($id);
+
     }
 }

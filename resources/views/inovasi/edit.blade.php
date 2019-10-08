@@ -62,18 +62,18 @@
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-plus"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right menu-grid" aria-labelledby="menuDropdown">
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Dashboard"><i class="ik ik-bar-chart-2"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Message"><i class="ik ik-mail"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Accounts"><i class="ik ik-users"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Sales"><i class="ik ik-shopping-cart"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Purchase"><i class="ik ik-briefcase"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Pages"><i class="ik ik-clipboard"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Chats"><i class="ik ik-message-square"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Contacts"><i class="ik ik-map-pin"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Blocks"><i class="ik ik-inbox"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Events"><i class="ik ik-calendar"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Notifications"><i class="ik ik-bell"></i></a>
-                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="More"><i class="ik ik-more-horizontal"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dashboard"><i class="ik ik-bar-chart-2"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Message"><i class="ik ik-mail"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Accounts"><i class="ik ik-users"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sales"><i class="ik ik-shopping-cart"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Purchase"><i class="ik ik-briefcase"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pages"><i class="ik ik-clipboard"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Chats"><i class="ik ik-message-square"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Contacts"><i class="ik ik-map-pin"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Blocks"><i class="ik ik-inbox"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Events"><i class="ik ik-calendar"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Notifications"><i class="ik ik-bell"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="More"><i class="ik ik-more-horizontal"></i></a>
                                 </div>
                             </div>
                             <!-- END::Tombol Ikon Fitur Kelola Sistem -->
@@ -83,13 +83,13 @@
                             <!-- END::Tombol Modal Fitur Kelola Sistem -->
 
                             <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../img/user.jpg" alt=""></a>
+                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="Inovasi%20-%20Smart%20City_files/user.jpg" alt=""></a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
+                                    <a class="dropdown-item" href="http://inovasi.depok.go.id/pages/profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
                                     <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
                                     <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
                                     <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
-                                    <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
+                                    <a class="dropdown-item" href="http://inovasi.depok.go.id/pages/login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                                 </div>
                             </div>
 
@@ -162,12 +162,12 @@
                                     <nav class="breadcrumb-container" aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="/dashboard"><i class="ik ik-home"></i></a>
+                                                <a href="http://inovasi.depok.go.id/index.html"><i class="ik ik-home"></i></a>
                                             </li>
                                             <li class="breadcrumb-item">
-                                                <a href="/inovasi">Kelola</a>
+                                                <a href="#">Kelola</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Detail Inovasi</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Status Inovasi</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -179,25 +179,27 @@
                         <!-- <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-5"> -->
                             <div class="card">
                                 <div class="card-header">
-                                    DETAIL DATA INOVASI
+                                    STATUS DATA INOVASI
                                 </div>
                                 <div class="card-body">
                                     <div class="tab-content" id="myTabContent2">
 
                                             <div class="col-md-12">
-                                                <form class="forms-sample" >
+                                                <form class="forms-sample" method="post" action="/inovasi/update/{{$inovasi->id}}">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('PUT')}}
 
                                                     <!-- BEGIN::Nama Inovasi -->
                                                     <div class="form-group">
                                                         <div class="row">
                                                             <div class="col-md-8">
                                                                 <label for="namaInovasi">Nama Singkat Inovasi</label>
-                                                                <input type="text" class="form-control" id="namaInovasi" value="{{ $detail_info->name }}" disabled>
+                                                                <input type="text" class="form-control" id="namaInovasi" value="{{ $inovasi->name }}" disabled="disabled">
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="perangkatDaerah">Perangkat Daerah</label>
-                                                                <select class="form-control" id="perangkatDaerah" disabled>
-                                                                    <option value="{{$detail_info->institute->short_name}}" >{{$detail_info->institute->short_name}}</option>
+                                                                <select class="form-control" id="perangkatDaerah" disabled="disabled">
+                                                                    <option value="{{$inovasi->institute->short_name}}" >{{$inovasi->institute->short_name}}</option>
                                                                     <!-- <option value="2">DINKES</option>
                                                                     <option value="3">DISDIK</option>
                                                                     <option value="4">DISKARPUS</option>
@@ -209,45 +211,21 @@
                                                     </div>
                                                     <!-- END::Nama Inovasi -->
 
-                                                    <!-- BEGIN::Jenis dan Pilar Inovasi -->
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label for="jenisInovasi">Jenis Inovasi</label>
-                                                                <select class="form-control" id="jenisInovasi" disabled>
-                                                                    <!-- <option value="1">Program</option> -->
-
-                                                                    <option value="">{{$detail_info->Type->name}}</option>
-                                                                    <!-- <option value="3">Metode</option>
-                                                                    <option value="4">Konseptual</option>
-                                                                    <option value="5">Teknologi</option> -->
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label for="pilarInovasi">Pilar Smart City</label>
-                                                                <select class="form-control" id="pilarInovasi" disabled>
-                                                                    <option value="">{{$detail_info->Pilar->name}}</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END::Jenis dan Pilar Inovasi -->
-
                                                     <!-- BEGIN::Status, Progres, Keterangan -->
                                                     <div class="form-group">
                                                         <div class="row">
                                                             <div class="col-md-6">
-                                                                <label for="statusInovasi">Status Inovasi</label>
-                                                                <select class="form-control" id="statusInovasi" disabled>
-                                                                    <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                                    <option value="2">Perumusan Ide</option>
-                                                                    <option value="3">Perencanaan Pembangunan</option>
-                                                                    <option value="4">Pembangunan</option> -->
-                                                                    @foreach($detail_info->innovation_step as $ino_step)
+                                                                <label for="statusInovasi">Status Inovasi 1</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    {{-- @foreach($inovasi->innovation_step as $ino_step)
                                                                         <option value="">{{$ino_step->step->name}}</option>
-                                                                    @endforeach
-
-                                                                    <!-- <option value="6">Evaluasi</option> -->
+                                                                    @endforeach --}}
+                                                                    <option value="1" selected="selected">Perumusan Masalah atau Kebutuhan</option>
+                                                                    <!-- <option value="2">Perumusan Ide</option>
+                                                                    <option value="3">Perencanaan Pembangunan</option>
+                                                                    <option value="4">Pembangunan</option>
+                                                                    <option value="5">Implementasi</option>
+                                                                    <option value="6">Evaluasi</option> -->
                                                                 </select>
                                                             </div>
                                                             <!-- <div class="col-md-2">
@@ -262,95 +240,196 @@
                                                             </div> -->
                                                             <div class="col-md-2">
                                                                 <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                                    @foreach($detail_info->innovation_step as $ino_step)
+                                                                    {{-- @foreach($inovasi->innovation_step as $ino_step)
                                                                         <input type="text" class="form-control" id="progresInovasi" disabled="disabled" value="{{$ino_step->progress_persentage}}">
+                                                                    @endforeach --}}
+                                                                    <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
+                                                             </div>
+                                                            <div class="col-md-4">
+                                                                <label for="keteranganStatus">Keterangan</label>
+                                                                    @foreach($inovasi->innovation_step as $ino_step)
+                                                                        <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled">{{$ino_step->explaination}}</textarea>
                                                                     @endforeach
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label for="statusInovasi">Status Inovasi 2</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option> -->
+                                                                    <option value="2" selected="selected">Perumusan Ide</option>
+                                                                    <!-- <option value="3">Perencanaan Pembangunan</option>
+                                                                    <option value="4">Pembangunan</option>
+                                                                    <option value="5">Implementasi</option>
+                                                                    <option value="6">Evaluasi</option> -->
+                                                                </select>
+                                                            </div>
+                                                            <!-- <div class="col-md-2">
+                                                                <label>Unggah File</label>
+                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <div class="input-group col-xs-12">
+                                                                    <input type="text" class="form-control file-upload-info" disabled placeholder="File">
+                                                                    <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="col-md-2">
+                                                                <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="keteranganStatus">Keterangan</label>
-                                                                    @foreach($detail_info->innovation_step as $ino_step)
-                                                                        <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="{{$ino_step->explaination}}" disabled="disabled"></textarea>
-                                                                    @endforeach
+                                                                <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label for="statusInovasi">Status Inovasi 3</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
+                                                                    <option value="2">Perumusan Ide</option> -->
+                                                                    <option value="3" selected="selected">Perencanaan Pembangunan</option>
+                                                                    <!-- <option value="4">Pembangunan</option>
+                                                                    <option value="5">Implementasi</option>
+                                                                    <option value="6">Evaluasi</option> -->
+                                                                </select>
+                                                            </div>
+                                                            <!-- <div class="col-md-2">
+                                                                <label>Unggah File</label>
+                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <div class="input-group col-xs-12">
+                                                                    <input type="text" class="form-control file-upload-info" disabled placeholder="File">
+                                                                    <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="col-md-2">
+                                                                <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="keteranganStatus">Keterangan</label>
+                                                                <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label for="statusInovasi">Status Inovasi 4</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
+                                                                    <option value="2">Perumusan Ide</option>
+                                                                    <option value="3">Perencanaan Pembangunan</option> -->
+                                                                    <option value="4" selected="selected">Pembangunan</option>
+                                                                    <!-- <option value="5">Implementasi</option>
+                                                                    <option value="6">Evaluasi</option> -->
+                                                                </select>
+                                                            </div>
+                                                            <!-- <div class="col-md-2">
+                                                                <label>Unggah File</label>
+                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <div class="input-group col-xs-12">
+                                                                    <input type="text" class="form-control file-upload-info" disabled placeholder="File">
+                                                                    <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div> -->
+                                                            <div class="col-md-2">
+                                                                <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="keteranganStatus">Keterangan</label>
+                                                                <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label for="statusInovasi">Status Inovasi 5</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
+                                                                    <option value="2">Perumusan Ide</option>
+                                                                    <option value="3">Perencanaan Pembangunan</option>
+                                                                    <option value="4">Pembangunan</option> -->
+                                                                    <option value="5" selected="selected">Implementasi</option>
+                                                                    <!-- <option value="6">Evaluasi</option> -->
+                                                                </select>
+                                                            </div>
+                                                            {{-- <div class="col-md-2">
+                                                                <label>Unggah File</label>
+                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <div class="input-group col-xs-12">
+                                                                    <input type="text" class="form-control file-upload-info" disabled="disabled" placeholder="File">
+                                                                    <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div> --}}
+                                                            <div class="col-md-2">
+                                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                    <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="keteranganStatus">Keterangan</label>
+                                                                <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
+                                                                {{-- <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="Aplikasi ini masih dalam tahap uji coba"></textarea> --}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="statusInovasi">Status Inovasi 6</label>
+                                                                <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                    {{-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
+                                                                    <option value="2">Perumusan Ide</option>
+                                                                    <option value="3">Perencanaan Pembangunan</option>
+                                                                    <option value="4">Pembangunan</option> -->
+                                                                    <option value="5" selected="selected">Implementasi</option> --}}
+                                                                    <option value="6">Evaluasi</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label>Unggah File</label>
+                                                                <input type="file" name="img[]" class="file-upload-default">
+                                                                <div class="input-group col-xs-12">
+                                                                    <input type="text" class="form-control file-upload-info" disabled="disabled" placeholder="File">
+                                                                    <span class="input-group-append">
+                                                                    <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                    <input required="" type="number" min="0" max="100" value="" disabled="disabled" class="form-control" id="progresInovasi">
+                                                                    {{-- <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled"> --}}
+                                                                </div>
+                                                            <div class="col-md-4">
+                                                                <label for="keteranganStatus">Keterangan</label>
+                                                                <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="Aplikasi ini masih dalam tahap uji coba"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <!-- END::Status, Progres, Keterangan -->
 
-                                                    <!-- BEGIN::Penjelasan Manfaat Keunikan Inovasi -->
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label>
-                                                                <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="{{$detail_info->description}}" disabled></textarea>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label for="manfaatInovasi">Manfaat Inovasi</label>
-                                                                <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="{{$detail_info->benefit}}" disabled></textarea>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label for="keunikanInovasi">Keunikan/Kreativitas Inovasi</label>
-                                                                <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="{{$detail_info->unique_creativity}}" disabled></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END::Penjelasan Manfaat Keunikan Inovasi -->
-
-                                                    <!-- BEGIN::Mitra Inovasi -->
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <label for="namaInovasi">Bentuk Mitra</label>
-                                                                <input type="text" class="form-control" id="bentukMitra" placeholder="Perusahaan (PT)" disabled>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <label for="perangkatDaerah">Nama Mitra</label>
-                                                                <input type="text" class="form-control" id="namaMitra" placeholder="PPV" disabled>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END::Mitra Inovasi -->
-
-                                                    <!-- BEGIN::Potensi Strategi Analisis Inovasi -->
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <label for="potensiPengembangan">Potensi Pengembangan Inovasi</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->potency}}" disabled></textarea>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="{{$detail_info->strategy}}" disabled></textarea>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label for="analisisRisiko">Analisis Risiko</label>
-                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="{{$detail_info->risk_analysis}}" disabled></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- END::Potensi Strategi Analisis Inovasi -->
-
-                                                    <!-- BEGIN::Sumber Tahun Pilar Inovasi -->
-                                                    <div class="form-group">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <label for="potensiPengembangan">Sumber Daya yang Digunakan</label>
-                                                                <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->resource}}" disabled></textarea>
-                                                            </div>
-                                                            <!-- <div class="col-md-4">
-                                                                <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                                <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="Upaya memastikan keberlangsungan (regulasi, kelembagaan, penyediaan sumber daya, dan model bisnis)"></textarea>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label for="analisisRisiko">Analisis Risiko</label>
-                                                                <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="Dampak yang perlu diantisipasi, hambatan, dan potensi kegagalan"></textarea>
-                                                            </div> -->
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- END::Sumber Tahun Pilar Inovasi -->
-
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
-                                                    {{-- <button type="submit" class="btn btn-primary btn-lg btn-block mt-4 mb-4">MEMPERBARUI DATA STATUS</button> --}}
+                                                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-4 mb-4">SIMPAN DATA</button>
                                                     <!-- BEGIN::Tombol Simpan & Ulang -->
                                                 </form>
                                             </div>
@@ -391,7 +470,7 @@
                             <div class="row">
                                 <div class="col-md-4 ml-auto mr-auto">
                                     <div class="input-wrap">
-                                        <input type="text" id="quick-search" class="form-control" placeholder="Search..." />
+                                        <input type="text" id="quick-search" class="form-control" placeholder="Search...">
                                         <i class="ik ik-search"></i>
                                     </div>
                                 </div>
@@ -468,33 +547,33 @@
         </div>
         <!-- END::Modal Fitur Kelola Sistem -->
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ asset('assets/src/js/vendor/jquery-3.3.1.min.js') }}"><\/script>')</script>
-        <script src="{{ asset('assets/plugins/popper.js/dist/umd/popper.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/select2/dist/js/select2.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/summernote/dist/summernote-bs4.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/form-fields-repeater/repeater.js') }}"></script>
-        <script src="{{ asset('assets/plugins/mohithg-switchery/dist/switchery.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/screenfull/dist/screenfull.js') }}"></script>
-        <script src="{{ asset('assets/plugins/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/jvectormap/jquery-jvectormap.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js') }}"></script>
-        <script src="{{ asset('assets/plugins/moment/moment.js') }}"></script>
-        <script src="{{ asset('assets/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/d3/dist/d3.min.js') }}"></script>
-        <script src="{{ asset('assets/plugins/c3/c3.min.js') }}"></script>
-        <script src="{{ asset('assets/js/tables.js') }}"></script>
-        <script src="{{ asset('assets/js/widgets.js') }}"></script>
-        <script src="{{ asset('assets/js/charts.js') }}"></script>
-        <script src="{{ asset('assets/dist/js/theme.min.js') }}"></script>
-        <script src="{{ asset('assets/js/form-components.js') }}"></script>
-        <script src="{{ asset('assets/js/form-advanced.js') }}"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/jquery-3.js"></script>
+        <script>window.jQuery || document.write('<script src="../src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="Inovasi%20-%20Smart%20City_files/popper.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/bootstrap.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/perfect-scrollbar.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/select2.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/summernote-bs4.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/bootstrap-tagsinput.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/repeater.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/switchery.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/screenfull.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/jquery.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/dataTables.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/dataTables_002.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/responsive.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/jquery-jvectormap.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/jquery-jvectormap-world-mill-en.html"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/moment.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/tempusdominus-bootstrap-4.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/d3.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/c3.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/tables.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/widgets.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/charts.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/theme.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/form-components.js"></script>
+        <script src="Inovasi%20-%20Smart%20City_files/form-advanced.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -512,5 +591,6 @@
             });
         </script>
         <!-- END::Repeater -->
-    </body>
-</html>
+
+
+</body></html>
