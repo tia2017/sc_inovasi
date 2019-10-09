@@ -42,6 +42,20 @@ Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
+
 Route::get('/profile', 'profileController@index');
 Route::get('/daftarRole', 'daftarUserController@index');
 Route::get('/buatAkun', 'buatAkunController@index');
+=======
+route::get('/profile', 'profileController@index');
+route::get('/daftarRole', 'daftarUserController@index');
+route::get('/buatAkun', 'buatAkunController@index');
+
+
+
+
+
+
+
+// Route::resource('inovasi', 'inovasiController');
+>>>>>>> 67f42ef725bcaebd04f1d89fb2fe7d6fd4323532
