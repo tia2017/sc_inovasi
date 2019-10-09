@@ -3,8 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+
         <title>Daftar Role | ThemeKit - Admin Template</title>
         <title>Buat Akun</title>
+
+        <title>Daftar Role</title>
         <title>Profile | ThemeKit - Admin Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -275,8 +278,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Buat Akun</h5>
-                                            <span>Silahkan mengisi form dibawah ini untuk membuat akun baru</span>
+                                            <h5>Daftar Role</h5>
+                                            <span>Berikut adalah daftar role</span>
                                         </div>
                                     </div>
                                 </div>
@@ -289,7 +292,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="#">Pages</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Buat Akun</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Daftar Role</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -322,26 +325,19 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Inovasi" data-column="0">
+                                                            <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Nama" data-column="0">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Perangkat Daerah/Dewan Smart City" data-column="1">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col2_filter" placeholder="Tahun" data-column="2">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col3_filter" placeholder="Bulan" data-column="3">
+                                                            <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Email" data-column="1">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-theme">Cari</button>
+                                                <div align="center ">
+                                                     <button class="btn btn-theme">Cari</button>
+                                                </div>
+                                               
                                             </div>
                                         </form>
                                     </div>
@@ -364,13 +360,11 @@
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </th>
-                                            <th class="nosort">Inovasi</th>
-                                            <th>Perangkat Daerah</th>
-                                            <th>Tahapan</th>
-                                            <th>Progres</th>
-                                            <th>Total Progres</th>
-                                            <th>Tanggal Buat</th>
-                                            <th>Tanggal Ubah</th>
+                                            <th class="nosort">No</th>
+                                            <th>Nama</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -381,13 +375,11 @@
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </td>
-                                            <td>Pembangunan Sistem Manajemen Inovasi Smart City</td>
-                                            <td>DISKOMINFO</td>
-                                            <td>Tahapan 5</td>
-                                            <td>50%</td>
-                                            <td>70%</td>
-                                            <td>22/07/2019</td>
-                                            <td>22/07/2019</td>
+                                            <td>1</td>
+                                            <td>MAULIDYA</td>
+                                            <td>maulidya@gmail.com</td>
+                                            <td>admin</td>
+                                            
                                         </tr>
                                         <tr>
                                             <td>
@@ -396,14 +388,36 @@
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </td>
-                                            <td>Pembangunan Pemesanan Online Space Room</td>
-                                            <td>DISKOMINFO</td>
-                                            <td>Tahapan 3</td>
-                                            <td>50%</td>
-                                            <td>40%</td>
-                                            <td>22/07/2019</td>
-                                            <td>22/07/2019</td>
+                                            <td>2</td>
+                                            <td>RAMONA</td>
+                                            <td>ramona@gmail.com</td>
+                                            <td>admin</td>
                                         </tr>
+                                         <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                    <span class="custom-control-label">&nbsp;</span>
+                                                </label>
+                                            </td>
+                                            <td>3</td>
+                                            <td>ADEL</td>
+                                            <td>adel@gmail.com</td>
+                                            <td>admin</td>
+                                        </tr>
+                                         <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                    <span class="custom-control-label">&nbsp;</span>
+                                                </label>
+                                            </td>
+                                            <td>4</td>
+                                            <td>ELLA</td>
+                                            <td>ella@gmail.com</td>
+                                            <td>admin</td>
+                                        </tr>
+                                
                                     </tbody>
                                 </table>
                             </div>
@@ -547,8 +561,7 @@
                 </div>
                 <footer class="footer">
                     <div class="w-100 clearfix">
-                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights Reserved.</span>
-                        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://lavalite.org/" class="text-dark" target="_blank">Lavalite</a></span>
+                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2019 theCiwis v2.0. All Rights Reserved.</span>
                     </div>
                 </footer>
             </div>
@@ -1020,41 +1033,6 @@
 </body>
 
             <div>
-
-
-            <div>
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>      
-            </div>
-                
-            </div>
                  
                
 </body>
