@@ -43,16 +43,5 @@ Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
 Route::get('/profile', 'profileController@index');
-Route::get('/daftarRole', 'daftarRoleController@index');
+Route::get('/daftarRole', 'daftarUserController@index');
 Route::get('/buatAkun', 'buatAkunController@index');
-
-
-
-
-
-
-
-// Route::resource('inovasi', 'inovasiController');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
