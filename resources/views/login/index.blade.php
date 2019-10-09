@@ -60,11 +60,11 @@
                             <p>Happy to see you again!</p>
                             <form action="../index.html">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email" required="" value="johndoe@admin.com">
+                                    <input type="text" class="form-control" placeholder="Email" required="" value="">
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="" value="123456">
+                                    <input type="password" class="form-control" placeholder="Password" required="" value="">
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="row">
@@ -78,7 +78,7 @@
                                 <div class="sign-btn text-center">
                                     <!-- <button class="btn btn-theme">Sign In</button> -->
                                     <div class="nav-item active">
-                                    <a href="dashboard"><i class="ik ik-bar-chart-2"></i><span>Sign In</span></a>
+                                    <a href="dashboard" class="btn btn-danger btn-lg"><i class="ik ik-bar-chart-2"></i><span>Sign In</span></a>
                                 </div>
                                 </div>
                             </form>
