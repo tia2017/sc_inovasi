@@ -30,7 +30,8 @@ Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/inovasi/detail/{detail_info}', 'inovasiController@detail');
-route::get('/profile', 'profileController@index');
+Route::get('/profile', 'profileController@index');
 Route::get('/inovasi/hapus/{detail_info}','inovasiController@hapus');
-
+Route::get('/inovasi/edit/{detail_info}','inovasiController@edit');
+Route::put('/inovasi/edit/{detail_info)','inovasiController@update');
 // Route::resource('inovasi', 'inovasiController');

@@ -106,7 +106,7 @@
                 <!-- BEGIN::Menu Utama -->
                 <div class="app-sidebar colored">
                     <div class="sidebar-header">
-                        <a class="header-brand" href="index.html">
+                        <a class="header-brand" href="dashboard">
                             <div class="logo-img">
                                <img src="{{asset('assets/src/img/brand-white.svg')}}" class="header-brand-img" alt="ipi">
                             </div>
@@ -126,8 +126,8 @@
                                 <div class="nav-item has-sub">
                                     <a href="javascript:void(0)"><i class="ik ik-aperture"></i><span>Inovasi</span> <span class="badge badge-danger">150+</span></a>
                                     <div class="submenu-content">
-                                        <a href="inovasi" class="menu-item active">Data Inovasi</a>
-                                        <a href="tambah-inovasi" class="menu-item">Tambah Inovasi</a>
+                                        <a href="/inovasi" class="menu-item active">Data Inovasi</a>
+                                        <a href="/tambah-inovasi" class="menu-item">Tambah Inovasi</a>
                                     </div>
                                 </div>
                                 <div class="nav-lavel">Bantuan</div>
@@ -248,15 +248,15 @@
                                                 <td>{{$ino_data->Institute->short_name}}</td>
                                                 <td>
                                                 @foreach($ino_data->innovation_step as $ino_step)
-                                                    {{$ino_step->step->name}}     
-                                                @endforeach                                           
+                                                    {{$ino_step->step->name}}
+                                                @endforeach
                                                 </td>
-                                                
+
                                                 <td>
                                                 @foreach($ino_data->innovation_step as $ino_step)
                                                     {{$ino_step->progress_persentage}}%
-                                                @endforeach 
-                                                </td>                                                
+                                                @endforeach
+                                                </td>
                                                 <td>70%</td>
                                                 <td><a href="/inovasi/edit/{{$ino_data->id}}" class="btn btn-warning">Edit</a></td>
                                                 <td><a href="/inovasi/hapus/{{$ino_data->id}}" class="btn btn-danger">Hapus</a></td>
