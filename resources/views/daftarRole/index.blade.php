@@ -265,6 +265,74 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                 <div>
+                        <div class="page-header">
+                            <div class="row align-items-end">
+                                <div class="col-lg-8">
+                                    <div class="page-header-title">
+                                        <i class="ik ik-file-text bg-blue"></i>
+                                        <div class="d-inline">
+                                            <h5>Daftar Role</h5>
+                                            <span>Ini adalah daftar role</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <nav class="breadcrumb-container" aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="../index.html"><i class="ik ik-home"></i></a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <a href="#">Pages</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+
+  <div class="main-content">
+   <h1><center>Daftar Role</center></h1>              
+	<div class="container-fluid">
+		<table class="table table-hover">
+	  <thead>
+		    <tr>
+		      <th scope="col">No</th>
+		      <th scope="col">First</th>
+		      <th scope="col">Last</th>
+		      <th scope="col">Handle</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			    <tr>
+			      <th scope="row">1</th>
+			      <td>Mark</td>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">2</th>
+			      <td>Jacob</td>
+			      <td>Thornton</td>
+			      <td>@fat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td colspan="2">Larry the Bird</td>
+			      <td>@twitter</td>
+			    </tr>
+		  </tbody>
+	</table>		
+	</div>
+</div>
+
+<!--
                 <div class="main-content">
                     <div class="container-fluid">
                         <div class="page-header">
@@ -293,7 +361,21 @@
                                 </div>
                             </div>
                         </div>
+                <div>
+                	<table rules="all" , border="1">
+                	<thead>
+                		    <th>Nip</th>
+							<th>Nama</th>
+							<th>Bidang Studi</th>
+                	</thead>
+                	<tbody>
+                		<tr>
 
+                		</tr>
+                	</tbody>
+
+                	</table>
+                </div>
                         
-                                       
-                </body>
+                   -->                    
+</body>
