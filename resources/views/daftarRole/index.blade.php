@@ -357,63 +357,29 @@
                                                 </label>
                                             </th>
                                             <th class="nosort">No</th>
-                                            <th>Nama</th>
+                                            <th>Name</th>
                                             <th>Email</th>
-                                            <th>Role</th>
+                                            <th>Id</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>1</td>
-                                            <td>MAULIDYA</td>
-                                            <td>maulidya@gmail.com</td>
-                                            <td>admin</td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>2</td>
-                                            <td>RAMONA</td>
-                                            <td>ramona@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>3</td>
-                                            <td>ADEL</td>
-                                            <td>adel@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>4</td>
-                                            <td>ELLA</td>
-                                            <td>ella@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                
+                                        @foreach($df_role as $daftar_role)                                        
+                                            <tr>
+                                                <td>
+                                                    <label class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                        <span class="custom-control-label">&nbsp;</span>
+                                                    </label>
+                                                </td>
+                                                <td> {{ $daftar_role->name }} </td>
+                                                <td> {{ $daftar_role->email }} </td>
+                                                <td> {{ $daftar_role->id }} </td>
+                                                
+                                            </tr>
+                                        @endforeach
+
+
                                     </tbody>
                                 </table>
                             </div>
