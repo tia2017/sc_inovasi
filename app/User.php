@@ -16,7 +16,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role_id', 'user_id', 'remember_token', 'created_at', 'updated_at'
+        'name', 'email', 'password'
+         // 'role_id', 'user_id', 'remember_token', 'created_at', 'updated_at'
     ];
 
     /**
@@ -37,6 +38,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    
+    
     public function innovation()
     {
         return $this->hasMany(Innovation::class);

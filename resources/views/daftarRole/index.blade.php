@@ -360,8 +360,8 @@
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </th>
-                                            <th class="nosort">No</th>
-                                            <th>Nama</th>
+                                            <th scope="col">No</th>
+                                            <th>Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
 
@@ -419,6 +419,29 @@
                                             <td>admin</td>
                                         </tr>
                                 
+
+                                            <th>Id</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($df_role as $daftar_role)                                        
+                                            <tr>
+                                                <td>
+                                                    <label class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                        <span class="custom-control-label">&nbsp;</span>
+                                                    </label>
+                                                </td>
+                                        
+                                                <th scope="row"> {{ $loop->iteration }} </th>
+                                                <td> {{ $daftar_role->name }} </td>
+                                                <td> {{ $daftar_role->email }} </td>
+                                                <td> {{ $daftar_role->id }} </td>
+                                                
+                                            </tr>
+                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>
