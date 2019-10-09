@@ -34,4 +34,3 @@ class Innovation extends Model
         return $this->belongsTo(Institute::class);
     }
 }
-

@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Profile</title>
+        <title>Buat Akun</title>
+        <title>Profile | ThemeKit - Admin Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +119,7 @@
                     <div class="sidebar-header">
                         <a class="header-brand" href="index.html">
                             <div class="logo-img">
-                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="lavalite"> 
+                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt=""> 
                             </div>
                             <span class="text">DEPOK</span>
                         </a>
@@ -273,8 +274,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Profile</h5>
-                                            <span>Tentang akun anda</span>
+                                            <h5>Buat Akun</h5>
+                                            <span>Silahkan mengisi form dibawah ini untuk membuat akun baru</span>
                                         </div>
                                     </div>
                                 </div>
@@ -287,148 +288,128 @@
                                             <li class="breadcrumb-item">
                                                 <a href="#">Pages</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Buat Akun</li>
                                         </ol>
                                     </nav>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-lg-4 col-md-5">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="text-center"> 
-                                            <img src="../img/user.jpg" class="rounded-circle" width="150" />
-                                            <h4 class="card-title mt-10">John Doe</h4>
-                                            <p class="card-subtitle">Front End Developer</p>
-                                            <div class="row text-center justify-content-md-center">
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-user"></i> <font class="font-medium">254</font></a></div>
-                                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-image"></i> <font class="font-medium">54</font></a></div>
+                                            <!-- BEGIN::Tabel Data Inovasi -->
+                        <div class="card">
+                            <div class="card-header row">
+                                <div class="col col-sm-3">
+                                    <div class="card-options d-inline-block">
+                                        <a href="#"><i class="ik ik-inbox"></i></a>
+                                        <a href="#"><i class="ik ik-plus"></i></a>
+                                        <a href="#"><i class="ik ik-rotate-cw"></i></a>
+                                        <div class="dropdown d-inline-block">
+                                            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="moreDropdown">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">More Action</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="mb-0"> 
-                                    <div class="card-body"> 
-                                        <small class="text-muted d-block">Email address </small>
-                                        <h6>johndoe@admin.com</h6> 
-                                        <small class="text-muted d-block pt-10">Phone</small>
-                                        <h6>(021) 593 7890</h6> 
-                                        <small class="text-muted d-block pt-10">Address</small>
-                                        <h6>71 Pilgrim Avenue Chevy Chase, MD 20815</h6>
-                                        <div class="map-box">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452149588!3d12.953959988118836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1542005497600" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                        </div> 
-                                        <small class="text-muted d-block pt-30">Social Profile</small>
-                                        <br/>
-                                        <button class="btn btn-icon btn-facebook"><i class="fab fa-facebook-f"></i></button>
-                                        <button class="btn btn-icon btn-twitter"><i class="fab fa-twitter"></i></button>
-                                        <button class="btn btn-icon btn-instagram"><i class="fab fa-instagram"></i></button>
+                                </div>
+                                <div class="col col-sm-6">
+                                    <div class="card-search with-adv-search dropdown">
+                                        <form action="">
+                                            <input type="text" class="form-control global_filter" id="global_filter" placeholder="Pencarian" required>
+                                            <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
+                                            <button type="button" id="adv_wrap_toggler" class="adv-btn ik ik-chevron-down dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                                            <div class="adv-search-wrap dropdown-menu dropdown-menu-right" aria-labelledby="adv_wrap_toggler">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Inovasi" data-column="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Perangkat Daerah/Dewan Smart City" data-column="1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control column_filter" id="col2_filter" placeholder="Tahun" data-column="2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control column_filter" id="col3_filter" placeholder="Bulan" data-column="3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-theme">Cari</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-3">
+                                    <div class="card-options text-right">
+                                        <span class="mr-5" id="top">1 - 50 of 2,500</span>
+                                        <a href="#"><i class="ik ik-chevron-left"></i></a>
+                                        <a href="#"><i class="ik ik-chevron-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-7">
-                                <div class="card">
-                                    <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
-
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#last-month" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false">Setting</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="last-month" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-6"> <strong>Full Name</strong>
-                                                        <br>
-                                                        <p class="text-muted">Johnathan Deo</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Mobile</strong>
-                                                        <br>
-                                                        <p class="text-muted">(021) 593 7890</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Email</strong>
-                                                        <br>
-                                                        <p class="text-muted">johnathan@admin.com</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-6"> <strong>Location</strong>
-                                                        <br>
-                                                        <p class="text-muted">Indonesia</p>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <p class="mt-30">Saya bisa dipanggil Jeo. Saya adalah seorang programming fornt end developer. Saya telah bekerja di banyak perusahaan</p>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </p>
-                                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                <h4 class="mt-30">Skill Set</h4>
-                                                <hr>
-                                                <h6 class="mt-30">Wordpress <span class="pull-right">80%</span></h6>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">HTML 5 <span class="pull-right">90%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">jQuery <span class="pull-right">50%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                                <h6 class="mt-30">Photoshop <span class="pull-right">70%</span></h6>
-                                                <div class="progress  progress-sm">
-                                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;"> <span class="sr-only">50% Complete</span> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
-                                            <div class="card-body">
-                                                <form class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label for="example-name">Full Name</label>
-                                                        <input type="text" placeholder="Enter your full name" class="form-control" name="example-name" id="example-name">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="example-email">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-password">Password</label>
-                                                        <input type="password"placeholder="Password" class="form-control" name="example-password" id="example-password">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-phone">Phone No</label>
-                                                        <input type="text" placeholder=" ex: 081388446654" id="example-phone" name="example-phone" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-message">Message</label>
-                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-country">Select Country</label>
-
-                                                        <select name="example-message" id="example-message" class="form-control">
-                                                        <option value="">Choose your country</option>
-                                                            <option>Indonesia</option>
-                                                            <option>India</option>
-                                                            <option>Usa</option>
-                                                            <option>Canada</option>
-                                                            <option>Thailand</option>
-                                                        </select>
-                                                    </div>
-                                                    <button class="btn btn-success" type="submit">Update Profile</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="card-body">
+                                <table id="advanced_table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="nosort" width="10">
+                                                <label class="custom-control custom-checkbox m-0">
+                                                    <input type="checkbox" class="custom-control-input" id="selectall" name="" value="option2">
+                                                    <span class="custom-control-label">&nbsp;</span>
+                                                </label>
+                                            </th>
+                                            <th class="nosort">Inovasi</th>
+                                            <th>Perangkat Daerah</th>
+                                            <th>Tahapan</th>
+                                            <th>Progres</th>
+                                            <th>Total Progres</th>
+                                            <th>Tanggal Buat</th>
+                                            <th>Tanggal Ubah</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                    <span class="custom-control-label">&nbsp;</span>
+                                                </label>
+                                            </td>
+                                            <td>Pembangunan Sistem Manajemen Inovasi Smart City</td>
+                                            <td>DISKOMINFO</td>
+                                            <td>Tahapan 5</td>
+                                            <td>50%</td>
+                                            <td>70%</td>
+                                            <td>22/07/2019</td>
+                                            <td>22/07/2019</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
+                                                    <span class="custom-control-label">&nbsp;</span>
+                                                </label>
+                                            </td>
+                                            <td>Pembangunan Pemesanan Online Space Room</td>
+                                            <td>DISKOMINFO</td>
+                                            <td>Tahapan 3</td>
+                                            <td>50%</td>
+                                            <td>40%</td>
+                                            <td>22/07/2019</td>
+                                            <td>22/07/2019</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <aside class="right-sidebar">
+                        <!-- END::Tabel Data Inovasi -->
+
+               <aside class="right-sidebar">
                     <div class="sidebar-chat" data-plugin="chat-sidebar">
                         <div class="sidebar-chat-info">
                             <h6>Chat List</h6>
@@ -639,7 +620,9 @@
                                 <div class="app-item">
                                     <a href="#"><i class="ik ik-edit"></i><span>Blogs</span></a>
                                 </div>
-                                
+                                <div class="app-item">
+                                    <a href="#"><i class="ik ik-settings"></i><span>Settings</span></a>
+                                </div>
                                 <div class="app-item">
                                     <a href="#"><i class="ik ik-more-horizontal"></i><span>More</span></a>
                                 </div>
@@ -668,3 +651,288 @@
         </script>
     </body>
 </html>
+
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <header class="header-top" header-theme="light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between">
+                        <div class="top-menu d-flex align-items-center">
+                            <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                            <div class="header-search">
+                                <div class="input-group">
+                                    <span class="input-group-addon search-close"><i class="ik ik-x"></i></span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
+                                </div>
+                            </div>
+                            <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
+                        </div>
+                        <div class="top-menu d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-bell"></i><span class="badge bg-danger">3</span></a>
+                                <div class="dropdown-menu dropdown-menu-right notification-dropdown" aria-labelledby="notiDropdown">
+                                    <h4 class="header">Notifications</h4>
+                                    <div class="notifications-wrap">
+                                        <a href="#" class="media">
+                                            <span class="d-flex">
+                                                <i class="ik ik-check"></i> 
+                                            </span>
+                                            <span class="media-body">
+                                                <span class="heading-font-family media-heading">Invitation accepted</span> 
+                                                <span class="media-content">Your have been Invited ...</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="media">
+                                            <span class="d-flex">
+                                                <img src="../img/users/1.jpg" class="rounded-circle" alt="">
+                                            </span>
+                                            <span class="media-body">
+                                                <span class="heading-font-family media-heading">Steve Smith</span> 
+                                                <span class="media-content">I slowly updated projects</span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="media">
+                                            <span class="d-flex">
+                                                <i class="ik ik-calendar"></i> 
+                                            </span>
+                                            <span class="media-body">
+                                                <span class="heading-font-family media-heading">To Do</span> 
+                                                <span class="media-content">Meeting with Nathan on Friday 8 AM ...</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="footer"><a href="javascript:void(0);">See all activity</a></div>
+                                </div>
+                            </div>
+                            <button type="button" class="nav-link ml-10 right-sidebar-toggle"><i class="ik ik-message-square"></i><span class="badge bg-success">3</span></button>
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-plus"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right menu-grid" aria-labelledby="menuDropdown">
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Dashboard"><i class="ik ik-bar-chart-2"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Message"><i class="ik ik-mail"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Accounts"><i class="ik ik-users"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Sales"><i class="ik ik-shopping-cart"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Purchase"><i class="ik ik-briefcase"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Pages"><i class="ik ik-clipboard"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Chats"><i class="ik ik-message-square"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Contacts"><i class="ik ik-map-pin"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Blocks"><i class="ik ik-inbox"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Events"><i class="ik ik-calendar"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Notifications"><i class="ik ik-bell"></i></a>
+                                    <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="More"><i class="ik ik-more-horizontal"></i></a>
+                                </div>
+                            </div>
+                            <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="../img/user.jpg" alt=""></a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="profile.html"><i class="ik ik-user dropdown-icon"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><i class="ik ik-settings dropdown-icon"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="ik ik-mail dropdown-icon"></i> Inbox</a>
+                                    <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> Message</a>
+                                    <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-wrap">
+                <div class="app-sidebar colored">
+                    <div class="sidebar-header">
+                        <a class="header-brand" href="index.html">
+                            <div class="logo-img">
+                               <img src="../src/img/brand-white.svg" class="header-brand-img" alt="lavalite"> 
+                            </div>
+                            <span class="text">ThemeKit</span>
+                        </a>
+                        <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
+                        <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+                    </div>
+                    
+                    <div class="sidebar-content">
+                        <div class="nav-container">
+                            <nav id="main-menu-navigation" class="navigation-main">
+                                <div class="nav-lavel">Navigation</div>
+                                <div class="nav-item">
+                                    <a href="../index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="navbar.html"><i class="ik ik-menu"></i><span>Navigation</span> <span class="badge badge-success">New</span></a>
+                                </div>
+                                <div class="nav-item has-sub">
+                                    <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Widgets</span> <span class="badge badge-danger">150+</span></a>
+                                    <div class="submenu-content">
+                                        <a href="widgets.html" class="menu-item">Basic</a>
+                                        <a href="widget-statistic.html" class="menu-item">Statistic</a>
+                                        <a href="widget-data.html" class="menu-item">Data</a>
+                                        <a href="widget-chart.html" class="menu-item">Chart Widget</a>
+                                    </div>
+                                </div>
+                                <div class="nav-lavel">UI Element</div>
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-box"></i><span>Basic</span></a>
+                                    <div class="submenu-content">
+                                        <a href="ui/alerts.html" class="menu-item">Alerts</a>
+                                        <a href="ui/badges.html" class="menu-item">Badges</a>
+                                        <a href="ui/buttons.html" class="menu-item">Buttons</a>
+                                        <a href="ui/navigation.html" class="menu-item">Navigation</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-gitlab"></i><span>Advance</span> <span class="badge badge-success">New</span></a>
+                                    <div class="submenu-content">
+                                        <a href="ui/modals.html" class="menu-item">Modals</a>
+                                        <a href="ui/notifications.html" class="menu-item">Notifications</a>
+                                        <a href="ui/carousel.html" class="menu-item">Slider</a>
+                                        <a href="ui/range-slider.html" class="menu-item">Range Slider</a>
+                                        <a href="ui/rating.html" class="menu-item">Rating</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-package"></i><span>Extra</span></a>
+                                    <div class="submenu-content">
+                                        <a href="ui/session-timeout.html" class="menu-item">Session Timeout</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="ui/icons.html"><i class="ik ik-command"></i><span>Icons</span></a>
+                                </div>
+                                <div class="nav-lavel">Forms</div>
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-edit"></i><span>Forms</span></a>
+                                    <div class="submenu-content">
+                                        <a href="form-components.html" class="menu-item">Components</a>
+                                        <a href="form-addon.html" class="menu-item">Add-On</a>
+                                        <a href="form-advance.html" class="menu-item">Advance</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="form-picker.html"><i class="ik ik-terminal"></i><span>Form Picker</span> <span class="badge badge-success">New</span></a>
+                                </div>
+
+                                <div class="nav-lavel">Tables</div>
+                                <div class="nav-item">
+                                    <a href="table-bootstrap.html"><i class="ik ik-credit-card"></i><span>Bootstrap Table</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="table-datatable.html"><i class="ik ik-inbox"></i><span>Data Table</span></a>
+                                </div>
+
+                                <div class="nav-lavel">Charts</div>
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-pie-chart"></i><span>Charts</span> <span class="badge badge-success">New</span></a>
+                                    <div class="submenu-content">
+                                        <a href="charts-chartist.html" class="menu-item">Chartist</a>
+                                        <a href="charts-flot.html" class="menu-item">Flot</a>
+                                        <a href="charts-knob.html" class="menu-item">Knob</a>
+                                        <a href="charts-amcharts.html" class="menu-item">Amcharts</a>
+                                    </div>
+                                </div>
+
+                                <div class="nav-lavel">Apps</div>
+                                <div class="nav-item">
+                                    <a href="calendar.html"><i class="ik ik-calendar"></i><span>Calendar</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="taskboard.html"><i class="ik ik-server"></i><span>Taskboard</span></a>
+                                </div>
+
+                                <div class="nav-lavel">Pages</div>
+
+                                <div class="nav-item has-sub">
+                                    <a href="#"><i class="ik ik-lock"></i><span>Authentication</span></a>
+                                    <div class="submenu-content">
+                                        <a href="login.html" class="menu-item">Login</a>
+                                        <a href="register.html" class="menu-item">Register</a>
+                                        <a href="forgot-password.html" class="menu-item">Forgot Password</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item has-sub open active">
+                                    <a href="#"><i class="ik ik-file-text"></i><span>Other</span></a>
+                                    <div class="submenu-content">
+                                        <a href="profile.html" class="menu-item active">Profile</a>
+                                        <a href="invoice.html" class="menu-item">Invoice</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="layouts.html"><i class="ik ik-layout"></i><span>Layouts</span><span class="badge badge-success">New</span></a>
+                                </div>
+                                <div class="nav-lavel">Other</div>
+                                <div class="nav-item has-sub">
+                                    <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Menu Levels</span></a>
+                                    <div class="submenu-content">
+                                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.1</a>
+                                        <div class="nav-item has-sub">
+                                            <a href="javascript:void(0)" class="menu-item">Menu Level 2.2</a>
+                                            <div class="submenu-content">
+                                                <a href="javascript:void(0)" class="menu-item">Menu Level 3.1</a>
+                                            </div>
+                                        </div>
+                                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.3</a>
+                                    </div>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>Disabled Menu</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="javascript:void(0)"><i class="ik ik-award"></i><span>Sample Page</span></a>
+                                </div>
+                                <div class="nav-lavel">Support</div>
+                                <div class="nav-item">
+                                    <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Documentation</span></a>
+                                </div>
+                                <div class="nav-item">
+                                    <a href="javascript:void(0)"><i class="ik ik-help-circle"></i><span>Submit Issue</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            <div>
+
+
+            <div>
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td colspan="2">Larry the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>      
+            </div>
+                
+            </div>
+                 
+               
+</body>
