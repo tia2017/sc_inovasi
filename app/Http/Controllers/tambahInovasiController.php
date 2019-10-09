@@ -59,7 +59,7 @@ class tambahInovasiController extends Controller
             'innovation_id' => $data->id,
             'step_id' => $request['step_id'],
             'explaination' => $request['explaination'],
-            'file' => $request['file'],   
+            'file' => $request['img[0]'],   
             'progress_persentage' => $request['progress_persentage']   
         ]);
         

@@ -259,7 +259,7 @@
                                                             </div>
                                                             <div class="col-md-2">
                                                                 <label>Unggah File</label>
-                                                                <input type="file" name="img[]" class="file-upload-default" name="file">
+                                                                <input type="file" name="img[]" class="file-upload-default">
                                                                 <div class="input-group col-xs-12">
                                                                     <input type="text" class="form-control file-upload-info" disabled placeholder="File" value="{{old('file')}}">
                                                                     <span class="input-group-append">
@@ -267,10 +267,10 @@
                                                                     </span>
                                                                 </div>
                                                             </div>
-                                                            <!-- (bingung) progress masuk ke tabel mana -->
+                                                            
                                                             <div class="col-md-2">
-                                                                <label for="progresInovasi">Progres Inovasi (%)</label> <!-- bingung -->
-                                                                <input class="@error('progress_persentage') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
+                                                                <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                                <input required="" class="@error('progress_persentage') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
                                                                 @error('progress_persentage')
                                                                     <div class="invalid-feedback">{{$message}}</div>  
                                                                 @enderror
