@@ -356,7 +356,7 @@
                                                     <span class="custom-control-label">&nbsp;</span>
                                                 </label>
                                             </th>
-                                            <th class="nosort">No</th>
+                                            <th scope="col">No</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Id</th>
@@ -372,7 +372,8 @@
                                                         <span class="custom-control-label">&nbsp;</span>
                                                     </label>
                                                 </td>
-                                                <td> {{ $daftar_role->no }} </td>
+                                        
+                                                <th scope="row"> {{ $loop->iteration }} </th>
                                                 <td> {{ $daftar_role->name }} </td>
                                                 <td> {{ $daftar_role->email }} </td>
                                                 <td> {{ $daftar_role->id }} </td>
