@@ -30,10 +30,11 @@ Route::get('/buatAkun', function() {
 	return view('buatAkun.index');
 });
 
-
 Route::get('/profile', function() {
 	return view('profile.index');
 });
+
+
 
 
 Route::get('/login','loginController@index');
@@ -42,9 +43,9 @@ Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
-Route::get('/profile', 'profileController@index');
-Route::get('/daftarRole', 'daftarRoleController@index');
-Route::get('/buatAkun', 'buatAkunController@index');
+route::get('/profile', 'profileController@index');
+route::get('/daftarRole', 'daftarRoleController@index');
+route::get('/buatAkun', 'buatAkunController@index');
 
 
 
