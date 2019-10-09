@@ -18,4 +18,10 @@ class loginController extends Controller
 
 
     }
+    function masuk(Request $kiriman){
+    	$data1 = User::where('username', $kiriman->email)
+    }
+
+
+
 }

@@ -53,3 +53,6 @@ Route::get('/buatAkun', 'buatAkunController@index');
 
 
 // Route::resource('inovasi', 'inovasiController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
