@@ -372,6 +372,7 @@
                                                         <span class="custom-control-label">&nbsp;</span>
                                                     </label>
                                                 </td>
+                                                <td> {{ $daftar_role->no }} </td>
                                                 <td> {{ $daftar_role->name }} </td>
                                                 <td> {{ $daftar_role->email }} </td>
                                                 <td> {{ $daftar_role->id }} </td>

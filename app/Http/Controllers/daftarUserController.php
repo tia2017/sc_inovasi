@@ -15,8 +15,8 @@ class daftarUserController extends Controller
      */
     public function index()
     {
-         $df_role = Role ::all();
-            return view('daftarRole.index', compact('df_role');
+         $df_role = DaftraUser::all();
+            return view('daftarRole.index', compact('df_role'));
     }
 
     /**

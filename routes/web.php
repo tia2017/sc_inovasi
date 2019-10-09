@@ -44,7 +44,7 @@ Route::get('/tambah-inovasi','tambahInovasiController@create');
 Route::post('/tambah-inovasi','tambahInovasiController@store');
 Route::get('/detail-inovasi', 'detailInovasiController@index');
 route::get('/profile', 'profileController@index');
-route::get('/daftarRole', 'daftarRoleController@index');
+route::get('/daftarRole', 'daftarUserController@index');
 route::get('/buatAkun', 'buatAkunController@index');
 
 
