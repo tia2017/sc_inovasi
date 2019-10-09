@@ -364,7 +364,7 @@
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th>Role</th>
-                                            
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -376,11 +376,12 @@
                                                 </label>
                                             </td>
                                             <td>1</td>
-                                            <td>MAULIDYA</td>
+                                            <td>MAULIDYA YUNANDA</td> 
                                             <td>maulidya@gmail.com</td>
-                                            <td>admin</td>
-                                            
+                                            <td>admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="badge badge-success">Edit</a> <a href="" class="badge badge-danger">Delete</td> 
+                                    
                                         </tr>
+
                                         <tr>
                                             <td>
                                                 <label class="custom-control custom-checkbox">
@@ -389,7 +390,7 @@
                                                 </label>
                                             </td>
                                             <td>2</td>
-                                            <td>RAMONA</td>
+                                            <td>RAMONA MATOVANI</td>
                                             <td>ramona@gmail.com</td>
                                             <td>admin</td>
                                         </tr>
