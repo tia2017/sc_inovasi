@@ -368,63 +368,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>1</td>
-                                            <td>MAULIDYA YUNANDA</td> 
-                                            <td>maulidya@gmail.com</td>
-                                            <td>admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="badge badge-success">Edit</a> <a href="" class="badge badge-danger">Delete</td> 
-                                    
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>2</td>
-                                            <td>RAMONA MATOVANI</td>
-                                            <td>ramona@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>3</td>
-                                            <td>ADEL</td>
-                                            <td>adel@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </td>
-                                            <td>4</td>
-                                            <td>ELLA</td>
-                                            <td>ella@gmail.com</td>
-                                            <td>admin</td>
-                                        </tr>
-                                
-
-                                            <th>Id</th>
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         @foreach($df_role as $daftar_role)                                        
                                             <tr>
                                                 <td>
@@ -437,7 +380,11 @@
                                                 <th scope="row"> {{ $loop->iteration }} </th>
                                                 <td> {{ $daftar_role->name }} </td>
                                                 <td> {{ $daftar_role->email }} </td>
-                                                <td> {{ $daftar_role->id }} </td>
+                                                <td> {{ $daftar_role->role }} </td>
+                                                <td>
+                                                    <a href="" class="badge badge-success">Edit</a>
+                                                    <a href="" class="badge badge-danger">Delete</a>
+                                                </td>
                                                 
                                             </tr>
                                         @endforeach
