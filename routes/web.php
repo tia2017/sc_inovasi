@@ -24,6 +24,8 @@ Route::get('/tambah-inovasi', function() {
 	return view('tambahInovasi.index');
 });
 Route::get('/login','loginController@index');
+Route::get('/dokumentasi','dokumentasiController@index');
+Route::get('/keluhan','keluhanController@index');
 Route::get('/register', 'registerController@index');
 Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');
