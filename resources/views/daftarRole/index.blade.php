@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title>Daftar Role | ThemeKit - Admin Template</title>
+        <title>Daftar User | ThemeKit - Admin Template</title>
         <title>Buat Akun</title>
 
-        <title>Daftar Role</title>
+        <title>Daftar User</title>
         <title>Profile | ThemeKit - Admin Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -278,8 +278,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Daftar Role</h5>
-                                            <span>Berikut adalah daftar role</span>
+                                            <h5>Daftar User</h5>
+                                            <span>Berikut adalah daftar user</span>
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +292,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="#">Pages</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Daftar Role</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Daftar user</li>
                                         </ol>
                                     </nav>
                                 </div>
