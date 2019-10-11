@@ -297,7 +297,8 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-5">
                                 <div class="card">
-                                    <div class="card-body">
+
+                             <!--       <div class="card-body">
                                         <div class="text-center"> 
                                             <img src="../img/user.jpg" class="rounded-circle" width="150" />
                                             <h4 class="card-title mt-10">John Doe</h4>
@@ -307,7 +308,8 @@
                                                 <div class="col-4"><a href="javascript:void(0)" class="link"><i class="ik ik-image"></i> <font class="font-medium">54</font></a></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
                                     <hr class="mb-0"> 
                                     <div class="card-body"> 
                                         <small class="text-muted d-block">Email address </small>
