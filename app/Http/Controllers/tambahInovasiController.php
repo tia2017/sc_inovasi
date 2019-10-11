@@ -35,34 +35,58 @@ class tambahInovasiController extends Controller
 
         $request->validate ([
             //validate innovation
-            'name' => 'required', 
-            'institute_id' => 'required', 
-            'innovation_type_id' => 'required', 
-            'pilar_id' => 'required', 
+            'name' => 'required',
+            'institute_id' => 'required',
+            'innovation_type_id' => 'required',
+            'pilar_id' => 'required',
             'created_by' => 'required',
-            'description' => 'required', 
-            'benefit' => 'required', 
-            'unique_creativity' => 'required', 
-            'potency' => 'required', 
-            'strategy' => 'required', 
+            'description' => 'required',
+            'benefit' => 'required',
+            'unique_creativity' => 'required',
+            'potency' => 'required',
+            'strategy' => 'required',
             'risk_analysis' => 'required',
             'resource' => 'required',
             //validate innovations_step
             'step_id' => 'required',
             'explaination' => 'required',
             'progress_persentage' => 'required'
-            
+
         ]);
-        
+
         $data = Innovation::create($request->all());
-        $data_step = Innovation_step::create([
-            'innovation_id' => $data->id,
-            'step_id' => $request['step_id'],
-            'explaination' => $request['explaination'],
-            'file' => $request['img[0]'],   
-            'progress_persentage' => $request['progress_persentage']   
-        ]);
-        
+
+        $id_inovasinya = $data->id;
+
+        for($i = 1; $i <= 6;$i++){
+            if($request['step_id']>$i){
+                $data_step = Innovation_step::create([
+                    'innovation_id' => $id_inovasinya,
+                    'step_id' => $i,
+                    'explaination' => '',
+                    'file' => $request['img[0]'],
+                    'progress_persentage' => 100
+                ]);
+            }
+            elseif($request['step_id']==$i){
+                $data_step = Innovation_step::create([
+                    'innovation_id' => $id_inovasinya,
+                    'step_id' => $i,
+                    'explaination' => $request['explaination'],
+                    'file' => $request['img[0]'],
+                    'progress_persentage' => $request['progress_persentage']
+                ]);
+            }
+            else{
+                $data_step = Innovation_step::create([
+                    'innovation_id' => $id_inovasinya,
+                    'step_id' => $i,
+                    'explaination' => '',
+                    'file' => $request['img[0]'],
+                    'progress_persentage' => 0
+                ]);
+            }
+        }
         // dd($data_step);
         // dd($request->all());
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');

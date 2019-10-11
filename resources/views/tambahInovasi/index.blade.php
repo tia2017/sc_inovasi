@@ -40,14 +40,14 @@
                     </div>
                     <div class="card-body">
                         <div class="tab-content" id="myTabContent2">
-                            
+
                                 <div class="col-md-12">
-                                    <form class="forms-sample" action="/tambah-inovasi" method="post"> 
+                                    <form class="forms-sample" action="/tambah-inovasi" method="post">
                                     <input type="hidden" name="created_by" value="1">
                                     <input type="hidden" name="date" value="{{date('Y-m-d h:i:s')}}">
                                     <input type="hidden" name="verification_status" value="True">
                                     @csrf
-                                  
+
                                         <!-- BEGIN::Nama Inovasi -->
                                         <div class="form-group">
                                             <div class="row">
@@ -55,20 +55,20 @@
                                                     <label for="namaInovasi" >Nama Singkat Inovasi</label>
                                                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="namaInovasi" placeholder="Nama Singkat Inovasi yang Diajukan" name="name" value="{{old('name')}}">
                                                     @error('name')
-                                                        <div class="invalid-feedback">{{$message}}</div>  
+                                                        <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="perangkatDaerah">Perangkat Daerah</label>
-                                                    <select class="form-control @error('institute_id') is-invalid @enderror" placeholder="Perangkat Daerah" id="perangkatDaerah" name="institute_id">                                                                    
-                                                    @foreach($institute as $ins_data)                                                                        
+                                                    <select class="form-control @error('institute_id') is-invalid @enderror" placeholder="Perangkat Daerah" id="perangkatDaerah" name="institute_id">
+                                                    @foreach($institute as $ins_data)
                                                         <option value="{{$loop->iteration}}">{{$ins_data->short_name}}</option>
                                                     @endforeach
-                                                    
+
                                                     @error('institute_id')
-                                                        <div class="invalid-feedback">{{$message}}</div>  
+                                                        <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
-                                                        
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -83,7 +83,7 @@
                                                     <select class="form-control" id="jenisInovasi" name="innovation_type_id">
                                                     @foreach($type as $type_data)
                                                         <option value="{{$loop->iteration}}">{{$type_data->name}}</option>
-                                                    @endforeach                                                                 
+                                                    @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
@@ -103,18 +103,18 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <label for="statusInovasi">Status Inovasi</label>
-                                                    <select class="form-control @error('step_id') is-invalid @enderror" id="statusInovasi" name="step_id"> 
+                                                    <select class="form-control @error('step_id') is-invalid @enderror" id="statusInovasi" name="step_id">
                                                         @foreach($step as $step_data)
                                                         <option value="{{$loop->iteration}}">{{ $step_data->name}}</option>
                                                         @endforeach
                                                         @error('step_id')
-                                                        <div class="invalid-feedback">{{$message}}</div>  
+                                                        <div class="invalid-feedback">{{$message}}</div>
                                                         @enderror
                                                     </select>
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
+                                                    <input type="file" name="file" class="file-upload-default">
                                                     <div class="input-group col-xs-12">
                                                         <input type="text" class="form-control file-upload-info" disabled placeholder="File" value="{{old('file')}}">
                                                         <span class="input-group-append">
@@ -122,12 +122,12 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div class="col-md-2">
                                                     <label for="progresInovasi">Progres Inovasi (%)</label>
                                                     <input required="" class="@error('progress_persentage') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
                                                     @error('progress_persentage')
-                                                        <div class="invalid-feedback">{{$message}}</div>  
+                                                        <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-md-4">
@@ -146,7 +146,7 @@
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label> 
+                                                    <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label>
                                                     <textarea class="form-control @error('description') is-invalid @enderror" id="penjelasanInovasi" rows="3" placeholder="Penjelasan mengenai inovasi yang dapat dipahami dengan baik" name="description">{{old('description')}}</textarea>
                                                     @error('description')
                                                         <div class="invalid-feedback">{{$message}}</div>
@@ -192,7 +192,7 @@
                                                                 <div class="form-group">
                                                                     <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                     <div class="col-lg-10 col-md-10">
-                                                                        <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form[]"> 
+                                                                        <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form[]">
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
@@ -264,8 +264,8 @@
                                         <!-- BEGIN::Tombol Simpan & Ulang -->
                                     </form>
                                 </div>
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>

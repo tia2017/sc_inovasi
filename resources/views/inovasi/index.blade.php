@@ -108,7 +108,6 @@
                                         {{$ino_step->step->name}}
                                     @endforeach
                                     </td>
-
                                     <td>
                                     @foreach($ino_data->innovation_step as $ino_step)
                                         {{$ino_step->progress_persentage}}%

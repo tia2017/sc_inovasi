@@ -74,10 +74,10 @@
                                                 <div class="col-md-6">
                                                     <label for="statusInovasi">Status Inovasi 1</label>
                                                     <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        {{-- @foreach($inovasi->innovation_step as $ino_step)
-                                                            <option value="">{{$ino_step->step->name}}</option>
-                                                        @endforeach --}}
-                                                        <option value="1" selected="selected">Perumusan Masalah atau Kebutuhan</option>
+                                                        @foreach($inovasi->innovation_step as $ino_step)
+                                                            <option value="{{$ino_step->step->name}}">{{$ino_step->step->name}}</option>
+                                                        @endforeach
+                                                        {{-- <option value="1" selected="selected">Perumusan Masalah atau Kebutuhan</option> --}}
                                                         <!-- <option value="2">Perumusan Ide</option>
                                                         <option value="3">Perencanaan Pembangunan</option>
                                                         <option value="4">Pembangunan</option>
@@ -97,15 +97,14 @@
                                                 </div> -->
                                                 <div class="col-md-2">
                                                     <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                        {{-- @foreach($inovasi->innovation_step as $ino_step)
-                                                            <input type="text" class="form-control" id="progresInovasi" disabled="disabled" value="{{$ino_step->progress_persentage}}">
-                                                        @endforeach --}}
-                                                        <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
-                                                 </div>
+                                                       @foreach($inovasi->innovation_step as $ino_step)
+                                                            <input type="text" class="form-control" id="progresInovasi"  value="{{$ino_step->progress_persentage}}%">
+                                                       @endforeach
+                                                </div>
                                                 <div class="col-md-4">
                                                     <label for="keteranganStatus">Keterangan</label>
                                                         @foreach($inovasi->innovation_step as $ino_step)
-                                                            <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled">{{$ino_step->explaination}}</textarea>
+                                                            <textarea class="form-control" id="keteranganStatus" rows="3" >{{$ino_step->explaination}}</textarea>
                                                         @endforeach
                                                 </div>
                                             </div>
