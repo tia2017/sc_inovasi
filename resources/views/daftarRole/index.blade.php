@@ -304,7 +304,7 @@
                                 <div class="col col-sm-3">
                                     <div class="card-options d-inline-block">
                                         <a href="#"><i class="ik ik-inbox"></i></a>
-                                        <a href="#"><i class="ik ik-plus"></i></a>
+                                        <a href="buatAkun"><i class="ik ik-plus"></i></a>
                                         <a href="#"><i class="ik ik-rotate-cw"></i></a>
                                         <div class="dropdown d-inline-block">
                                             <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
@@ -381,7 +381,7 @@
                                                 <th scope="row"> {{ $loop->iteration }} </th>
                                                 <td> {{ $daftar_role->name }} </td>
                                                 <td> {{ $daftar_role->email }} </td>
-                                                <td> {{ $daftar_role->role_id }} </td>
+                                                <td> {{ $daftar_role->role_name }} </td>
                                                 <td>
                                                     <a href="" class="badge badge-success">Edit</a>
                                                     <a href="" class="badge badge-danger">Delete</a>
