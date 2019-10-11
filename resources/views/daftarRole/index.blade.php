@@ -364,6 +364,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
+                                            <th>Action</th>
 
                                         </tr>
                                     </thead>
@@ -380,7 +381,7 @@
                                                 <th scope="row"> {{ $loop->iteration }} </th>
                                                 <td> {{ $daftar_role->name }} </td>
                                                 <td> {{ $daftar_role->email }} </td>
-                                                <td> {{ $daftar_role->role }} </td>
+                                                <td> {{ $daftar_role->role_id }} </td>
                                                 <td>
                                                     <a href="" class="badge badge-success">Edit</a>
                                                     <a href="" class="badge badge-danger">Delete</a>
