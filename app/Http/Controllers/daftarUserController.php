@@ -17,7 +17,9 @@ class daftarUserController extends Controller
     {
 
 
-         $df_role = DaftraUser::all();
+         $df_role = DaftraUser::query()
+         ->leftJoin("roles","roles.id","=","users.role_id")
+         ->get(['roles.name AS role_name','users.*']);
             return view('daftarRole.index', compact('df_role'));
 
     }

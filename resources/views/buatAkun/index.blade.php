@@ -298,15 +298,22 @@
                         <!--Mulai form buat akun-->
         <div class="row">
             <div class="col-lg-8 col-md-7">
+        <div class="row">           
+            <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="tab-content" id="pills-tabContent" align="">
                          <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
                                                 <form class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label for="example-name">Full Name</label>
-                                                        <input type="text" placeholder="Enter your full name" class="form-control" name="example-name" id="example-name">
-                                                    </div>
+                                                     <div class="row">
+                                                        <div class="col">
+                                                        
+                                                          <input type="text" class="form-control" placeholder="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                          <input type="text" class="form-control" placeholder="Last name">
+                                                        </div>
+                                                      </div>
                                                     <div class="form-group">
                                                         <label for="example-email">Email</label>
                                                         <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="example-email">
