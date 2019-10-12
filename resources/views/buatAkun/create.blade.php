@@ -323,17 +323,17 @@
 
                                                     <div class="form-group">
                                                         <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="example-email">
+                                                        <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="email">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="example-password">Password</label>
-                                                        <input type="password"placeholder="Password" class="form-control" name="example-password" id="example-password">
+                                                        <input type="password"placeholder="Password" class="form-control" name="example-password" id="password">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="example-phone">Phone No</label>
-                                                        <input type="text" placeholder=" ex: 081388446654" id="example-phone" name="example-phone" class="form-control">
+                                                        <input type="text" placeholder=" ex: 081388446654" id="phone" name="example-phone" class="form-control">
                                                     </div>
 
                                                     <div class="form-group">

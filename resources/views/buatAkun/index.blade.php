@@ -296,51 +296,77 @@
 
 
                         <!--Mulai form buat akun-->
+        <div class="row">
+            <div class="col-lg-8 col-md-7">
         <div class="row">           
             <div class="col-lg-12 col-md-12">
                 <div class="card">
-                    <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content" id="pills-tabContent" align="">
                          <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
                                                 <form class="form-horizontal">
-                                                     <div class="row">
-                                                        <div class="col">
-                                                        
-                                                          <input type="text" class="form-control" placeholder="First name">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-firstname">Nama</label>
+                                                             <input type="text" class="form-control" placeholder="Masukkan Nama" name="example-nama" id="example-nama">
                                                         </div>
-                                                        <div class="col">
-                                                          <input type="text" class="form-control" placeholder="Last name">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-lastname">Email</label>
+                                                            <input type="email" class="form-control" placeholder="ex: scinovasi@gmail.com" name="example-email" id="example-email">
                                                         </div>
-                                                      </div>
-                                                    <div class="form-group">
-                                                        <label for="example-email">Email</label>
-                                                        <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="example-email">
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-password">Password</label>
+                                                            <input type="password" class="form-control" placeholder="Masukkan Password" name="example-password" id="example-password"></input>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-repassword">Ulangi Password</label>
+                                                            <input type="password" class="form-control" placeholder="Ulangi Password" name="example-repassword" id="example-repassword"></input>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-nik">NIK</label>
+                                                            <input type="text" class="form-control" placeholder="Masukan NIK" name="example-nik" id="example-nik"></input>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-nip">NIP</label>
+                                                            <input type="text" class="form-control" placeholder="Maukkan NIP" name="example-nip" id="example-nip"></input>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-telepon">Nomor Telepon</label>
+                                                            <input type="text" class="form-control" placeholder="ex:081388932778 atau ex:0215679987" name="example-telepon" id="example-telepon"></input>
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label for="example-jeniskelamin">Jenis Kelamin</label>
+                                                            <div class="form-row">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                    <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+                                                                 </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                    <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                     <div class="form-group">
+                                                        <label for="example-alamat">Alamat</label>
+                                                        <textarea name="example-alamat" name="example-alamat" rows="5" class="form-control"></textarea>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="example-password">Password</label>
-                                                        <input type="password"placeholder="Password" class="form-control" name="example-password" id="example-password">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-phone">Phone No</label>
-                                                        <input type="text" placeholder=" ex: 081388446654" id="example-phone" name="example-phone" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-message">Message</label>
-                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="example-country">Select Country</label>
-
-                                                        <select name="example-message" id="example-message" class="form-control">
-                                                        <option value="">Choose your country</option>
-                                                            <option>Indonesia</option>
-                                                            <option>India</option>
-                                                            <option>Usa</option>
-                                                            <option>Canada</option>
-                                                            <option>Thailand</option>
+                                                        <label for="example-role">Role</label>
+                                                        <select name="example-role" id="example-role" class="form-control">
+                                                            <option value="">Pilih Role</option>
+                                                                <option>Admin</option>
+                                                                <option>User</option>
                                                         </select>
                                                     </div>
-                                                    <button class="btn btn-success" type="submit"><a href="daftarRole">Update Profile</a></button>
+                                                    <button class="btn btn-success" type="submit"><a href="daftarRole">Simpan</a></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -349,8 +375,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </div> 
                <aside class="right-sidebar">
                     <div class="sidebar-chat" data-plugin="chat-sidebar">
                         <div class="sidebar-chat-info">
