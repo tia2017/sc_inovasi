@@ -49,4 +49,14 @@ Route::get('/buatAkun', 'buatAkunController@index');
 
 route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarUserController@index');
-route::get('/buatAkun', 'buatAkunController@index');
+
+
+
+Route::get('/buatAkun', 'buatAkunController@index');
+Route::post('/buatAkun', 'buatAkunController@store');
+
+Route::get('/buatAkun/create', 'buatAkunController@create');
+
+
+
+

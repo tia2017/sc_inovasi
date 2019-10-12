@@ -3,12 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-        <title>Daftar User | ThemeKit - Admin Template</title>
         <title>Buat Akun</title>
-
-        <title>Daftar User</title>
-        <title>Profile | ThemeKit - Admin Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -133,7 +128,7 @@
                     
                     <div class="sidebar-content">
                         <div class="nav-container">
-                            <nav id="main-menu-navigation" class="navigation-main">
+                            <nav id="main-menu-navigation" class="navigation-main"> 
                                 <div class="nav-lavel">Navigation</div>
                                 <div class="nav-item">
                                     <a href="../index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
@@ -166,7 +161,7 @@
                                         <a href="ui/modals.html" class="menu-item">Modals</a>
                                         <a href="ui/notifications.html" class="menu-item">Notifications</a>
                                         <a href="ui/carousel.html" class="menu-item">Slider</a>
-                                        <a href="ui/range-slider.html" class="menu-item">Range Slider</a>
+                                        <a href="ui/range-slider.html" class="menu-item">Range  Slider</a>
                                         <a href="ui/rating.html" class="menu-item">Rating</a>
                                     </div>
                                 </div>
@@ -278,8 +273,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Daftar User</h5>
-                                            <span>Berikut adalah daftar user</span>
+                                            <h5>Buat Akun</h5>
+                                            <span>Silahkan mengisi form dibawah ini untuk membuat akun baru</span>
                                         </div>
                                     </div>
                                 </div>
@@ -292,112 +287,84 @@
                                             <li class="breadcrumb-item">
                                                 <a href="#">Pages</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Daftar user</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Buat Akun</li>
                                         </ol>
                                     </nav>
                                 </div>
                             </div>
                         </div>
-                                            <!-- BEGIN::Tabel Data Inovasi -->
-                        <div class="card">
-                            <div class="card-header row">
-                                <div class="col col-sm-3">
-                                    <div class="card-options d-inline-block">
-                                        <a href="#"><i class="ik ik-inbox"></i></a>
 
-                                        <!-- //link buat ke akun -->
-                                        <a href="buatAkun/create"><i class="ik ik-plus"></i></a>
 
-                                        <a href="#"><i class="ik ik-rotate-cw"></i></a>
-                                        <div class="dropdown d-inline-block">
-                                            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-more-horizontal"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="moreDropdown">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">More Action</a>
+                        <!--Mulai form buat akun-->
+        <div class="row">           
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="tab-content" id="pills-tabContent">
+                         <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
+
+                                    
+
+                                            <div class="card-body">
+                                                <form class="form-horizontal">
+                                                     <div class="row">
+                                                        <div class="col">
+                                                        
+                                                        
+                                                          <input type="text" class="form-control" placeholder="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                          <input type="text" class="form-control" placeholder="Last name">
+                                                        </div>
+                                                      </div>
+
+                                                <form method="post" action="buatAkun">
+                                                
+                                                {{ csrf_field() }}
+
+                                                    <div class="form-group">
+                                                        <label for="example-email">Email</label>
+                                                        <input type="email" placeholder="Enter your email" class="form-control" name="example-email" id="example-email">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="example-password">Password</label>
+                                                        <input type="password"placeholder="Password" class="form-control" name="example-password" id="example-password">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="example-phone">Phone No</label>
+                                                        <input type="text" placeholder=" ex: 081388446654" id="example-phone" name="example-phone" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="example-message">Message</label>
+                                                        <textarea name="example-message" name="example-message" rows="5" class="form-control"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="example-country">Select Country</label>
+
+                                                        <select name="example-message" id="example-message" class="form-control">
+                                                        <option value="">Choose your country</option>
+                                                            <option>Indonesia</option>
+                                                            <option>India</option>
+                                                            <option>Usa</option>
+                                                            <option>Canada</option>
+                                                            <option>Thailand</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-success" ><a href="daftarRole"></a> Update Profile </button>
+
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col col-sm-6">
-                                    <div class="card-search with-adv-search dropdown">
-                                        <form action="">
-                                            <input type="text" class="form-control global_filter" id="global_filter" placeholder="Pencarian" required>
-                                            <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
-                                            <button type="button" id="adv_wrap_toggler" class="adv-btn ik ik-chevron-down dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                                            <div class="adv-search-wrap dropdown-menu dropdown-menu-right" aria-labelledby="adv_wrap_toggler">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Nama" data-column="0">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Email" data-column="1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div align="center ">
-                                                     <button class="btn btn-theme">Cari</button>
-                                                </div>
-                                               
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col col-sm-3">
-                                    <div class="card-options text-right">
-                                        <span class="mr-5" id="top">1 - 50 of 2,500</span>
-                                        <a href="#"><i class="ik ik-chevron-left"></i></a>
-                                        <a href="#"><i class="ik ik-chevron-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <table id="advanced_table" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th class="nosort" width="10">
-                                                <label class="custom-control custom-checkbox m-0">
-                                                    <input type="checkbox" class="custom-control-input" id="selectall" name="" value="option2">
-                                                    <span class="custom-control-label">&nbsp;</span>
-                                                </label>
-                                            </th>
-                                            <th scope="col">No</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Role</th>
-                                            <th>Action</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($df_role as $daftar_role)                                        
-                                            <tr>
-                                                <td>
-                                                    <label class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
-                                                        <span class="custom-control-label">&nbsp;</span>
-                                                    </label>
-                                                </td>
-                                        
-                                                <th scope="row"> {{ $loop->iteration }} </th>
-                                                <td> {{ $daftar_role->name }} </td>
-                                                <td> {{ $daftar_role->email }} </td>
-                                                <td> {{ $daftar_role->role_name }} </td>
-                                                <td>
-                                                    <a href="" class="badge badge-success">Edit</a>
-                                                    <a href="" class="badge badge-danger">Delete</a>
-                                                </td>
-                                                
-                                            </tr>
-                                        @endforeach
-
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
-                        <!-- END::Tabel Data Inovasi -->
+                    </div>
+                </div>
 
                <aside class="right-sidebar">
                     <div class="sidebar-chat" data-plugin="chat-sidebar">
@@ -536,7 +503,8 @@
                 </div>
                 <footer class="footer">
                     <div class="w-100 clearfix">
-                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2019 TheCiwis v2.0. All Rights Reserved.</span>
+                        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights Reserved.</span>
+                        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://lavalite.org/" class="text-dark" target="_blank">Lavalite</a></span>
                     </div>
                 </footer>
             </div>
@@ -640,58 +608,3 @@
         </script>
     </body>
 </html>
-
-
-
-<!--
-                <div class="main-content">
-                    <div class="container-fluid">
-                        <div class="page-header">
-                            <div class="row align-items-end">
-                                <div class="col-lg-8">
-                                    <div class="page-header-title">
-                                        <i class="ik ik-file-text bg-blue"></i>
-                                        <div class="d-inline">
-                                            <h5>Daftar Role</h5>
-                                            <span>Ini adalah daftar role</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <nav class="breadcrumb-container" aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item">
-                                                <a href="../index.html"><i class="ik ik-home"></i></a>
-                                            </li>
-                                            <li class="breadcrumb-item">
-                                                <a href="#">Pages</a>
-                                            </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                <div>
-                	<table rules="all" , border="1">
-                	<thead>
-                		    <th>Nip</th>
-							<th>Nama</th>
-							<th>Bidang Studi</th>
-                	</thead>
-                	<tbody>
-                		<tr>
-
-                		</tr>
-                	</tbody>
-
-                	</table>
-                </div>
-                        
-                   -->                    
-</body>
-
-            <div>
-                 
-               
-</body>
