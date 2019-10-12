@@ -306,9 +306,9 @@
 
                                     
                                             <div class="card-body">
-                                                <form class="form-horizontal" method="post" action="store">
+                                                <form class="form-horizontal" method="post" action="/buatAkun/store">
                                                 
-                                                {{ csrf_field() }}
+                                                {{ csrf_field() }}  
                                                <!--  @method('PUT') -->
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
