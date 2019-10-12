@@ -53,18 +53,12 @@ route::get('/daftarRole', 'daftarUserController@index');
 
 
 Route::get('/buatAkun', 'buatAkunController@index');
-Route::post('/buatAkun', 'buatAkunController@store');
+Route::post('/buatAkun/store', 'buatAkunController@store');
 
-Route::get('/buatAkun/create', 'buatAkunController@create');
-
-
-
-
-
-route::get('/buatAkun', 'buatAkunController@index');
+// route::get('/buatAkun/buatAkun', 'daftarUserController@index');
 
 //login Coba
 Route::get('/dashboard', 'loginController@index');
 Route::get('/login', 'loginController@login');
 Route::post('/login-post', 'loginController@loginPost');
-// Route::get('/logout', 'User@logout');
+

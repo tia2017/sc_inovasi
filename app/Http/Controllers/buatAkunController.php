@@ -19,17 +19,24 @@ class buatAkunController extends Controller
 
     public function store (Request $request)
     {
-    	$buatAkun = new buatAkun;
-    	$buatAkun->nama = $buatAkun->nama;
-    	$buatAkun->email = $buatAkun->email;
-    	$buatAkun->password = $buatAkun->password;
-    	$buatAkun->phoneNo = $buatAkun->phoneNo;
-    	$buatAkun->message = $buatAkun->message;
-    	$buatAkun->selectCountry = $buatAkun->selectCountry;
+    	// $buatAkun = new buatAkunController;
+    	// $buatAkun->nama = $buatAkun->nama;
+    	// $buatAkun->email = $buatAkun->email;
+    	// $buatAkun->password = $buatAkun->password;
+    	// $buatAkun->repassword = $buatAkun->repassword;
+    	// $buatAkun->nik = $buatAkun->nik;
+    	// $buatAkun->nip = $buatAkun->nip;
+    	// $buatAkun->telepon = $buatAkun->telepon;
+    	// $buatAkun->jeniskelamin = $buatAkun->jeniskelamin;
+    	// $buatAkun->alamat = $buatAkun->alamat;
+    	// $buatAkun->role = $buatAkun->role;
 
-    	$buatAkun->save();
+    	// $buatAkun->save();
 
-    	return redirect('/daftarRole');
+        buatAkunController::index($request->all());
+    	
+
+    	return redirect('buatAkun/store');
 
 
     }

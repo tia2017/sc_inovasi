@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class DaftraUser extends Model
 {
-    protected $table = 'users';
-    protected $fillable = ['nama', 'email', 'role'];
+    protected $table = 'users_detail';
+    protected $fillable = ['nik','nip','name', 'email', 'password', 'gender','address',  
+          ];
 }
