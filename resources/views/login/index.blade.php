@@ -56,15 +56,15 @@
                             <div class="logo-centered">
                                 <a href="../index.html"><img src="{{asset('assets/src/img/brand.svg')}}" alt=""></a>
                             </div>
-                            <h3>Sign In to ThemeKit</h3>
-                            <p>Happy to see you again!</p>
-                            <form action="../index.html">
+                            <h3>Sign In to SC Inovasi</h3>
+                            <form action="{{ url('/login-post') }}" method="post">
+                                {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email" required="" value="">
+                                    <input type="text" class="form-control" placeholder="Email" required="" value="" id="email">
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="" value="">
+                                    <input type="password" class="form-control" placeholder="Password" required="" value="" id="password">
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="row">
@@ -78,7 +78,7 @@
                                 <div class="sign-btn text-center">
                                     <!-- <button class="btn btn-theme">Sign In</button> -->
                                     <div class="nav-item active">
-                                    <a href="dashboard" class="btn btn-danger btn-lg"><i class="ik ik-bar-chart-2"></i><span>Sign In</span></a>
+                                    <button class="btn btn-danger btn-lg" type="submit"><i class="ik ik-bar-chart-2" ></i><span>Sign In</span></button>
                                 </div>
                                 </div>
                             </form>

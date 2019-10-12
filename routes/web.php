@@ -14,29 +14,29 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dashboard', function() {
-	return view('dashboard.index');
-});
+// Route::get('/dashboard', function() {
+// 	return view('dashboard.index');
+// });
 Route::get('/inovasi', function() {
 	return view('inovasi.index');
 });
 Route::get('/tambah-inovasi', function() {
 	return view('tambahInovasi.index');
 });
-Route::get('/daftarRole', function() {
-	return view('daftarRole.index');
-});
+// Route::get('/daftarRole', function() {
+// 	return view('daftarRole.index');
+// });
 Route::get('/buatAkun', function() {
 	return view('buatAkun.index');
 });
 
 
-Route::get('/profile', function() {
-	return view('profile.index');
-});
+// Route::get('/profile', function() {
+// 	return view('profile.index');
+// });
 
 
-Route::get('/login','loginController@index');
+// Route::get('/login','loginController@index');
 Route::get('/dashboard','dashboardController@index');
 Route::get('/inovasi','inovasiController@index');
 Route::get('/tambah-inovasi','tambahInovasiController@create');
@@ -50,3 +50,9 @@ Route::get('/buatAkun', 'buatAkunController@index');
 route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarUserController@index');
 route::get('/buatAkun', 'buatAkunController@index');
+
+//login Coba
+Route::get('/dashboard', 'loginController@index');
+Route::get('/login', 'loginController@login');
+Route::post('/login-post', 'loginController@loginPost');
+// Route::get('/logout', 'User@logout');
