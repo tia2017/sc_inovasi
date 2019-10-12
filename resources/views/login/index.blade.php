@@ -57,14 +57,15 @@
                                 <a href="../index.html"><img src="{{asset('assets/src/img/brand.svg')}}" alt=""></a>
                             </div>
                             <h3>Sign In to SC Inovasi</h3>
-                            <form action="{{ url('/login-post') }}" method="post">
+                            <form method="post" action="{{ url('/login-post') }}" >
+                                <!-- @method('POST') -->
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email" required="" value="" id="email">
+                                    <input type="text" class="form-control" placeholder="Email" required="" value="" id="email" name="email">
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="" value="" id="password">
+                                    <input type="password" class="form-control" placeholder="Password" required="" value="" id="password" name="password">
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="row">

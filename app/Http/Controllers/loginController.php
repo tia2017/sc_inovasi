@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use App\User;
+use App\ModelUser;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class loginController extends Controller
 {
@@ -13,12 +15,12 @@ class loginController extends Controller
 
     public function index()
     {	
-    	// if (!Session::get('login.index')) {
-    	// 	return redirect('login.index')->with('alert','Login dulu!');
-    	// }
-    	// else{
-    	// 	return view('dashboard.index');
-    	// }
+    	if (!Session::get('login')) {
+    		 return redirect('login')->with('alert','Login dulu!');
+    	}
+    	else{
+    		return view('dashboard.index');
+    	}
 
     	// $users = User::all();
     	// return view('login.index', ['user' => $users]);
@@ -32,19 +34,27 @@ class loginController extends Controller
     	$email=$request->email;
     	$password=$request->password;
 
-    	$data=User::where('email',$email)->first();
+        // $data = new loginController;
+        // $data->email = $data->email;
+        // $data->password = $data->password;
+    	$data=ModelUser::where('email',$email)->first();
     	if ($data) {
-            if(Hash::check($password,$data->password)){
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
-                return redirect('dashboard');
+            if(
+                $password==$data->password){
+                // Hash::check($password,$data->password)){
+                // Session::put('email',$data->email);
+                 Session::put('login',TRUE);
+                 return redirect('dashboard');
             }
             else{
-                return redirect('login')->with('alert','Password atau Email, Salah !');
+
+                //return redirect('login')->with('alert','Password atau Email, Salah !');
+                return("index login nih 1");
             }
     	}
     	else{
-            return redirect('login')->with('alert','Password atau Email, Salah!');
+            //return redirect('login')->with('alert','Password atau Email, Salah!');
+            return("index login nih 2");
         }
     }
 
