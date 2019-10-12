@@ -296,10 +296,10 @@
 
 
                         <!--Mulai form buat akun-->
-        <div class="row">           
+        <div class="row">
             <div class="col-lg-8 col-md-7">
                 <div class="card">
-                    <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content" id="pills-tabContent" align="">
                          <div class="tab-pane fade show active " id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
                                             <div class="card-body">
                                                 <form class="form-horizontal">
@@ -344,8 +344,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </div> 
                <aside class="right-sidebar">
                     <div class="sidebar-chat" data-plugin="chat-sidebar">
                         <div class="sidebar-chat-info">
