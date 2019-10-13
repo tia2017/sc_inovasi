@@ -19,10 +19,10 @@
                         <nav class="breadcrumb-container" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="http://inovasi.depok.go.id/index.html"><i class="ik ik-home"></i></a>
+                                    <a href="/dashboard"><i class="ik ik-home"></i></a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="#">Kelola</a>
+                                    <a href="/inovasi">Kelola</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">Status Inovasi</li>
                             </ol>
@@ -42,9 +42,9 @@
                         <div class="tab-content" id="myTabContent2">
 
                                 <div class="col-md-12">
-                                    <form class="forms-sample" method="post" action="/inovasi/update/{{$inovasi->id}}">
+                                    <form class="forms-sample" method="post" action="/inovasi/edit">
                                         {{ csrf_field() }}
-                                        {{ method_field('PUT')}}
+                                        {{-- {{ method_field('PUT')}} --}}
 
                                         <!-- BEGIN::Nama Inovasi -->
                                         <div class="form-group">
@@ -57,11 +57,6 @@
                                                     <label for="perangkatDaerah">Perangkat Daerah</label>
                                                     <select class="form-control" id="perangkatDaerah" disabled="disabled">
                                                         <option value="{{$inovasi->institute->short_name}}" >{{$inovasi->institute->short_name}}</option>
-                                                        <!-- <option value="2">DINKES</option>
-                                                        <option value="3">DISDIK</option>
-                                                        <option value="4">DISKARPUS</option>
-                                                        <option value="5">DISPORYATA</option>
-                                                        <option value="6">DPMPTSP</option> -->
                                                     </select>
                                                 </div>
                                             </div>
@@ -70,19 +65,13 @@
 
                                         <!-- BEGIN::Status, Progres, Keterangan -->
                                         <div class="form-group">
+                                            @foreach($step as $ino_step)
+                                            <?php $no = 1?>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi 1</label>
+                                                    <label for="statusInovasi">Status Inovasi <?=$no?></label>
                                                     <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        @foreach($inovasi->innovation_step as $ino_step)
                                                             <option value="{{$ino_step->step->name}}">{{$ino_step->step->name}}</option>
-                                                        @endforeach
-                                                        {{-- <option value="1" selected="selected">Perumusan Masalah atau Kebutuhan</option> --}}
-                                                        <!-- <option value="2">Perumusan Ide</option>
-                                                        <option value="3">Perencanaan Pembangunan</option>
-                                                        <option value="4">Pembangunan</option>
-                                                        <option value="5">Implementasi</option>
-                                                        <option value="6">Evaluasi</option> -->
                                                     </select>
                                                 </div>
                                                 <!-- <div class="col-md-2">
@@ -95,191 +84,19 @@
                                                         </span>
                                                     </div>
                                                 </div> -->
+                                                <input type="hidden" name="id_step[]" value="{{$ino_step->id}}">
                                                 <div class="col-md-2">
                                                     <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                       @foreach($inovasi->innovation_step as $ino_step)
-                                                            <input type="text" class="form-control" id="progresInovasi"  value="{{$ino_step->progress_persentage}}%">
-                                                       @endforeach
+                                                        <input type="text" class="form-control" id="progresInovasi" name="progress_inovasi[]"  value="{{$ino_step->progress_persentage}}">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="keteranganStatus">Keterangan</label>
-                                                        @foreach($inovasi->innovation_step as $ino_step)
-                                                            <textarea class="form-control" id="keteranganStatus" rows="3" >{{$ino_step->explaination}}</textarea>
-                                                        @endforeach
+                                                        <textarea class="form-control" id="keteranganStatus" rows="3" name="keterangan[]">{{$ino_step->explaination}}</textarea>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <?php $no = $no +1?>
+                                            @endforeach
 
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi 2</label>
-                                                    <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option> -->
-                                                        <option value="2" selected="selected">Perumusan Ide</option>
-                                                        <!-- <option value="3">Perencanaan Pembangunan</option>
-                                                        <option value="4">Pembangunan</option>
-                                                        <option value="5">Implementasi</option>
-                                                        <option value="6">Evaluasi</option> -->
-                                                    </select>
-                                                </div>
-                                                <!-- <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
-                                                    </div>
-                                                </div> -->
-                                                <div class="col-md-2">
-                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                    <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                    <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi 3</label>
-                                                    <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                        <option value="2">Perumusan Ide</option> -->
-                                                        <option value="3" selected="selected">Perencanaan Pembangunan</option>
-                                                        <!-- <option value="4">Pembangunan</option>
-                                                        <option value="5">Implementasi</option>
-                                                        <option value="6">Evaluasi</option> -->
-                                                    </select>
-                                                </div>
-                                                <!-- <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
-                                                    </div>
-                                                </div> -->
-                                                <div class="col-md-2">
-                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                    <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                    <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi 4</label>
-                                                    <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                        <option value="2">Perumusan Ide</option>
-                                                        <option value="3">Perencanaan Pembangunan</option> -->
-                                                        <option value="4" selected="selected">Pembangunan</option>
-                                                        <!-- <option value="5">Implementasi</option>
-                                                        <option value="6">Evaluasi</option> -->
-                                                    </select>
-                                                </div>
-                                                <!-- <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
-                                                    </div>
-                                                </div> -->
-                                                <div class="col-md-2">
-                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                    <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                    <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi 5</label>
-                                                    <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                        <option value="2">Perumusan Ide</option>
-                                                        <option value="3">Perencanaan Pembangunan</option>
-                                                        <option value="4">Pembangunan</option> -->
-                                                        <option value="5" selected="selected">Implementasi</option>
-                                                        <!-- <option value="6">Evaluasi</option> -->
-                                                    </select>
-                                                </div>
-                                                {{-- <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled="disabled" placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
-                                                    </div>
-                                                </div> --}}
-                                                <div class="col-md-2">
-                                                        <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                        <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled">
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                    <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="-" disabled="disabled"></textarea>
-                                                    {{-- <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="Aplikasi ini masih dalam tahap uji coba"></textarea> --}}
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <label for="statusInovasi">Status Inovasi 6</label>
-                                                    <select class="form-control" id="statusInovasi" disabled="disabled">
-                                                        {{-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                        <option value="2">Perumusan Ide</option>
-                                                        <option value="3">Perencanaan Pembangunan</option>
-                                                        <option value="4">Pembangunan</option> -->
-                                                        <option value="5" selected="selected">Implementasi</option> --}}
-                                                        <option value="6">Evaluasi</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled="disabled" placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                        <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                        <input required="" type="number" min="0" max="100" value="" disabled="disabled" class="form-control" id="progresInovasi">
-                                                        {{-- <input type="text" class="form-control" id="progresInovasi" placeholder="100%" disabled="disabled"> --}}
-                                                    </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                    <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="Aplikasi ini masih dalam tahap uji coba"></textarea>
-                                                </div>
-                                            </div>
                                         </div>
 
                                         <!-- END::Status, Progres, Keterangan -->

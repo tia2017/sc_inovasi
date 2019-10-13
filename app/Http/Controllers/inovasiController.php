@@ -42,8 +42,12 @@ class inovasiController extends Controller
         return view('inovasi.index', compact('inovasi'));
     }
 
-    public function detail(Innovation $detail_info){
-        return view('inovasi.detail', compact('detail_info'));
+    public function detail($id){
+        $inovasi = Innovation::find($id);
+        $step = Innovation_step::where('innovation_id',$id)
+                ->orderBy('id', 'asc')
+                ->get();
+        return view('inovasi.detail', compact('inovasi','step'));
 
         // dibawah ini cara lain return
         // return view('detailInovasi.index', ['detail' => $detail]);
@@ -53,15 +57,45 @@ class inovasiController extends Controller
         $inovasi = Innovation::find($id);
         $inovasi->delete();
 
-        return redirect('inovasi');
+        return redirect('inovasi')->with('status', 'Data Inovasi Berhasil Dihapus');
     }
 
     public function edit($id){
         $inovasi = Innovation::find($id);
-        return view('inovasi.edit', compact('inovasi'));
+        $step = Innovation_step::where('innovation_id',$id)
+                ->orderBy('id', 'asc')
+                ->get();
+        return view('inovasi.edit', compact('inovasi','step'));
     }
-    public function update($id, Request $request){
-        $inovasi = Innovation::find($id);
+    public function store(Request $request){
+        for($i=0;$i<=5;$i++){
+            if($request->keterangan[$i]==NULL){
+                $step = Innovation_step::find($request->id_step[$i]);
+                $step->progress_persentage = $request->progress_inovasi[$i];
+                $step->explaination = '';
+                $step->save();
+            }
+            else{
+                $step = Innovation_step::find($request->id_step[$i]);
+                $step->progress_persentage = $request->progress_inovasi[$i];
+                $step->explaination = $request->keterangan[$i];
+                $step->save();
+            }
+        }
+        return redirect('inovasi')->with('status', 'Data Inovasi Berhasil Diubah');
+    }
+    // public function update($id, Request $request){
+    //     $id_step = Innovation_step::where('innovation_id',$id)
+    //             ->get('id');
+    //     foreach($id_step as $id_s){
+    //         $data = Innovation_step::find($id_s);
 
-    }
+    //             $data->progress_persentage = $request->progress_inovasi;
+    //             $data->explaination = $request->keterangan;
+
+    //             $data->save();
+    //     }
+
+    //     return redirect('inovasi')->with('status', 'Data Inovasi Berhasil Diubah');
+    // }
 }

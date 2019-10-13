@@ -49,12 +49,12 @@
                                             <div class="row">
                                                 <div class="col-md-8">
                                                     <label for="namaInovasi">Nama Singkat Inovasi</label>
-                                                    <input type="text" class="form-control" id="namaInovasi" value="{{ $detail_info->name }}" disabled>
+                                                    <input type="text" class="form-control" id="namaInovasi" value="{{ $inovasi->name }}" disabled>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="perangkatDaerah">Perangkat Daerah</label>
                                                     <select class="form-control" id="perangkatDaerah" disabled>
-                                                        <option value="{{$detail_info->institute->short_name}}" >{{$detail_info->institute->short_name}}</option>
+                                                        <option value="{{$inovasi->institute->short_name}}" >{{$inovasi->institute->short_name}}</option>
                                                         <!-- <option value="2">DINKES</option>
                                                         <option value="3">DISDIK</option>
                                                         <option value="4">DISKARPUS</option>
@@ -74,7 +74,7 @@
                                                     <select class="form-control" id="jenisInovasi" disabled>
                                                         <!-- <option value="1">Program</option> -->
 
-                                                        <option value="">{{$detail_info->Type->name}}</option>
+                                                        <option value="">{{$inovasi->Type->name}}</option>
                                                         <!-- <option value="3">Metode</option>
                                                         <option value="4">Konseptual</option>
                                                         <option value="5">Teknologi</option> -->
@@ -83,7 +83,7 @@
                                                 <div class="col-md-6">
                                                     <label for="pilarInovasi">Pilar Smart City</label>
                                                     <select class="form-control" id="pilarInovasi" disabled>
-                                                        <option value="">{{$detail_info->Pilar->name}}</option>
+                                                        <option value="">{{$inovasi->Pilar->name}}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -92,45 +92,38 @@
 
                                         <!-- BEGIN::Status, Progres, Keterangan -->
                                         <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="statusInovasi">Status Inovasi</label>
-                                                    <select class="form-control" id="statusInovasi" disabled>
-                                                        <!-- <option value="1">Perumusan Masalah atau Kebutuhan</option>
-                                                        <option value="2">Perumusan Ide</option>
-                                                        <option value="3">Perencanaan Pembangunan</option>
-                                                        <option value="4">Pembangunan</option> -->
-                                                        @foreach($detail_info->innovation_step as $ino_step)
-                                                            <option value="">{{$ino_step->step->name}}</option>
-                                                        @endforeach
-
-                                                        <!-- <option value="6">Evaluasi</option> -->
-                                                    </select>
-                                                </div>
-                                                <!-- <div class="col-md-2">
-                                                    <label>Unggah File</label>
-                                                    <input type="file" name="img[]" class="file-upload-default">
-                                                    <div class="input-group col-xs-12">
-                                                        <input type="text" class="form-control file-upload-info" disabled placeholder="File">
-                                                        <span class="input-group-append">
-                                                        <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
-                                                        </span>
+                                                @foreach($step as $ino_step)
+                                                <?php $no = 0?>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="statusInovasi">Status Inovasi <?=$no?></label>
+                                                        <select class="form-control" id="statusInovasi" disabled="disabled">
+                                                                <option value="{{$ino_step->step->name}}">{{$ino_step->step->name}}</option>
+                                                        </select>
                                                     </div>
-                                                </div> -->
-                                                <div class="col-md-2">
-                                                    <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                        @foreach($detail_info->innovation_step as $ino_step)
-                                                            <input type="text" class="form-control" id="progresInovasi" disabled="disabled" value="{{$ino_step->progress_persentage}}">
-                                                        @endforeach
+                                                    <!-- <div class="col-md-2">
+                                                        <label>Unggah File</label>
+                                                        <input type="file" name="img[]" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                            <input type="text" class="form-control file-upload-info" disabled placeholder="File">
+                                                            <span class="input-group-append">
+                                                            <button class="file-upload-browse btn btn-primary" type="button">Unggah</button>
+                                                            </span>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="col-md-2">
+                                                        <label for="progresInovasi">Progres Inovasi (%)</label>
+                                                        <input type="text" class="form-control" id="progresInovasi" disabled="disabled" value="{{$ino_step->progress_persentage}}%">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="keteranganStatus">Keterangan</label>
+                                                                <textarea class="form-control" id="keteranganStatus" disabled="disabled" rows="3" >{{$ino_step->explaination}}</textarea>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <label for="keteranganStatus">Keterangan</label>
-                                                        @foreach($detail_info->innovation_step as $ino_step)
-                                                            <textarea class="form-control" id="keteranganStatus" rows="3" placeholder="{{$ino_step->explaination}}" disabled="disabled"></textarea>
-                                                        @endforeach
-                                                </div>
+                                                <?php $no = $no +1?>
+                                                @endforeach
+
                                             </div>
-                                        </div>
                                         <!-- END::Status, Progres, Keterangan -->
 
                                         <!-- BEGIN::Penjelasan Manfaat Keunikan Inovasi -->
@@ -138,15 +131,15 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <label for="penjelasanInovasi">Penjelasan Singkat Inovasi</label>
-                                                    <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="{{$detail_info->description}}" disabled></textarea>
+                                                    <textarea class="form-control" id="penjelasanInovasi" rows="3" placeholder="{{$inovasi->description}}" disabled></textarea>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="manfaatInovasi">Manfaat Inovasi</label>
-                                                    <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="{{$detail_info->benefit}}" disabled></textarea>
+                                                    <textarea class="form-control" id="manfaatInovasi" rows="3" placeholder="{{$inovasi->benefit}}" disabled></textarea>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="keunikanInovasi">Keunikan/Kreativitas Inovasi</label>
-                                                    <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="{{$detail_info->unique_creativity}}" disabled></textarea>
+                                                    <textarea class="form-control" id="keunikanInovasi" rows="3" placeholder="{{$inovasi->unique_creativity}}" disabled></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,15 +165,15 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <label for="potensiPengembangan">Potensi Pengembangan Inovasi</label>
-                                                    <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->potency}}" disabled></textarea>
+                                                    <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$inovasi->potency}}" disabled></textarea>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
-                                                    <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="{{$detail_info->strategy}}" disabled></textarea>
+                                                    <textarea class="form-control" id="strategiKeberlangsungan" rows="3" placeholder="{{$inovasi->strategy}}" disabled></textarea>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label for="analisisRisiko">Analisis Risiko</label>
-                                                    <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="{{$detail_info->risk_analysis}}" disabled></textarea>
+                                                    <textarea class="form-control" id="analisisRisiko" rows="3" placeholder="{{$inovasi->risk_analysis}}" disabled></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,7 +184,7 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <label for="potensiPengembangan">Sumber Daya yang Digunakan</label>
-                                                    <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$detail_info->resource}}" disabled></textarea>
+                                                    <textarea class="form-control" id="potensiPengembangan" rows="3" placeholder="{{$inovasi->resource}}" disabled></textarea>
                                                 </div>
                                                 <!-- <div class="col-md-4">
                                                     <label for="strategiKeberlangsungan">Strategi Menjaga Keberlangsungan</label>
