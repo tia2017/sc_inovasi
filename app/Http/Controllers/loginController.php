@@ -48,8 +48,8 @@ class loginController extends Controller
             }
             else{
 
-                //return redirect('login')->with('alert','Password atau Email, Salah !');
-                return("index login nih 1");
+                return redirect('login')->with('alert','Password atau Email, Salah !');
+                //return("index login nih 1");
             }
     	}
     	else{

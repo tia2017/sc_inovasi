@@ -306,7 +306,7 @@
                                         <a href="#"><i class="ik ik-inbox"></i></a>
 
                                         <!-- //link buat ke akun -->
-                                        <a href="buatAkun/create"><i class="ik ik-plus"></i></a>
+                                        <a href="users/tambah"><i class="ik ik-plus"></i></a>
 
                                         <a href="#"><i class="ik ik-rotate-cw"></i></a>
                                         <div class="dropdown d-inline-block">
