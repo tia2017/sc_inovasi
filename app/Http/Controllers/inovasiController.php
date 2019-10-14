@@ -37,9 +37,14 @@ class inovasiController extends Controller
         //         ->get();
                 // select * from x where (select * from x where ())
 
-        $inovasi = Innovation::all();
+        // $inovasi = Innovation::all();
+
+        $ino_steps = Innovation_step::with('innovation')
+        ->where('progress_persentage', '>', '0')
+        ->where('progress_persentage', '<', '100')
+        ->get();
         // dd($inovasi);
-        return view('inovasi.index', compact('inovasi'));
+        return view('inovasi.index', compact('ino_steps'));
     }
 
     public function detail($id){
