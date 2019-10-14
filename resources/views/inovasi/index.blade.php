@@ -99,26 +99,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($inovasi as $ino_data)
+                            @foreach($ino_steps as $ino_step)
                                 <tr class="text text-center">
-                                    <td><a href="/inovasi/detail/{{$ino_data->id}}" >{{$ino_data->name}}</a></td>
-                                    <td>{{$ino_data->Institute->short_name}}</td>
+                                    <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
+                                    <td>{{$ino_step->innovation->institute->short_name}}</td>
                                     <td>
-                                    @foreach($ino_data->innovation_step as $ino_step)
-                                        {{$ino_step->step->name}}
-                                    @endforeach
+                                    {{$ino_step->step->name}}
                                     </td>
                                     <td>
-                                    @foreach($ino_data->innovation_step as $ino_step)
-                                        {{$ino_step->progress_persentage}}%
-                                    @endforeach
+                                    {{$ino_step->progress_persentage}}%
                                     </td>
-                                    <td>
-                                    @foreach($ino_data->innovation_step as $ino_step)
-                                        {{$ino_step->progress_persentage}}%
-                                    @endforeach</td>
-                                    <td><a href="/inovasi/edit/{{$ino_data->id}}" class="btn btn-warning">Edit</a></td>
-                                    <td><a href="/inovasi/hapus/{{$ino_data->id}}" class="btn btn-danger">Hapus</a></td>
+                                    <td>70%</td>
+                                    <td><a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="btn btn-warning">Edit</a></td>
+                                    <td><a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="btn btn-danger">Hapus</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
