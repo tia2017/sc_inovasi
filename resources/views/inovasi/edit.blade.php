@@ -65,8 +65,8 @@
 
                                         <!-- BEGIN::Status, Progres, Keterangan -->
                                         <div class="form-group">
-                                            @foreach($step as $ino_step)
                                             <?php $no = 1?>
+                                            @foreach($step as $ino_step)
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="statusInovasi">Status Inovasi <?=$no?></label>

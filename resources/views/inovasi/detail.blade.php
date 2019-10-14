@@ -92,11 +92,11 @@
 
                                         <!-- BEGIN::Status, Progres, Keterangan -->
                                         <div class="form-group">
+                                            <?php $no = 1?>
                                                 @foreach($step as $ino_step)
-                                                <?php $no = 0?>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <label for="statusInovasi">Status Inovasi <?=$no?></label>
+                                                        <label for="statusInovasi">Status Inovasi <?php echo $no;?></label>
                                                         <select class="form-control" id="statusInovasi" disabled="disabled">
                                                                 <option value="{{$ino_step->step->name}}">{{$ino_step->step->name}}</option>
                                                         </select>
