@@ -18,10 +18,24 @@ class buatAkunController extends Controller
     	return view('buatAkun.create');
     }
 
+    public function update(Request $request, buatAkun $buatAkun)
+    {
+        $request->validate([
+
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required',
+        ]);
+
+        $dataAkun->update($request->all());
+        return redirect('users.index');
+    }
+
     public function store (Request $request)
     {
-        print_r($request);
+
     	$buatAkun = User::create($request->all());
+        $buatAkun = user::update($request->all());
 
         // buatAkunController::index($request->all());
     	

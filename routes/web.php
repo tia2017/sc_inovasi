@@ -52,6 +52,8 @@ Route::get('/buatAkun', 'buatAkunController@index');
 route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarUserController@index');
 
+//try
+route::resource('users','userController');
 
 route::get('/users', 'userController@index');
 route::get('/users/tambah', 'userController@create');
