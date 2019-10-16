@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ModelUser extends Model
 {
-    //
-    protected $table='users';
+    //untuk mengambil data dari tabel roles
+    protected $table='roles';
 }

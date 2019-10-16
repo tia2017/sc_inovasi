@@ -309,7 +309,7 @@
                                                 <form class="form-horizontal" method="post" action="/users/store">
                                                 
                                                 {{ csrf_field() }}  
-                                               <!--  @method('PUT') -->
+                                               
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label for="firstname">Nama</label>
@@ -365,11 +365,13 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="role">Role</label>
-                                                        <select name="role_id" id="role" class="form-control">
-                                                            <option value="">Pilih Role</option>
-                                                                <option value="1">Admin</option>
-                                                                <option value="2">User</option>
-                                                        </select>
+                                                          <select id="role" name="role" class="form-control">
+                                                            <?php foreach($df_role as $role) {
+                                                            
+                                                            ?>
+                                                            <option value="<?= $role->id ?>"><?= $role->name?></option>
+                                                            <?php } ?>
+                                                          </select>
                                                     </div>
                                                     <button class="btn btn-success" type="submit">Simpan</button>
 

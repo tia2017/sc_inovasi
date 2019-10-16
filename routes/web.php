@@ -53,7 +53,7 @@ route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarUserController@index');
 
 
-route::get('/users', 'userController@index');
+Route::get('/users', 'userController@index');
 route::get('/users/tambah', 'userController@create');
 route::post('/users/store', 'userController@store');
 
