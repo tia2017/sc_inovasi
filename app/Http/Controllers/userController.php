@@ -27,12 +27,15 @@ class userController extends Controller
     	//return view('users.create');
     }
 
+    public function edit()
+    {
+        return view('buatAkun');
+    }
+
+
     public function store(Request $request){
 
         // $buatAkun = User::create($request->all());   
-        
-         
-
 
         $dataAkun =  new User;
 
