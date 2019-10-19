@@ -30,6 +30,7 @@
         
     </head>
 
+<<<<<<< Updated upstream
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -50,6 +51,58 @@
                                     <input type="text" class="form-control">
                                     <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
                                 </div>
+=======
+        <!-- BEGIN::Informasi Statistik Global -->
+        <div class="row clearfix">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="state">
+                                <h2>{{ $jumlah_inovasi }}</h2>
+                                <h6>Inovasi</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="ik ik-thumbs-up"></i>
+                            </div>
+                        </div>
+                        <small class="text-small mt-10 d-block">Dari {{ $jumlah_perangkat_daerah }} Perangkat Daerah</small>
+                    </div>
+                    <div class="progress progress-sm">
+                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="state">
+                                <h2>11</h2>
+                                <h6>Usulan Inovasi</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="ik ik-thumbs-up"></i>
+                            </div>
+                        </div>
+                        <small class="text-small mt-10 d-block">Dari Dewan Smart City</small>
+                    </div>
+                    <div class="progress progress-sm">
+                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="state">
+                                <h2>{{ $jumlah_perangkat_daerah }}</h2>
+                                <h6>Perangkat Daerah</h6>
+                            </div>
+                            <div class="icon">
+                                <i class="ik ik-help-circle"></i>
+>>>>>>> Stashed changes
                             </div>
                             <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
                         </div>
@@ -145,6 +198,7 @@
                 <div class="main-content">
                     <div class="container-fluid">
 
+<<<<<<< Updated upstream
                         <!-- BEGIN::Informasi Statistik Global -->
                         <div class="row clearfix">
                             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -158,9 +212,27 @@
                                             <div class="icon">
                                                 <i class="ik ik-thumbs-up"></i>
                                             </div>
+=======
+        <!-- BEGIN::Baris Inovasi PD -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header"><h3>Inovasi Berdasarkan Perangkat Daerah</h3></div>
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <!-- BEGIN::Kolom 1 Inovasi PD -->
+                            <div class="col-lg-3 col-md-12">
+                                <div class="row mb-15">
+                                    <div class="col-9">DISKOMINFO</div>
+                                    <div class="col-3 text-right"></div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+>>>>>>> Stashed changes
                                         </div>
                                         <small class="text-small mt-10 d-block">Dari 38 Perangkat Daerah</small>
                                     </div>
+<<<<<<< Updated upstream
                                     <div class="progress progress-sm">
                                         <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
                                     </div>
@@ -182,9 +254,25 @@
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+=======
+                                </div>
+
+                                @foreach($ino_diskominfo as $inovasi_diskominfo)
+                                <div class="row mb-15">
+                                    <div class="col-9">
+                                        {{ $inovasi_diskominfo->name }}
+                                    </div>
+                                    <div class="col-3 text-right">0%</div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-aqua" role="progressbar" style="width: 0%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
+<<<<<<< Updated upstream
                             <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="widget">
                                     <div class="widget-body">
@@ -220,9 +308,37 @@
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+=======
+                            <!-- END::Kolom 1 Inovasi PD -->
+
+                            <!-- BEGIN::Kolom 2 Inovasi PD -->
+                            <div class="col-lg-3 col-md-12">
+                                <div class="row mb-15">
+                                    <div class="col-9">DINKES</div>
+                                    <div class="col-3 text-right"></div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                @foreach($ino_diskes as $inovasi_diskes)
+                                <div class="row mb-15">
+                                    <div class="col-9">
+                                        {{ $inovasi_diskes->name }}
+                                    </div>
+                                    <div class="col-3 text-right">0%</div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-purple" role="progressbar" style="width: 0%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+>>>>>>> Stashed changes
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
+<<<<<<< Updated upstream
                         </div>
                         <!-- END::Informasi Statistik Global -->
 
@@ -298,13 +414,41 @@
                                                 </div>
                                             </div>
                                             <!-- END::Kolom 1 Inovasi PD -->
+=======
+
+                            <!-- END::Kolom 2 Inovasi PD -->
+
+                            <!-- BEGIN::Kolom 3 Inovasi PD -->
+                            <div class="col-lg-3 col-md-12">
+                                <div class="row mb-15">
+                                    <div class="col-9">DISDIK</div>
+                                    <div class="col-3 text-right"></div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
+
+                                @foreach($ino_disdik as $inovasi_disdik)
+                                <div class="row mb-15">
+                                    <div class="col-9">
+                                        {{ $inovasi_disdik->name }}
+                                    </div>
+                                    <div class="col-3 text-right">0%</div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+>>>>>>> Stashed changes
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <!-- END::Baris Keterkinian & Distribusi -->
 
+<<<<<<< Updated upstream
                         <!-- BEGIN::Baris Inovasi PD -->
                         <div class="row">
                             <div class="col-md-12">
@@ -538,8 +682,33 @@
                                         <span class="mr-5" id="top">1 - 50 of 2,500</span>
                                         <a href="#"><i class="ik ik-chevron-left"></i></a>
                                         <a href="#"><i class="ik ik-chevron-right"></i></a>
+=======
+                            <!-- BEGIN::Kolom 4 Inovasi PD -->
+                            <div class="col-lg-3 col-md-12">
+                                <div class="row mb-15">
+                                    <div class="col-9">DIKARPUS</div>
+                                    <div class="col-3 text-right"></div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                @foreach($ino_diskarpus as $inovasi_diskarpus)
+                                <div class="row mb-15">
+                                    <div class="col-9">
+                                        {{ $inovasi_diskarpus->name }}
+                                    </div>
+                                    <div class="col-3 text-right">0%</div>
+                                    <div class="col-12">
+                                        <div class="progress progress-sm mt-5">
+                                            <div class="progress-bar bg-blue" role="progressbar" style="width: 0%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+>>>>>>> Stashed changes
+                                    </div>
+                                </div>
+                                @endforeach
                             </div>
                             <div class="card-body">
                                 <table id="advanced_table" class="table">
