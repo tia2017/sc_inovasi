@@ -50,7 +50,7 @@ class tambahInovasiController extends Controller
             //validate innovations_step
             'step_id' => 'required',
             'explaination' => 'required',
-            'progress_persentage' => 'required'
+            'progress_persentage' => 'required|numeric|min:0|max:100'
 
         ]);
 
