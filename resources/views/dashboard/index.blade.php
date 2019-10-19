@@ -434,6 +434,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($ino_steps as $ino_step)
                         <tr>
                             <td>
                                 <label class="custom-control custom-checkbox">
@@ -441,15 +442,16 @@
                                     <span class="custom-control-label">&nbsp;</span>
                                 </label>
                             </td>
-                            <td>Pembangunan Sistem Manajemen Inovasi Smart City</td>
-                            <td>DISKOMINFO</td>
-                            <td>Tahapan 5</td>
-                            <td>50%</td>
+                            <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
+                            <td>{{$ino_step->innovation->institute->short_name}}</td>
+                            <td>{{$ino_step->step->name}}</td>
+                            <td>{{$ino_step->progress_persentage}}%</td>                        
                             <td>70%</td>
-                            <td>22/07/2019</td>
-                            <td>22/07/2019</td>
+                            <td>{{$ino_step->created_at}}</td>
+                            <td>{{$ino_step->updated_at}}</td>
                         </tr>
-                        <tr>
+                        @endforeach
+                        <!-- <tr>
                             <td>
                                 <label class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input select_all_child" id="" name="" value="option2">
@@ -463,7 +465,7 @@
                             <td>40%</td>
                             <td>22/07/2019</td>
                             <td>22/07/2019</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
