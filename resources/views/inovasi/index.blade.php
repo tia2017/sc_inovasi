@@ -73,12 +73,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col col-sm-3">
-                        <div class="card-options text-right">
-                            <span class="mr-5" id="top">1 - 50 of 2,500</span>
-                            <a href="#"><i class="ik ik-chevron-left"></i></a>
-                            <a href="#"><i class="ik ik-chevron-right"></i></a>
-                        </div>
+                    <div class="col-sm-3">
+
                     </div>
                 </div>
                 <div class="card-body">
@@ -87,35 +83,62 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <table class="table">
-                        <thead>
-                            <tr class="text text-center">
-                                <th>Inovasi</th>
-                                <th>Perangkat Daerah</th>
-                                <th>Tahapan</th>
-                                <th>Progres</th>
-                                <th>Total Progres</th>
-                                <th colspan="2">Opsi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($ino_steps as $ino_step)
-                                <tr class="text text-center">
-                                    <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
-                                    <td>{{$ino_step->innovation->institute->short_name}}</td>
-                                    <td>
-                                    {{$ino_step->step->name}}
-                                    </td>
-                                    <td>
-                                    {{$ino_step->progress_persentage}}%
-                                    </td>
-                                    <td>70%</td>
-                                    <td><a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="btn btn-warning">Edit</a></td>
-                                    <td><a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="btn btn-danger">Hapus</a></td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div id="advanced_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="advanced_table_length">
+                                    <label>Show <select name="advanced_table_length" aria-controls="advanced_table" class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="10" selected="selected">10</option>
+                                    <option value="25">25</option><option value="50">50</option>
+                                    <option value="100">100</option></select> entries
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="advanced_table" class="table dataTable no-footer dtr-inline collapsed" role="grid" aria-describedby="advanced_table_info" style="width: 966px;">
+                                    <thead>
+                                        <tr role="row" class="text text-xl-center">
+                                            <th class="sorting" rowspan="1" colspan="1" style="width: 182px;" aria-label="Inovasi: activate to sort column ascending">Inovasi</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 88px;" aria-label="Perangkat Daerah: activate to sort column ascending">Perangkat Daerah</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 101px;" aria-label="Tahapan: activate to sort column ascending">Tahapan</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 50px;" aria-label="Progres: activate to sort column ascending">Progres</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 65px;" aria-label="Total Progres: activate to sort column ascending">Total Progres</th>
+                                            <th class="nosort sorting_disabled" tabindex="0" rowspan="1" colspan="2" style="width: 66px;" aria-label="Opsi">Opsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            @foreach($ino_steps as $ino_step)
+                                            <tr class="text text-center">
+                                                <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
+                                                <td>{{$ino_step->innovation->institute->short_name}}</td>
+                                                <td>{{$ino_step->step->name}}</td>
+                                                <td>{{$ino_step->progress_persentage}}%</td>
+                                                <td>70%</td>
+                                                <td><a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="btn btn-warning">Edit</a></td>
+                                                <td><a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="btn btn-danger">Hapus</a></td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="advanced_table_info" role="status" aria-live="polite">Showing {{ $ino_steps->firstItem() }} to {{ $ino_steps->lastItem() }} of {{$ino_steps->total()}} entries</div>
+                            </div>
+                            <div class="col-sm-12 col-md-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="advanced_table_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous" id="advanced_table_previous"><a href="{{$ino_steps->previousPageUrl()}}" aria-controls="advanced_table" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                        <li class="paginate_button page-item disabled"><a href="#" aria-controls="advanced_table" data-dt-idx="1" tabindex="0" class="page-link">{{$ino_steps->currentPage()}}</a></li>
+                                        <li class="paginate_button page-item next" id="advanced_table_next"><a href="{{$ino_steps->nextPageUrl()}}" aria-controls="advanced_table" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- END::Tabel Data Inovasi -->
