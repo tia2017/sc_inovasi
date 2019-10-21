@@ -122,10 +122,9 @@
                                                         </span>
                                                     </div>
                                                 </div>
-
                                                 <div class="col-md-2">
                                                     <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                    <input required="" class="@error('progress_persentage') is-invalid @enderror" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
+                                                    <input class="@error('progress_persentage') is-invalid @enderror" type="text" class="form-control" placeholder="0-100" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
                                                     @error('progress_persentage')
                                                         <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
@@ -136,7 +135,6 @@
                                                     @error('explaination')
                                                         <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
-
                                                 </div>
                                             </div>
                                         </div>
@@ -380,7 +378,7 @@
                                                         </div>
                                                         <div class="col-md-2">
                                                             <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                            <input required="" type="number" min="0" max="100" placeholder="0-100" class="form-control" id="progress_presentage">
+                                                            <input required="" type="text" placeholder="0-100" class="form-control" id="progress_presentage">
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label for="keteranganStatus">Keterangan</label>

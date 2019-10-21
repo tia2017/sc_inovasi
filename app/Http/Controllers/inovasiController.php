@@ -21,7 +21,7 @@ class inovasiController extends Controller
         // return view('detailInovasi.index', ['detail' => $detail]);
         // Innovation::all();
      */
-    public function index()
+    public function index(Request $request)
     {
         // dibawah ini adalah cara lain pemanggilan
         // $inovasi_step = Innovation_step::get();
@@ -42,7 +42,8 @@ class inovasiController extends Controller
         $ino_steps = Innovation_step::with('innovation')
         ->where('progress_persentage', '>', '0')
         ->where('progress_persentage', '<', '100')
-        ->get();
+        ->paginate($request->advanced_table_length);
+        // ->get();
         // dd($inovasi);
         return view('inovasi.index', compact('ino_steps'));
     }
