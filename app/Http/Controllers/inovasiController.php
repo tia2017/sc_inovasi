@@ -90,18 +90,18 @@ class inovasiController extends Controller
         }
         return redirect('inovasi')->with('status', 'Data Inovasi Berhasil Diubah');
     }
-    // public function update($id, Request $request){
-    //     $id_step = Innovation_step::where('innovation_id',$id)
-    //             ->get('id');
-    //     foreach($id_step as $id_s){
-    //         $data = Innovation_step::find($id_s);
+    public function search(Request $request){
+        $cari_global = $request->cari_global;
+        $cari_inovasi = $request->cari_inovasi;
+        $cari_perangkat = $request->cari_perangkat;
+        $cari_tahun = $request->cari_tahun;
+        $cari_bulan = $request->cari_bulan;
 
-    //             $data->progress_persentage = $request->progress_inovasi;
-    //             $data->explaination = $request->keterangan;
-
-    //             $data->save();
-    //     }
-
-    //     return redirect('inovasi')->with('status', 'Data Inovasi Berhasil Diubah');
-    // }
+        $inovasi = Innovation::
+              where('name', 'like', "%".$cari_inovasi."%")
+            ->where('short_name', 'like', "%".$cari_perangkat."%")
+            ->where('date', 'like', "%".$cari_tahun."%")
+            ->where('date', 'like', "%".$cari_bulan."%")
+            ->paginate();
+    }
 }
