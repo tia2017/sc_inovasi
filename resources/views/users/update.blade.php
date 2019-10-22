@@ -274,8 +274,8 @@
                                     <div class="page-header-title">
                                         <i class="ik ik-file-text bg-blue"></i>
                                         <div class="d-inline">
-                                            <h5>Buat Akun</h5>
-                                            <span>Silahkan mengisi form dibawah ini untuk membuat akun baru</span>
+                                            <h5>Update Akun</h5>
+                                            <span>Silahkan mengisi form dibawah ini untuk mengupdate akun</span>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="#">Pages</a>
                                             </li>
-                                            <li class="breadcrumb-item active" aria-current="page">Buat Akun</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Update Akun</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -374,7 +374,7 @@
                                                             <?php } ?>
                                                           </select>
                                                     </div>
-                                                    <button class="btn btn-success" type="submit">Simpan</button>
+                                                    <button class="btn btn-success" type="submit">Update</button>
 
                                                 </form>
                                             </div>

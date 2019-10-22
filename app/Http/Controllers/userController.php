@@ -27,9 +27,34 @@ class userController extends Controller
     	//return view('users.create');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('buatAkun');
+        $df_role = ModelUser::get();
+        // $users = DB::table('users')->where('id',$id)->get();
+
+        // $users_1 = DB::table('users_detail')->where('id',$id)->get();
+
+         // return view('users.edit',['users' => $user, $users_1]);
+         return view('users.edit',compact('df_role'));
+    }
+
+    public function update(Request $request)
+    {
+        DB::table('users')->where('id',$request->id)->update([
+            'nama' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
+        DB::table('users_detail')->where('id',$request->id)->update([
+            'nik' =>$request->nik,
+            'nip' =>$request->nip,
+            'telepon'=> $request->phone,
+            'gender' =>$request->gender,
+            'alamat' => $request->address,
+        ]);        
+
+        return redirect('users');
     }
 
 

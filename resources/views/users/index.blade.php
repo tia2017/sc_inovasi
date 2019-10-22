@@ -386,7 +386,7 @@
                                                 <td> {{ $daftar_role->email }} </td>
                                                 <td> {{ $daftar_role->role_name }} </td>
                                                 <td>
-                                                    <a href="buatAkun" class="badge badge-success">Edit</a>
+                                                    <a href="users/edit" class="badge badge-success">Edit</a>
                                                     <a href="" class="badge badge-danger">Delete</a>
                                                 </td>
                                                 
