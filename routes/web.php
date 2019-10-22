@@ -53,7 +53,7 @@ route::get('/profile', 'profileController@index');
 route::get('/daftarRole', 'daftarUserController@index');
 
 //try
-route::resource('users','userController');
+// route::resource('users','userController');
 
 Route::get('/users', 'userController@index');
 route::get('/users/tambah', 'userController@create');
@@ -63,7 +63,8 @@ route::post('/users/store', 'userController@store');
 Route::get('/buatAkun', 'buatAkunController@index');
 Route::post('/buatAkun/store', 'buatAkunController@store');
 
-// route::get('/buatAkun/buatAkun', 'daftarUserController@index');
+
+Route::get('/users/edit/','userController@edit');
 
 
 //login Coba

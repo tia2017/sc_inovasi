@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\User;
+//use App\User;
 use App\ModelUser; //untuk mengambil data dari tabel roles
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,7 +12,7 @@ class userController extends Controller
 {
     public function index()
     {
-         $df_role = User::query()
+         $df_role = ModelUser::query()
          ->leftJoin("roles","roles.id","=","users.role_id")
          ->get(['roles.name AS role_name','users.*']);
             return view('users.index', compact('df_role'));
@@ -27,7 +27,7 @@ class userController extends Controller
     	//return view('users.create');
     }
 
-    public function edit($id)
+    public function edit(Request $id)
     {
         $df_role = ModelUser::get();
         // $users = DB::table('users')->where('id',$id)->get();
@@ -35,7 +35,14 @@ class userController extends Controller
         // $users_1 = DB::table('users_detail')->where('id',$id)->get();
 
          // return view('users.edit',['users' => $user, $users_1]);
-         return view('users.edit',compact('df_role'));
+
+        // $df_role = ModelUser::query()->where('id', $df_role->id);
+        foreach ($df_role as $daftar_role) {
+            ModelUser::get()
+                ->where('id', $daftar_role->id);
+                return view('users.update', compact('df_role'));
+        }
+         
     }
 
     public function update(Request $request)

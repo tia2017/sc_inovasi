@@ -372,6 +372,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+
                                         @foreach($df_role as $daftar_role)                                        
                                             <tr>
                                                 <td>
@@ -386,7 +387,7 @@
                                                 <td> {{ $daftar_role->email }} </td>
                                                 <td> {{ $daftar_role->role_name }} </td>
                                                 <td>
-                                                    <a href="users/edit" class="badge badge-success">Edit</a>
+                                                    <a href="users/edit?id={{$daftar_role->id}}" class="badge badge-success">Edit</a>
                                                     <a href="" class="badge badge-danger">Delete</a>
                                                 </td>
                                                 

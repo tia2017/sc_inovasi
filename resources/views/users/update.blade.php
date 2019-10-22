@@ -310,11 +310,11 @@
                                                 <form class="form-horizontal" method="post" action="/users/store">
                                                 
                                                 {{ csrf_field() }}  
-                                               
+                                                @foreach($df_role as $daftar_role )
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label for="firstname">Nama</label>
-                                                             <input type="text" class="form-control" placeholder="Masukkan Nama" name="name" id="nama">
+                                                             <input type="text" class="form-control" name="name" id="nama" value="{{$daftar_role->nama}}">
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label for="lastname">Email</label>
@@ -375,7 +375,7 @@
                                                           </select>
                                                     </div>
                                                     <button class="btn btn-success" type="submit">Update</button>
-
+                                                    @endforeach
                                                 </form>
                                             </div>
                                         </div>

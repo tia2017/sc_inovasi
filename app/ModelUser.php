@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class ModelUser extends Model
 {
     //untuk mengambil data dari tabel roles
-    protected $table='roles';
+    protected $table='users';
 }

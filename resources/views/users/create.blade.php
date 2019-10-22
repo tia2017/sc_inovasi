@@ -1,5 +1,4 @@
-@@ -1,628 +0,0 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
