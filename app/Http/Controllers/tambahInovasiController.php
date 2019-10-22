@@ -8,8 +8,10 @@ use App\Type;
 use App\Institute;
 use App\Pilar;
 use App\Step;
+use App\Partner;
 use App\Innovation;
 use App\Innovation_step;
+use App\Innovation_partner;
 use Illuminate\Support\Facades\Cache;
 
 class tambahInovasiController extends Controller
@@ -26,13 +28,13 @@ class tambahInovasiController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // $post = $_POST;
-        // // echo "<pre>";
-        // // print_r($post);
-        // // print_r($request->all());
-        // // die();
+    {       
 
+        // dd($coba = $request->all());
+
+        // echo "<pre>";
+        // print_r($_POST);
+        // die();
         $request->validate ([
             //validate innovation
             'name' => 'required',
@@ -54,9 +56,28 @@ class tambahInovasiController extends Controller
 
         ]);
 
+
+        // input innovation
         $data = Innovation::create($request->all());
 
+        // input innovation_step
         $id_inovasinya = $data->id;
+
+        //input partner
+        for($i = 0; $i < count($request->mitraBentuk) ;$i++){
+            $data_partner =  Partner::create([
+                'name' => $request->mitraNama[$i],
+                'form' => $request->mitraBentuk[$i]
+            ]);
+            $id_partner = $data_partner->id;
+
+            // input innovation_partner
+            Innovation_partner::create([
+                'innovation_id' => $id_inovasinya,
+                'partner_id' => $data_partner->id
+            ]);         
+
+        }           
 
         for($i = 1; $i <= 6;$i++){
             if($request['step_id']>$i){
@@ -87,6 +108,8 @@ class tambahInovasiController extends Controller
                 ]);
             }
         }
+
+        
         // dd($data_step);
         // dd($request->all());
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
