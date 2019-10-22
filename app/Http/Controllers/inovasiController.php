@@ -104,4 +104,5 @@ class inovasiController extends Controller
             ->where('date', 'like', "%".$cari_bulan."%")
             ->paginate();
     }
+    
 }

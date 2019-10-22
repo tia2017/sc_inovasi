@@ -42,7 +42,7 @@
                         <div class="tab-content" id="myTabContent2">
 
                                 <div class="col-md-12">
-                                    <form class="forms-sample" action="/tambah-inovasi" method="post">
+                                    <form class="forms-sample" action="/tambah-inovasi" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="created_by" value="1">
                                     <input type="hidden" name="date" value="{{date('Y-m-d h:i:s')}}">
                                     <input type="hidden" name="verification_status" value="True">

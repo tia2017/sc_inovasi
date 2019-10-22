@@ -24,7 +24,8 @@ class tambahInovasiController extends Controller
         $type = Type::all();
         $pilar = Pilar::all();
         $step = Step::all();
-    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step'));
+        $partner = Innovation_partner::all();
+    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step', 'partner'));
     }
 
     public function store(Request $request)
@@ -49,6 +50,7 @@ class tambahInovasiController extends Controller
             'strategy' => 'required',
             'risk_analysis' => 'required',
             'resource' => 'required',
+            'file' => 'required',
             //validate innovations_step
             'step_id' => 'required',
             'explaination' => 'required',
@@ -78,6 +80,14 @@ class tambahInovasiController extends Controller
             ]);         
 
         }           
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+ 
+        $nama_file = time()."_".$file->getClientOriginalName();
+ 
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'data_file';
+        $file->move($tujuan_upload,$nama_file);
 
         for($i = 1; $i <= 6;$i++){
             if($request['step_id']>$i){
@@ -85,7 +95,7 @@ class tambahInovasiController extends Controller
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => 100
                 ]);
             }
@@ -94,7 +104,7 @@ class tambahInovasiController extends Controller
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => $request['explaination'],
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => $request['progress_persentage']
                 ]);
             }
@@ -103,7 +113,7 @@ class tambahInovasiController extends Controller
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => 0
                 ]);
             }
@@ -112,6 +122,7 @@ class tambahInovasiController extends Controller
         
         // dd($data_step);
         // dd($request->all());
+
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
     }
 }
