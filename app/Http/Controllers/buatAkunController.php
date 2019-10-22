@@ -22,7 +22,6 @@ class buatAkunController extends Controller
     {
 
     	$buatAkun = User::create($request->all());
-        $buatAkun = user::update($request->all());
 
         // buatAkunController::index($request->all());
     	
