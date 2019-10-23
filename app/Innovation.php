@@ -12,18 +12,14 @@ class Innovation extends Model
         'name', 'institute_id', 'innovation_type_id', 'pilar_id', 'created_by' ,
         'description', 'benefit', 'unique_creativity', 'potency', 'strategy', 'risk_analysis',
         'resource', 'date', 'verification_status'];
-    
-    public function innovation_step()
-    {
-        return $this->hasMany(Innovation_step::class);
-    }
-    public function innovation_partner()
-    {
-        return $this->hasMany(Innovation_partner::class);
-    }
+
     public function pilar()
     {
         return $this->belongsTo(Pilar::class);
+    }
+    public function innovation_step()
+    {
+        return $this->hasMany(Innovation_step::class);
     }
     public function user()
     {

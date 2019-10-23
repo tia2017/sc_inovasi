@@ -8,10 +8,8 @@ use App\Type;
 use App\Institute;
 use App\Pilar;
 use App\Step;
-use App\Partner;
 use App\Innovation;
 use App\Innovation_step;
-use App\Innovation_partner;
 use Illuminate\Support\Facades\Cache;
 
 class tambahInovasiController extends Controller
@@ -29,13 +27,13 @@ class tambahInovasiController extends Controller
     }
 
     public function store(Request $request)
-    {       
+    {
+        // $post = $_POST;
+        // // echo "<pre>";
+        // // print_r($post);
+        // // print_r($request->all());
+        // // die();
 
-        // dd($coba = $request->all());
-
-        // echo "<pre>";
-        // print_r($_POST);
-        // die();
         $request->validate ([
             //validate innovation
             'name' => 'required',
@@ -58,13 +56,11 @@ class tambahInovasiController extends Controller
 
         ]);
 
-
-        // input innovation
         $data = Innovation::create($request->all());
 
-        // input innovation_step
         $id_inovasinya = $data->id;
 
+<<<<<<< HEAD
         //input partner
         for($i = 0; $i < count($request->mitraBentuk) ;$i++){
             $data_partner =  Partner::create([
@@ -89,6 +85,8 @@ class tambahInovasiController extends Controller
         $tujuan_upload = 'data_file';
         $file->move($tujuan_upload,$nama_file);
 
+=======
+>>>>>>> parent of 9bc6e05... Merge branch 'master' of https://github.com/tia2017/sc_inovasi
         for($i = 1; $i <= 6;$i++){
             if($request['step_id']>$i){
                 $data_step = Innovation_step::create([
@@ -118,8 +116,6 @@ class tambahInovasiController extends Controller
                 ]);
             }
         }
-
-        
         // dd($data_step);
         // dd($request->all());
 

@@ -184,19 +184,19 @@
                                                         <div class="clearfix"></div>
                                                         <!-- Repeater Items -->
                                                         <!--(bingung) mitra masih null -->
-                                                        <div class="items" data-group="mitra">
+                                                        <div class="items" data-group="test">
                                                             <!-- Repeater Content -->
                                                             <div class="item-content">
                                                                 <div class="form-group">
                                                                     <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                     <div class="col-lg-10 col-md-10">
-                                                                        <input type="text" class="form-control " id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="Bentuk" value="{{old('Bentuk')}}" >                                                                        
+                                                                        <input type="text" class="form-control" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="bentuk" name="form[]">
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="namaMitra" class="col-lg-2 control-label">Nama Mitra</label>
                                                                     <div class="col-lg-10">
-                                                                        <input type="text" class="form-control" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="Nama">
+                                                                        <input type="text" class="form-control" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="nama" name="partner_name[]">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -422,7 +422,7 @@
                                                                 </div>
                                                                 <div class="clearfix"></div>
                                                                 <!-- Repeater Items -->
-                                                                <div class="items" data-group="mitra">
+                                                                <div class="items" data-group="test">
                                                                     <!-- Repeater Content -->
                                                                     <div class="item-content">
                                                                         <div class="form-group">
