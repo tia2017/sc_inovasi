@@ -41,30 +41,30 @@
                     </div>
                     <div class="col col-sm-6">
                         <div class="card-search with-adv-search dropdown">
-                            <form action="">
-                                <input type="text" class="form-control global_filter" id="global_filter" placeholder="Pencarian" required>
+                            <form action="/inovasi/cari" method="GET">
+                                <input type="text" class="form-control global_filter" id="global_filter" name="cari_global" placeholder="Pencarian" required>
                                 <button type="submit" class="btn btn-icon"><i class="ik ik-search"></i></button>
                                 <button type="button" id="adv_wrap_toggler" class="adv-btn ik ik-chevron-down dropdown-toggle" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                                 <div class="adv-search-wrap dropdown-menu dropdown-menu-right" aria-labelledby="adv_wrap_toggler">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Inovasi" data-column="0">
+                                                <input type="text" class="form-control column_filter" id="col0_filter" placeholder="Inovasi" name="cari_inovasi" data-column="0" value="{{ old('cari_inovasi') }}">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Perangkat Daerah/Dewan Smart City" data-column="1">
+                                                <input type="text" class="form-control column_filter" id="col1_filter" placeholder="Perangkat Daerah/Dewan Smart City" name="cari_perangkat" data-column="1" value="{{ old('cari_perangkat') }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control column_filter" id="col2_filter" placeholder="Tahun" data-column="2">
+                                                <input type="text" class="form-control column_filter" id="col2_filter" placeholder="Tahun" name="cari_tahun" data-column="2" value="{{ old('cari_tahun') }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control column_filter" id="col3_filter" placeholder="Bulan" data-column="3">
+                                                <input type="text" class="form-control column_filter" id="col3_filter" placeholder="Bulan" name="cari_bulan" data-column="3" value="{{ old('cari_bulan') }}">
                                             </div>
                                         </div>
                                     </div>
@@ -73,12 +73,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col col-sm-3">
-                        <div class="card-options text-right">
-                            <span class="mr-5" id="top">1 - 50 of 2,500</span>
-                            <a href="#"><i class="ik ik-chevron-left"></i></a>
-                            <a href="#"><i class="ik ik-chevron-right"></i></a>
-                        </div>
+                    <div class="col-sm-3">
+
                     </div>
                 </div>
                 <div class="card-body">
@@ -87,35 +83,62 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <table class="table">
-                        <thead>
-                            <tr class="text text-center">
-                                <th>Inovasi</th>
-                                <th>Perangkat Daerah</th>
-                                <th>Tahapan</th>
-                                <th>Progres</th>
-                                <th>Total Progres</th>
-                                <th colspan="2">Opsi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($ino_steps as $ino_step)
-                                <tr class="text text-center">
-                                    <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
-                                    <td>{{$ino_step->innovation->institute->short_name}}</td>
-                                    <td>
-                                    {{$ino_step->step->name}}
-                                    </td>
-                                    <td>
-                                    {{$ino_step->progress_persentage}}%
-                                    </td>
-                                    <td>70%</td>
-                                    <td><a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="btn btn-warning">Edit</a></td>
-                                    <td><a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="btn btn-danger">Hapus</a></td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div id="advanced_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="advanced_table_length">
+                                    <label>Show <select name="advanced_table_length" aria-controls="advanced_table" class="custom-select custom-select-sm form-control form-control-sm" onchange="this.form.submit()">
+                                    <option value="10" selected="selected">10</option>
+                                    <option value="25">25</option><option value="50">50</option>
+                                    <option value="100">100</option></select> entries
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="advanced_table" class="table dataTable no-footer dtr-inline collapsed" role="grid" aria-describedby="advanced_table_info">
+                                    <thead>
+                                        <tr role="row" class="text text-xl-center">
+                                            <th class="sorting" rowspan="1" colspan="1" aria-label="Inovasi: activate to sort column ascending">Inovasi</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Perangkat Daerah: activate to sort column ascending">Perangkat Daerah</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Tahapan: activate to sort column ascending">Tahapan</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Progres: activate to sort column ascending">Progres</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Total Progres: activate to sort column ascending">Total Progres</th>
+                                            <th class="nosort sorting_disabled" tabindex="0" rowspan="1" colspan="2" aria-label="Opsi">Opsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            @foreach($ino_steps as $ino_step)
+                                            <tr class="text text-center">
+                                                <td><a href="/inovasi/detail/{{$ino_step->innovation->id}}" >{{$ino_step->innovation->name}}</a></td>
+                                                <td>{{$ino_step->innovation->institute->short_name}}</td>
+                                                <td>{{$ino_step->step->name}}</td>
+                                                <td>{{$ino_step->progress_persentage}}%</td>
+                                                <td>70%</td>
+                                                <td><a href="/inovasi/edit/{{$ino_step->innovation->id}}" class="btn btn-warning">Edit</a></td>
+                                                <td><a href="/inovasi/hapus/{{$ino_step->innovation->id}}" class="btn btn-danger">Hapus</a></td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="advanced_table_info" role="status" aria-live="polite">Showing {{ $ino_steps->firstItem() }} to {{ $ino_steps->lastItem() }} of {{$ino_steps->total()}} entries</div>
+                            </div>
+                            <div class="col-sm-12 col-md-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="advanced_table_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous" id="advanced_table_previous"><a href="{{$ino_steps->previousPageUrl()}}" aria-controls="advanced_table" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                        <li class="paginate_button page-item disabled"><a href="#" aria-controls="advanced_table" data-dt-idx="1" tabindex="0" class="page-link">{{$ino_steps->currentPage()}}</a></li>
+                                        <li class="paginate_button page-item next" id="advanced_table_next"><a href="{{$ino_steps->nextPageUrl()}}" aria-controls="advanced_table" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- END::Tabel Data Inovasi -->
@@ -557,4 +580,12 @@
         </div>
     </div>
 <!-- END::Modal Layar Penuh -->
+
+    <script>
+        $(document).ready(function() {
+        $('#advanced_table_wrapper').DataTable( {
+            "lengthMenu": [10, 25, 50, 100]]
+            } );
+        } );
+    </script>
 @endsection

@@ -19,10 +19,10 @@
                         <nav class="breadcrumb-container" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="../index.html"><i class="ik ik-home"></i></a>
+                                    <a href="/dashboard"><i class="ik ik-home"></i></a>
                                 </li>
                                 <li class="breadcrumb-item">
-                                    <a href="#">Kelola</a>
+                                    <a href="/inovasi">Kelola</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">Tambah Inovasi</li>
                             </ol>
@@ -42,7 +42,7 @@
                         <div class="tab-content" id="myTabContent2">
 
                                 <div class="col-md-12">
-                                    <form class="forms-sample" action="/tambah-inovasi" method="post">
+                                    <form class="forms-sample" action="/tambah-inovasi" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="created_by" value="1">
                                     <input type="hidden" name="date" value="{{date('Y-m-d h:i:s')}}">
                                     <input type="hidden" name="verification_status" value="True">
