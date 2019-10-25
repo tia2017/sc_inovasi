@@ -12,11 +12,10 @@ jQuery.fn.extend({
             var item = itemContent;
             var input = item.find('input,select');
             input.each(function (index, el) {
-                var attrName = $(el).data('name');                
+                var attrName = $(el).data('name');
                 var skipName = $(el).data('skip-name');
                 if (skipName != true) {
-                    $(el).attr("name", group + attrName + "[" + key + "]");
-                    $(el).attr("valid", key);
+                    $(el).attr("name", group + "[" + key + "]" + attrName);
                 } else {
                     if (attrName != 'undefined') {
                         $(el).attr("name", attrName);

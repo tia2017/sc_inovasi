@@ -8,10 +8,8 @@ use App\Type;
 use App\Institute;
 use App\Pilar;
 use App\Step;
-use App\Partner;
 use App\Innovation;
 use App\Innovation_step;
-use App\Innovation_partner;
 use Illuminate\Support\Facades\Cache;
 
 class tambahInovasiController extends Controller
@@ -24,17 +22,18 @@ class tambahInovasiController extends Controller
         $type = Type::all();
         $pilar = Pilar::all();
         $step = Step::all();
-    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step'));
+        $partner = Innovation_partner::all();
+    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step', 'partner'));
     }
 
     public function store(Request $request)
-    {       
+    {
+        // $post = $_POST;
+        // // echo "<pre>";
+        // // print_r($post);
+        // // print_r($request->all());
+        // // die();
 
-        // dd($coba = $request->all());
-
-        // echo "<pre>";
-        // print_r($_POST);
-        // die();
         $request->validate ([
             //validate innovation
             'name' => 'required',
@@ -49,6 +48,7 @@ class tambahInovasiController extends Controller
             'strategy' => 'required',
             'risk_analysis' => 'required',
             'resource' => 'required',
+            'file' => 'required',
             //validate innovations_step
             'step_id' => 'required',
             'explaination' => 'required',
@@ -56,13 +56,11 @@ class tambahInovasiController extends Controller
 
         ]);
 
-
-        // input innovation
         $data = Innovation::create($request->all());
 
-        // input innovation_step
         $id_inovasinya = $data->id;
 
+<<<<<<< HEAD
         //input partner
         for($i = 0; $i < count($request->mitraBentuk) ;$i++){
             $data_partner =  Partner::create([
@@ -78,14 +76,24 @@ class tambahInovasiController extends Controller
             ]);         
 
         }           
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+ 
+        $nama_file = time()."_".$file->getClientOriginalName();
+ 
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'data_file';
+        $file->move($tujuan_upload,$nama_file);
 
+=======
+>>>>>>> parent of 9bc6e05... Merge branch 'master' of https://github.com/tia2017/sc_inovasi
         for($i = 1; $i <= 6;$i++){
             if($request['step_id']>$i){
                 $data_step = Innovation_step::create([
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => 100
                 ]);
             }
@@ -94,7 +102,7 @@ class tambahInovasiController extends Controller
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => $request['explaination'],
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => $request['progress_persentage']
                 ]);
             }
@@ -103,15 +111,14 @@ class tambahInovasiController extends Controller
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'file' => $nama_file,
                     'progress_persentage' => 0
                 ]);
             }
         }
-
-        
         // dd($data_step);
         // dd($request->all());
+
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
     }
 }

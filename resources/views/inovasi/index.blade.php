@@ -100,12 +100,12 @@
                                 <table id="advanced_table" class="table dataTable no-footer dtr-inline collapsed" role="grid" aria-describedby="advanced_table_info">
                                     <thead>
                                         <tr role="row" class="text text-xl-center">
-                                            <th class="sorting" rowspan="1" colspan="1" aria-label="Inovasi: activate to sort column ascending">Inovasi</th>
-                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Perangkat Daerah: activate to sort column ascending">Perangkat Daerah</th>
-                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Tahapan: activate to sort column ascending">Tahapan</th>
-                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Progres: activate to sort column ascending">Progres</th>
-                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" aria-label="Total Progres: activate to sort column ascending">Total Progres</th>
-                                            <th class="nosort sorting_disabled" tabindex="0" rowspan="1" colspan="2" aria-label="Opsi">Opsi</th>
+                                            <th class="sorting" rowspan="1" colspan="1" style="width: 182px;" aria-label="Inovasi: activate to sort column ascending">Inovasi</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 88px;" aria-label="Perangkat Daerah: activate to sort column ascending">Perangkat Daerah</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 101px;" aria-label="Tahapan: activate to sort column ascending">Tahapan</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 50px;" aria-label="Progres: activate to sort column ascending">Progres</th>
+                                            <th class="sorting" tabindex="0" aria-controls="advanced_table" rowspan="1" colspan="1" style="width: 65px;" aria-label="Total Progres: activate to sort column ascending">Total Progres</th>
+                                            <th class="nosort sorting_disabled" tabindex="0" rowspan="1" colspan="2" style="width: 66px;" aria-label="Opsi">Opsi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
