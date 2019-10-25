@@ -27,33 +27,32 @@ class userController extends Controller
     	//return view('users.create');
     }
 
-    public function edit(Request $id)
+    public function edit($id)
     {
-        $df_role = ModelUser::get();
-        // $users = DB::table('users')->where('id',$id)->get();
 
-        // $users_1 = DB::table('users_detail')->where('id',$id)->get();
+        $df_role = ModelUser::query()
+         ->leftJoin("users_detail","users_detail.id","=","users.user_id")
+         ->where('users.id', $id)
+         ->get();
+         
 
-         // return view('users.edit',['users' => $user, $users_1]);
+         
+            return view('users.update', compact('df_role'));
 
-        // $df_role = ModelUser::query()->where('id', $df_role->id);
-        foreach ($df_role as $daftar_role) {
-            ModelUser::get()
-                ->where('id', $daftar_role->id);
-                return view('users.update', compact('df_role'));
-        }
+
          
     }
 
     public function update(Request $request)
     {
-        DB::table('users')->where('id',$request->id)->update([
-            'nama' => $request->name,
+        DB::table('users')->where('user_id',$request->id)->update([
+            
             'email' => $request->email,
-            'password' => $request->password,
+         
         ]);
 
         DB::table('users_detail')->where('id',$request->id)->update([
+            'nama' => $request->name,
             'nik' =>$request->nik,
             'nip' =>$request->nip,
             'telepon'=> $request->phone,
@@ -69,7 +68,7 @@ class userController extends Controller
 
         // $buatAkun = User::create($request->all());   
 
-        $dataAkun =  new User;
+        $dataAkun =  new ModelUser;
 
         $dataAkun->name = $request->name;
         $dataAkun->email = $request->email;

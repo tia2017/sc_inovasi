@@ -64,7 +64,7 @@ Route::get('/buatAkun', 'buatAkunController@index');
 Route::post('/buatAkun/store', 'buatAkunController@store');
 
 
-Route::get('/users/edit/','userController@edit');
+Route::get('/users/edit/{id}','userController@edit');
 
 
 //login Coba

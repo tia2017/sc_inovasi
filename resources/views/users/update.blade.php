@@ -1,10 +1,9 @@
-@@ -1,628 +0,0 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Buat Akun</title>
+        <title>Update Akun</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -307,54 +306,49 @@
 
                                     
                                             <div class="card-body">
-                                                <form class="form-horizontal" method="post" action="/users/store">
+                                                <form class="form-horizontal" method="post" action="/users/update">
                                                 
                                                 {{ csrf_field() }}  
                                                 @foreach($df_role as $daftar_role )
                                                     <div class="form-row">
+                                                        
                                                         <div class="form-group col-md-6">
                                                             <label for="firstname">Nama</label>
-                                                             <input type="text" class="form-control" name="name" id="nama" value="{{$daftar_role->nama}}">
+                                                             <input type="text" class="form-control" name="name" id="nama" value="{{$daftar_role->name}}">
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label for="lastname">Email</label>
-                                                            <input type="email" class="form-control" placeholder="ex: scinovasi@gmail.com" name="email" id="email">
+                                                            <input type="email" class="form-control" name="email" id="email" value="{{$daftar_role->email}}">
                                                         </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="form-group col-md-6">
-                                                            <label for="password">Password</label>
-                                                            <input type="password" class="form-control" placeholder="Masukkan Password" name="password" id="password"></input>
-                                                        </div>
-                                                        <!-- <div class="form-group col-md-6">
-                                                            <label for="repassword">Ulangi Password</label>
-                                                            <input type="password" class="form-control" placeholder="Ulangi Password" name="repassword" id="repassword"></input>
-                                                        </div> -->
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label for="nik">NIK</label>
-                                                            <input type="text" class="form-control" placeholder="Masukan NIK" name="nik" id="nik"></input>
+                                                            <input type="text" class="form-control" name="nik" id="nik" value="{{$daftar_role->nik}}"></input>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label for="nip">NIP</label>
-                                                            <input type="text" class="form-control" placeholder="Maukkan NIP" name="nip" id="nip"></input>
+                                                            <input type="text" class="form-control" name="nip" id="nip" value="{{$daftar_role->nip}}"></input>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label for="telepon">Nomor Telepon</label>
-                                                            <input type="text" class="form-control" name="phone" placeholder="ex:081388932778 atau ex:0215679987" name="telepon" id="telepon"></input>
+                                                            <input type="text" class="form-control" name="phone" name="telepon" id="telepon" value="{{$daftar_role->phone}}"></input>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label for="gender" >Jenis Kelamin</label>
                                                             <div class="form-row">
                                                                 <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="laki-laki">
+                                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="laki-laki" <?php if ($daftar_role->gender=="Laki-Laki") {
+                                                                                echo 'checked';
+                                                                              } ?> >
                                                                     <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
                                                                  </div>
                                                                 <div class="form-check form-check-inline">
-                                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="perempuan">
+                                                                    <input class="form-check-input" type="radio" name="gender" id="gender" value="perempuan" <?php if ($daftar_role->gender=="Perempuan") {
+                                                                                echo 'checked';
+                                                                              } ?> >
                                                                     <label class="form-check-label" for="inlineRadio2">Perempuan</label>
                                                                 </div>
                                                             </div>
@@ -362,7 +356,7 @@
                                                     </div>
                                                      <div class="form-group">
                                                         <label for="alamat">Alamat</label>
-                                                        <textarea name="address" name="alamat" rows="5" class="form-control" id="alamat"></textarea>
+                                                        <textarea name="address" name="alamat" rows="5" class="form-control" id="alamat">{{$daftar_role->address}}</textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="role">Role</label>

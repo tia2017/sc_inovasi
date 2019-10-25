@@ -306,7 +306,7 @@
                                         <a href="#"><i class="ik ik-inbox"></i></a>
 
                                         <!-- //link buat ke akun -->
-                                        <a href="users/tambah"><i class="ik ik-plus"></i></a>
+                                        <a href="/users/tambah"><i class="ik ik-plus"></i></a>
 
                                         <a href="#"><i class="ik ik-rotate-cw"></i></a>
                                         <div class="dropdown d-inline-block">
@@ -383,12 +383,12 @@
                                                 </td>
                                         
                                                 <th scope="row"> {{ $loop->iteration }} </th>
-                                                <td> {{ $daftar_role->name }} </td>
-                                                <td> {{ $daftar_role->email }} </td>
-                                                <td> {{ $daftar_role->role_name }} </td>
-                                                <td>
-                                                    <a href="users/edit?id={{$daftar_role->id}}" class="badge badge-success">Edit</a>
-                                                    <a href="" class="badge badge-danger">Delete</a>
+                                                    <td> {{ $daftar_role->name }} </td>
+                                                    <td> {{ $daftar_role->email }} </td>
+                                                    <td> {{ $daftar_role->role_name }} </td>
+                                                    <td>
+                                                        <a href="edit/{{$daftar_role->id}}" class="badge badge-success">Edit</a>
+                                                        <a href="" class="badge badge-danger">Delete</a>
                                                 </td>
                                                 
                                             </tr>
