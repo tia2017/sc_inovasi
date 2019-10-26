@@ -9,34 +9,44 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Innovation;
 use App\Innovation_step;
-use Yajra\Datatables\Datatables;
 
 class inovasiController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response//
+     * @return \Illuminate\Http\Response// $detail = Innovation::find('$Innovation');
+        $detail = Innovation::find($Innovation);
+        return view::make('detailInovasi.index')->with('detail', $detail);
+        // return view('detailInovasi.index', ['detail' => $detail]);
+        // Innovation::all();
      */
     public function index(Request $request)
     {
-        if ($request->ajax()) {
-            $ino_steps = Innovation_step::with('innovation')
-            ->where('progress_persentage', '>', '0')
-            ->where('progress_persentage', '<', '100')
-            ->get();
-            return DataTables($ino_steps)->make(true);
-        }
-        return view('inovasi.index');
+        // dibawah ini adalah cara lain pemanggilan
+        // $inovasi_step = Innovation_step::get();
+        // $inovasi_step = Innovation::find(2)->innovation_step()->get();
+        // $ino_step = Innovation_step::all();
+        // $inovasi = Innovation::with(['pilar', 'innovation_step'])->get();
+        // $inovasi = Pilar::all();
+        // $inovasi =DB::table('innovations')
+        //         ->join('pilars', 'pilars.id', 'innovations.pilar_id')
+        //         ->join('innovation_steps', 'innovation_steps.innovation_id', 'innovations.id')
+        //         ->join('steps', 'steps.id', 'innovation_steps.step_id')
+        //         ->select('innovations.name as name_ino', 'innovations.description as decs_ino', 'innovations.*', 'pilars.*')
+        //         ->get();
+                // select * from x where (select * from x where ())
+
+        // $inovasi = Innovation::all();
+
+        $ino_steps = Innovation_step::with('innovation')
+        ->where('progress_persentage', '>', '0')
+        ->where('progress_persentage', '<', '100')
+        ->paginate($request->advanced_table_length);
+        // ->get();
+        // dd($inovasi);
+        return view('inovasi.index', compact('ino_steps'));
     }
-    // public function tes(){
-    //     $ino_steps = Innovation_step::with('innovation')
-    //     ->where('progress_persentage', '>', '0')
-    //     ->where('progress_persentage', '<', '100')
-    //     ->get();
-    //     // return DataTables($ino_steps)->make(true);
-    //     return DataTables::of($ino_steps)->make(true);
-    // }
 
     public function detail($id){
         $inovasi = Innovation::find($id);
@@ -45,6 +55,8 @@ class inovasiController extends Controller
                 ->get();
         return view('inovasi.detail', compact('inovasi','step'));
 
+        // dibawah ini cara lain return
+        // return view('detailInovasi.index', ['detail' => $detail]);
     }
 
     public function hapus($id){
