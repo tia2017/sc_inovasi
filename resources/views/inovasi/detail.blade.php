@@ -147,16 +147,18 @@
 
                                         <!-- BEGIN::Mitra Inovasi -->
                                         <div class="form-group">
+                                            @foreach($inovasi->innovation_partner as $partner_data )
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="namaInovasi">Bentuk Mitra</label>
-                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="Perusahaan (PT)" disabled>
+                                                    <input type="text" class="form-control" id="bentukMitra" placeholder="{{$partner_data->partner->form}}" disabled>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="perangkatDaerah">Nama Mitra</label>
-                                                    <input type="text" class="form-control" id="namaMitra" placeholder="PPV" disabled>
+                                                    <input type="text" class="form-control" id="namaMitra" placeholder="{{$partner_data->partner->name}}" disabled>
                                                 </div>
                                             </div>
+                                            @endforeach
                                         </div>
                                         <!-- END::Mitra Inovasi -->
 
