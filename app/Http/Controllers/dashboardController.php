@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Innovation;
 use App\Innovation_step;
+use App\Institute;
 
 class dashboardController extends Controller
 {
@@ -16,7 +17,25 @@ class dashboardController extends Controller
         ->where('progress_persentage', '>', '0')
         ->where('progress_persentage', '<', '100')
         ->get();
-        return view('dashboard.index', compact('ino_steps'));
-    	// return view('dashboard.index');
+
+        $inovasi = Innovation::all();
+    	$jumlah_inovasi = $inovasi->count();
+
+    	$institute = Institute::all();
+    	$jumlah_institute = $institute->count();
+
+
+        $semua_inovasi = Institute::with('innovation')
+        ->get();
+        
+
+        return view('dashboard.index', [
+        	'ino_steps'=>$ino_steps,
+        	'jumlah_inovasi'=>$jumlah_inovasi,
+        	'jumlah_perangkat_daerah'=>$jumlah_institute,
+            'semua_inovasi'=>$semua_inovasi
+        ]);
+
     }
+
 }
