@@ -15,15 +15,15 @@ jQuery.fn.extend({
                 var attrName = $(el).data('name');                
                 var skipName = $(el).data('skip-name');
                 if (skipName != true) {
-                    $(el).attr("name", group + attrName + "[" + key + "]");
-                    $(el).attr("valid", key);
+                    $(el).attr("name", attrName + group + "[" + key + "]");
+                    $(el).attr("value", "old('BentukMitra[0]')");
                 } else {
                     if (attrName != 'undefined') {
                         $(el).attr("name", attrName);
                     }
                 }
                 if (fresh == true) {
-                    $(el).attr('value', '');
+                    // $(el).attr('value', '');
                 }
             })
             var itemClone = items;

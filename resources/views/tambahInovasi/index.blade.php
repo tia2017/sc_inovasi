@@ -124,7 +124,7 @@
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label for="progresInovasi">Progres Inovasi (%)</label>
-                                                    <input class="@error('progress_persentage') is-invalid @enderror" type="text" class="form-control" placeholder="0-100" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
+                                                    <input type="text" class="form-control @error('progress_persentage') is-invalid @enderror" placeholder="0-100" id="progresInovasi" name="progress_persentage" value="{{old('progress_persentage')}}">
                                                     @error('progress_persentage')
                                                         <div class="invalid-feedback">{{$message}}</div>
                                                     @enderror
@@ -184,13 +184,16 @@
                                                         <div class="clearfix"></div>
                                                         <!-- Repeater Items -->
                                                         <!--(bingung) mitra masih null -->
-                                                        <div class="items" data-group="mitra">
+                                                        <div class="items" data-group="Mitra">
                                                             <!-- Repeater Content -->
                                                             <div class="item-content">
                                                                 <div class="form-group">
                                                                     <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                     <div class="col-lg-10 col-md-10">
-                                                                        <input type="text" class="form-control " id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="Bentuk" value="{{old('Bentuk')}}" >                                                                        
+                                                                        <input type="text" class="form-control @error('BentukMitra[0]') is-invalid @enderror" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="Bentuk" >                                                                        
+                                                                        @error('BentukMitra[0]')
+                                                                            <div class="invalid-feedback">{{$message}}</div>
+                                                                        @enderror
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
