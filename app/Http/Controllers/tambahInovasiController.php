@@ -24,7 +24,7 @@ class tambahInovasiController extends Controller
         $type = Type::all();
         $pilar = Pilar::all();
         $step = Step::all();
-    	return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step'));
+        return view('tambahInovasi.index', compact('institute', 'type', 'pilar', 'step'));
     }
 
     public function store(Request $request)
@@ -66,20 +66,20 @@ class tambahInovasiController extends Controller
         $id_inovasinya = $data->id;
 
         //input partner
-        for($i = 0; $i < count($request->mitraBentuk) ;$i++){
-            $data_partner =  Partner::create([
-                'name' => $request->mitraNama[$i],
-                'form' => $request->mitraBentuk[$i]
-            ]);
-            $id_partner = $data_partner->id;
+        // for($i = 0; $i < count($request->mitraBentuk) ;$i++){
+        //     $data_partner =  Partner::create([
+        //         'name' => $request->mitraNama[$i],
+        //         'form' => $request->mitraBentuk[$i]
+        //     ]);
+        //     $id_partner = $data_partner->id;
 
-            // input innovation_partner
-            Innovation_partner::create([
-                'innovation_id' => $id_inovasinya,
-                'partner_id' => $data_partner->id
-            ]);         
+        //     // input innovation_partner
+        //     Innovation_partner::create([
+        //         'innovation_id' => $id_inovasinya,
+        //         'partner_id' => $data_partner->id
+        //     ]);         
 
-        }           
+        // }           
 
         for($i = 1; $i <= 6;$i++){
             if($request['step_id']>$i){
