@@ -41,8 +41,25 @@
                     <div class="card-body">
                         <div class="tab-content" id="myTabContent2">
 
+                        <!-- /resources/views/post/create.blade.php -->
+
+                        <h1>Create Post</h1>
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif                       
+                
+
+                        <!-- Create Post Form -->
+
                                 <div class="col-md-12">
-                                    <form class="forms-sample" action="/tambah-inovasi" method="post">
+                                    <form class="forms-sample" action="/tambah-inovasi" method="post" enctype='multipart/form-data'>
                                     <input type="hidden" name="created_by" value="1">
                                     <input type="hidden" name="date" value="{{date('Y-m-d h:i:s')}}">
                                     <input type="hidden" name="verification_status" value="True">
@@ -114,7 +131,7 @@
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label>Unggah File</label>
-                                                    <input type="file" name="file" class="file-upload-default">
+                                                    <input type="file" name="imgStep" class="file-upload-default">
                                                     <div class="input-group col-xs-12">
                                                         <input type="text" class="form-control file-upload-info" disabled placeholder="File" value="{{old('file')}}">
                                                         <span class="input-group-append">
@@ -174,6 +191,17 @@
                                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                                     <!-- Repeater Html Start -->
                                                     <div id="repeater">
+                                                    <!-- Key Array Form Repeater keperluar validate jika gagal agar tidak ketik ulang value -->
+                                                    <input type="text" class="keyFormMitra" name="keyFormMitra" value="{{old('keyFormMitra')}}" hidden>    
+                                                    <?php
+                                                        $keyFormMitra = old('keyFormMitra');
+                                                        if($keyFormMitra != null){
+                                                            $key = old('keyFormMitra')+1;                                                           
+                                                        }else{
+                                                            $key = 1;                                                        
+                                                        }                                                                               
+                                                    ?> 
+                                                    
                                                         <!-- Repeater Heading -->
                                                         <div class="repeater-heading">
                                                             <h5 class="float-left">Kemitraan</h5>
@@ -183,15 +211,16 @@
                                                         </div>
                                                         <div class="clearfix"></div>
                                                         <!-- Repeater Items -->
-                                                        <!--(bingung) mitra masih null -->
-                                                        <div class="items" data-group="Mitra">
-                                                            <!-- Repeater Content -->
-                                                            <div class="item-content">
+                                                        
+                                                        @for ($i=0; $i < $key; $i++)
+                                                        <div class="items" data-group="Mitra">                                                                                                                                                                 
+                                                            <!-- Repeater Content -->                                                        
+                                                            <div class="item-content">                                                                           
                                                                 <div class="form-group">
                                                                     <label for="bentukMitra" class="col-lg-2 col-md-2 control-label">Bentuk Mitra</label>
                                                                     <div class="col-lg-10 col-md-10">
-                                                                        <input type="text" class="form-control @error('BentukMitra[0]') is-invalid @enderror" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="Bentuk" >                                                                        
-                                                                        @error('BentukMitra[0]')
+                                                                        <input type="text" class="form-control @error('Mitra.*.Bentuk') is-invalid @enderror" id="bentukMitra" placeholder="Bentuk Mitra yang Melakukan Kerjasama" data-name="Bentuk" value="{{old('Mitra.'.$i.'.Bentuk') }}"  >                                                                        
+                                                                        @error('Mitra.*.Bentuk')
                                                                             <div class="invalid-feedback">{{$message}}</div>
                                                                         @enderror
                                                                     </div>
@@ -199,9 +228,12 @@
                                                                 <div class="form-group">
                                                                     <label for="namaMitra" class="col-lg-2 control-label">Nama Mitra</label>
                                                                     <div class="col-lg-10">
-                                                                        <input type="text" class="form-control" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="Nama">
+                                                                        <input type="text" class="form-control @error('Mitra.*.Nama') is-invalid @enderror" id="namaMitra" placeholder="Nama Mitra yang Melakukan Kerjasama" data-name="Nama" value="{{old('Mitra.'.$i.'.Nama') }}">
+                                                                        @error('Mitra.*.Nama')
+                                                                            <div class="invalid-feedback">{{$message}}</div>
+                                                                        @enderror
                                                                     </div>
-                                                                </div>
+                                                                </div>                                                            
                                                             </div>
                                                             <!-- Repeater Remove Btn -->
                                                             <div class="float-right repeater-remove-btn">
@@ -209,8 +241,9 @@
                                                                     Hapus Form
                                                                 </button>
                                                             </div>
-                                                            <div class="clearfix"></div>
+                                                            <div class="clearfix"></div>                                                                                           
                                                         </div>
+                                                        @endfor
                                                     </div>
                                                     <!-- Repeater End -->
                                                 </div>
@@ -621,6 +654,7 @@
                                                                 </div>
                                                                 <div class="clearfix"></div>
                                                                 <!-- Repeater Items -->
+                                                              
                                                                 <div class="items" data-group="test">
                                                                     <!-- Repeater Content -->
                                                                     <div class="item-content">

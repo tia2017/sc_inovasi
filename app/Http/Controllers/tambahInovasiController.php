@@ -13,13 +13,12 @@ use App\Innovation;
 use App\Innovation_step;
 use App\Innovation_partner;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 class tambahInovasiController extends Controller
 {
     public function create()
     {
-        // $ins = Institute::all();
-        // dd($ins);
         $institute = Institute::all();
         $type = Type::all();
         $pilar = Pilar::all();
@@ -29,12 +28,14 @@ class tambahInovasiController extends Controller
 
     public function store(Request $request)
     {       
-
+        
+        // dd($request->imgStep->getRealPath());
         // dd($coba = $request->all());
-
         // echo "<pre>";
         // print_r($_POST);
         // die();
+
+      
         $request->validate ([
             //validate innovation
             'name' => 'required',
@@ -53,11 +54,10 @@ class tambahInovasiController extends Controller
             'step_id' => 'required',
             'explaination' => 'required',
             'progress_persentage' => 'required|numeric|min:0|max:100',
-            // validate partner
-            'BentukMitra[0]' => 'required'
-
+            'Mitra.*.Bentuk' => 'required',
+            'Mitra.*.Nama' => 'required',  
+            
         ]);
-
 
         // input innovation
         $data = Innovation::create($request->all());
@@ -66,54 +66,65 @@ class tambahInovasiController extends Controller
         $id_inovasinya = $data->id;
 
         //input partner
-        // for($i = 0; $i < count($request->mitraBentuk) ;$i++){
-        //     $data_partner =  Partner::create([
-        //         'name' => $request->mitraNama[$i],
-        //         'form' => $request->mitraBentuk[$i]
-        //     ]);
-        //     $id_partner = $data_partner->id;
+        for($i = 0; $i < count($request->Mitra) ;$i++){
+            // validate partner
+            $data_partner =  Partner::create([
+                'name' => $request->Mitra[$i]['Nama'],
+                'form' => $request->Mitra[$i]['Bentuk']
+            ]);
+            $id_partner = $data_partner->id;
 
-        //     // input innovation_partner
-        //     Innovation_partner::create([
-        //         'innovation_id' => $id_inovasinya,
-        //         'partner_id' => $data_partner->id
-        //     ]);         
+            // input innovation_partner
+            Innovation_partner::create([
+                'innovation_id' => $id_inovasinya,
+                'partner_id' => $data_partner->id
+            ]);         
 
-        // }           
+        }  
 
+    
         for($i = 1; $i <= 6;$i++){
+            //Input inovation_step yang otomatis udah selesai kondisi saat progress percentagenya = 100
             if($request['step_id']>$i){
                 $data_step = Innovation_step::create([
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
-                    'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'explaination' => '',                    
                     'progress_persentage' => 100
                 ]);
             }
+            //Input inovation_step saat ini sedang berjalan kondisi saat progress percentagenya > 0 dan < 100
             elseif($request['step_id']==$i){
+                     
+                //upload Gambar dan memindakah file ke folder local image
+                if( $request->imgStep != null){
+                    $path = Storage::putFile('image', $request->file('imgStep'));  
+                    $nameImage = $request->imgStep->getClientOriginalName();
+                } else{
+                    $nameImage = null;
+                }
+
                 $data_step = Innovation_step::create([
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
                     'explaination' => $request['explaination'],
-                    'file' => $request['img[0]'],
+                    'file' => $nameImage,                    
                     'progress_persentage' => $request['progress_persentage']
-                ]);
+                ]);                
+                
             }
+            //Input inovation_step yang belum selesai kondisi saat progress percentagenya = 0 
             else{
                 $data_step = Innovation_step::create([
                     'innovation_id' => $id_inovasinya,
                     'step_id' => $i,
-                    'explaination' => '',
-                    'file' => $request['img[0]'],
+                    'explaination' => '',                    
                     'progress_persentage' => 0
                 ]);
             }
         }
 
-        
-        // dd($data_step);
-        // dd($request->all());
+    
         return redirect('/inovasi')->with('status', 'Data Inovasi Berhasil Ditambah');
     }
 }
